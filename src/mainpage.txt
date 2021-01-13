@@ -1,0 +1,10 @@
+'mainpage.txt
+/**
+         @mainpage M_list Fortran Library
+
+         @section Introduction
+
+     M_list - maintaining a very simple sorted list
+
+         @image html html/images/yarnball.gif
+*/'
