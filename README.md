@@ -45,7 +45,7 @@ Just download the github repository, enter the src/ directory and run make(1):
 This will compile the M_list(3f) module.
 
 
-## SUPPORTS FPM 
+## SUPPORTS FPM ![fpm](docs/images/fpm_logo.gif)
 #### (registered at the [fpm(1) registry](https://github.com/fortran-lang/fpm-registry) )
 
 Alternatively, download the github repository and build it with 
