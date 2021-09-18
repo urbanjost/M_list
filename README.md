@@ -74,7 +74,7 @@ or just list it as a dependency in your fpm.toml project file.
 ## USER DOCUMENTATION
  - A single page that uses javascript to combine all the HTML descriptions
    of the manpages is at
-   [BOOK_FORTRAN](https://urbanjost.github.io/M_list/BOOK_M_list.html).
+   [BOOK_M_list](https://urbanjost.github.io/M_list/BOOK_M_list.html).
 
  - An [index](https://urbanjost.github.io/M_list/man3.html) to HTML versions
    of the manpages 
