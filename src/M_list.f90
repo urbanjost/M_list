@@ -435,6 +435,7 @@ integer                                :: maxtry
 integer                                :: imin, imax
 integer                                :: error
 
+   message=''
    if(.not.allocated(list))then
       list=[doubleprecision :: ]
    endif

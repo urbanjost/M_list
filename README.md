@@ -1,25 +1,25 @@
-# M_list
 <!--
+# M_list
 ![list](docs/images/list.gif)
 -->
 
-## M_list(3f) - [M_list] maintain simple lists
+## M_list(3f) - maintain a sorted intrinsic type array in Fortran
 
 ## DESCRIPTION
 
-   The M_list(3fm) module allows for maintaining an array as a sorted
-   list. An example is given that creates a keyword-value dictionary
-   using the lists.
+   As shown in the examples the M_list(3f) module contains simple routines
+   to add, replace  and delete values from an automatically sorted array
+   allow for creating simple dictionaries.
 
-   The lists are maintained as simple allocatable arrays. Each time an
-   entry is added or deleted the array is re-allocated.  Because of the
-   expense of reallocating the data these routines are best suited for
-   maintaining small lists that do not change size frequently.
+   The advantage of this routine over more conventional methods is
+   that the dictionary components are simple arrays which can be easily
+   accessed with standard routines.
 
-   The advantage is that the dictionary components are simple arrays
-   which can be easily accessed with standard routines.
+   Each time an entry is added or deleted the array is re-allocated.
+   Because of the expense of reallocating the data these routines are best
+   suited for maintaining small lists that do not change size frequently.
 
-## DOWNLOAD AND BUILD
+## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
 Just download the github repository, enter the src/ directory and run make(1):
 
      git clone https://github.com/urbanjost/M_list.git
@@ -45,8 +45,7 @@ Just download the github repository, enter the src/ directory and run make(1):
 This will compile the M_list(3f) module.
 
 
-## SUPPORTS FPM ![fpm](docs/images/fpm_logo.gif)
-#### (registered at the [fpm(1) registry](https://github.com/fortran-lang/fpm-registry) )
+## BUILD and TEST with fpm[fpm](docs/images/fpm_logo.gif)
 
 Alternatively, download the github repository and build it with 
 fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -56,7 +55,7 @@ fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/
      cd M_list
      fpm test  # run unit tests
      # optionally run the example programs from the man-pages in the example/ directory
-     fpm run --example
+     fpm run --example "*"
 ```
 
 or just list it as a dependency in your fpm.toml project file.
@@ -65,13 +64,11 @@ or just list it as a dependency in your fpm.toml project file.
      [dependencies]
      M_list        = { git = "https://github.com/urbanjost/M_list.git" ,tag="v1.0.1"}
 ```
+#### (registered at the [fpm(1) registry](https://github.com/fortran-lang/fpm-registry) )
 
-## DEMO PROGRAMS![demos](docs/images/demo.gif)
+## DOCUMENTATION   ![docs](docs/images/docs.gif)
 
-   There are demo programs extracted from the man pages in the example/ directory
-
-
-## USER DOCUMENTATION
+### USER
  - A single page that uses javascript to combine all the HTML descriptions
    of the manpages is at
    [BOOK_M_list](https://urbanjost.github.io/M_list/BOOK_M_list.html).
@@ -79,8 +76,18 @@ or just list it as a dependency in your fpm.toml project file.
  - An [index](https://urbanjost.github.io/M_list/man3.html) to HTML versions
    of the manpages 
 
-in addition in the docs/ directory there is
-
  - manpages in 
     + [manpages.zip](https://urbanjost.github.io/M_list/manpages.zip) 
     + [manpages.tgz](https://urbanjost.github.io/M_list/manpages.tgz) 
+
+### DEVELOPER
+   - [ford(1) output](https://urbanjost.github.io/M_list/fpm-ford/index.html).
+<!--
+   - [doxygen(1) output](https://urbanjost.github.io/M_list/doxygen_out/html/index.html).
+-->
+   - [github action status](docs/STATUS.md) 
+
+## DEMO PROGRAMS![demos](docs/images/demo.gif)
+
+   There are demo programs extracted from the man pages in the example/ directory
+
