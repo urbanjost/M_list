@@ -10,17 +10,21 @@
 !!
 !!##DESCRIPTION
 !!
-!!    The M_list(3fm) module allows for maintaining an array as a sorted
-!!    list. An example is given that creates a keyword-value dictionary
-!!    using the lists.
+!!    The M_list(3fm) module allows for maintaining an allocatable array of
+!!    intrinsic type (REAL, INTEGER, CHARACTER) as a sorted list. An example
+!!    is given that creates a keyword-value dictionary using the lists.
 !!
 !!    The lists are maintained as simple allocatable arrays. Each time an
 !!    entry is added or deleted the array is re-allocated. Because of the
 !!    expense of reallocating the data these routines are best suited for
 !!    maintaining small lists that do not change size frequently.
 !!
-!!    The advantage is that the dictionary components are simple arrays of
-!!    intrinsic types which can be easily accessed with standard routines.
+!!    The advantage of this simplistic approach is that the dictionary
+!!    components are simple arrays of intrinsic types which can be easily
+!!    accessed with standard routines.  It is easy to understand, as it
+!!    works with simple arrays. For more demanding applications this would
+!!    be implemented as a linked list, which there are a number of freely
+!!    available examples of; several are listed on the Fortran Wiki.
 !!
 !!    BASIC LIST
 !!
@@ -138,8 +142,8 @@
 !!    usage is required, now that that is available in more recent versions
 !!    of Fortran.
 !!
-!!    Note: this does not work with gfortran(1) up to at least 7.4.0 but works
-!!    from at least 10.3.0 and onward.
+!!    Note: this does not work with gfortran(1) up to at least 7.4.0 but
+!!    works from at least 10.3.0 and onward.
 !!
 !!    Dictionary type definition:
 !!

@@ -8,8 +8,8 @@
 ## DESCRIPTION
 
    As shown in the examples the M_list(3f) module contains simple routines
-   to add, replace  and delete values from an automatically sorted array
-   allow for creating simple dictionaries.
+   to add, replace  and delete values from an automatically sorted array,
+   which allows for creating simple dictionaries.
 
    The advantage of this routine over more conventional methods is
    that the dictionary components are simple arrays which can be easily
@@ -18,6 +18,9 @@
    Each time an entry is added or deleted the array is re-allocated.
    Because of the expense of reallocating the data these routines are best
    suited for maintaining small lists that do not change size frequently.
+
+   For more demanding needs, see linked-list methods for maintaining generic
+   dictionaries; several examples of which are available on the Fortran Wiki.
 
 ## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
 Just download the github repository, enter the src/ directory and run make(1):
