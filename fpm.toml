@@ -11,7 +11,7 @@ keywords = ["fortran", "list", "dictionary" ]
 homepage = "https://github.com/urbanjost/M_list.git"
 
 [install]
-   library="true"
+   library=true
 
 [dev-dependencies]
    M_sort    = { git = "https://github.com/urbanjost/M_sort.git" }

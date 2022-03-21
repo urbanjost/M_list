@@ -39,7 +39,7 @@ Just download the github repository, enter the src/ directory and run make(1):
      make F90=nvfortran nvfortran
 
      # optionally
-     make run  # run all the demo programs from the manpages
+     make run  # run all the demo programs from the man-pages
      make help # see other developer options
 
 This will compile the M_list(3f) module.
@@ -70,13 +70,13 @@ or just list it as a dependency in your fpm.toml project file.
 
 ### USER
  - A single page that uses javascript to combine all the HTML descriptions
-   of the manpages is at
+   of the man-pages is at
    [BOOK_M_list](https://urbanjost.github.io/M_list/BOOK_M_list.html).
 
  - An [index](https://urbanjost.github.io/M_list/man3.html) to HTML versions
-   of the manpages 
+   of the man-pages 
 
- - manpages in 
+ - man-pages in 
     + [manpages.zip](https://urbanjost.github.io/M_list/manpages.zip) 
     + [manpages.tgz](https://urbanjost.github.io/M_list/manpages.tgz) 
 
