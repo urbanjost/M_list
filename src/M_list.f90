@@ -203,7 +203,7 @@
 !!       !
 !!       subroutine print_dict()
 !!       integer :: i
-!!          !
+!!          ! the dictionary is just three arrays
 !!          write(*,'("DICTIONARY:")')
 !!          write(*,'(*(a,"==>","[",a,"]",/))') &
 !!          & (trim(dict%key(i)),               &
@@ -1402,9 +1402,9 @@ subroutine dict_delete(self,key)
 
 ! ident_24="@(#)M_list::dict_delete(3f): remove string from sorted allocatable string array if present"
 
-class(dictionary),intent(inout) :: self
-character(len=*),intent(in)     :: key
-integer                         :: place
+class(dictionary),intent(in) :: self
+character(len=*),intent(in)  :: key
+integer                      :: place
 
    call locate(self%key,key,place)
    if(place.ge.1)then
@@ -1493,8 +1493,7 @@ function dict_get(self,key) result(value)
 
 ! ident_25="@(#)M_list::dict_get(3f): get value of key-value pair in dictionary, given key"
 
-!!class(dictionary),intent(inout) :: self
-class(dictionary)               :: self
+class(dictionary),intent(in)    :: self
 character(len=*),intent(in)     :: key
 character(len=:),allocatable    :: value
 integer                         :: place
@@ -1580,14 +1579,14 @@ character(len=*),intent(in)     :: value
 integer                         :: place
 integer                         :: place2
    call locate(self%key,key,place)
-   if(place.lt.1)then
+   if(place.le.0)then
       place2=iabs(place)
       call insert( self%key,   key,             place2 )
       call insert( self%value, value,           place2 )
       call insert( self%count, len_trim(value), place2 )
    elseif(place.gt.0)then  ! replace instead of insert
-      call insert( self%value, value,           place )
-      call insert( self%count, len_trim(value), place )
+      call replace( self%value, value,           place )
+      call replace( self%count, len_trim(value), place )
    endif
 end subroutine dict_add
 !===================================================================================================================================
