@@ -21,7 +21,7 @@
 !!
 !!    The advantage of this simplistic approach is that the dictionary
 !!    components are simple arrays of intrinsic types which can be easily
-!!    accessed with standard routines.  It is easy to understand, as it
+!!    accessed with standard routines. It is easy to understand, as it
 !!    works with simple arrays. For more demanding applications this would
 !!    be implemented as a linked list, which there are a number of freely
 !!    available examples of; several are listed on the Fortran Wiki.
@@ -185,7 +185,7 @@
 !!         !
 !!         call print_dict()
 !!         !
-!!         ! delete dictionary entires
+!!         ! delete dictionary entries
 !!         !
 !!         call  table%del('A')
 !!         call  table%del('C')
@@ -1379,7 +1379,7 @@ end subroutine insert_i
 !!        call caps%set('D','dee')
 !!        ! show current dictionary
 !!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
-!!        ! delete dictionary entires
+!!        ! delete dictionary entries
 !!        call  caps%del('A')
 !!        call  caps%del('C')
 !!        call  caps%del('z') ! a noop as there is no key of 'z'
