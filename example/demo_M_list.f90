@@ -28,7 +28,7 @@
       write(*,*)'get b=>',get('b')
       write(*,*)'get d=>',get('d')
       write(*,*)'get notthere=>',get('notthere')
-
+      !
       contains
       subroutine update(key,valin)
       character(len=*),intent(in)           :: key
@@ -71,4 +71,4 @@
             valout=values(place)(:counts(place))
          endif
       end function get
-  end program demo_M_list
+      end program demo_M_list

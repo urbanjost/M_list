@@ -9,8 +9,10 @@
          call caps%set('C','see')
          call caps%set('D','dee')
          ! show current dictionary
+         write(*,'("DICTIONARY BEFORE CLEARED")')
          write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
          call  caps%clr()
+         write(*,'("DICTIONARY AFTER CLEARED")')
          ! show current dictionary
          write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
 

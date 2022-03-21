@@ -40,7 +40,7 @@
 !!    subroutine remove(list,place)           remove entry from an allocatable
 !!                                            array at specified position
 !!
-!!##EXAMPLE
+!!##EXAMPLES
 !!
 !!   Sample program
 !!
@@ -74,7 +74,7 @@
 !!     write(*,*)'get b=>',get('b')
 !!     write(*,*)'get d=>',get('d')
 !!     write(*,*)'get notthere=>',get('notthere')
-!!
+!!     !
 !!     contains
 !!     subroutine update(key,valin)
 !!     character(len=*),intent(in)           :: key
@@ -117,21 +117,21 @@
 !!           valout=values(place)(:counts(place))
 !!        endif
 !!     end function get
-!!    end program demo_M_list
+!!     end program demo_M_list
 !!
-!!   Results:
+!!   Results
 !!
-!!    d==>[value of d]
-!!    c==>[value of c again]
-!!    b==>[value of b]
-!!    a==>[value of a again]
-!!
-!!    d==>[value of d]
-!!    b==>[value of b]
-!!
-!!     get b=>value of b
-!!     get d=>value of d
-!!     get notthere=>
+!!       >  d==>[value of d]
+!!       >  c==>[value of c again]
+!!       >  b==>[value of b]
+!!       >  a==>[value of a again]
+!!       >
+!!       > d==>[value of d]
+!!       > b==>[value of b]
+!!       >
+!!       >  get b=>value of b
+!!       >  get d=>value of d
+!!       >  get notthere=>
 !!
 !!
 !!    BASIC DICTIONARY
@@ -163,52 +163,56 @@
 !!       %del      delete an existing key from type(dictionary)
 !!       %clr      empty a type(dictionary)
 !!
-!!##EXAMPLE
+!!##EXAMPLES
 !!
 !!   Sample program
 !!
-!!     program dictionary
-!!     use M_list, only : dictionary
-!!     implicit none
-!!     type(dictionary)             :: table
-!!
-!!        ! create a character string dictionary
-!!        call table%set('A','aye')
-!!        call table%set('B','bee')
-!!        call table%set('C','see')
-!!        call table%set('D','dee')
-!!
-!!        write(*,*)'A=',table%get('A')
-!!        write(*,*)'C=',table%get('C')
-!!        write(*,*)'notthere=',table%get('notthere')
-!!
-!!        call print_dict()
-!!
-!!        ! delete dictionary entires
-!!        call  table%del('A')
-!!        call  table%del('C')
-!!        call  table%del('z') ! a noop as there is no key of 'z'
-!!
-!!        call print_dict()
-!!
-!!        call  table%clr()
-!!
-!!        call print_dict()
-!!
-!!     contains
-!!
-!!        subroutine print_dict()
-!!        integer :: i
-!!
-!!            write(*,'("DICTIONARY:")')
-!!            write(*,'(*(a,"==>","[",a,"]",/))') &
-!!            & (trim(dict%key(i)),               &
-!!            & dict%value(i)(:dict%count(i)),    &
-!!            & i=1,size(dict%key))
-!!
-!!        end subroutine print_dict
-!!
-!!     end program dictionary
+!!       program dictionary
+!!       use M_list, only : dictionary
+!!       implicit none
+!!       type(dictionary)             :: table
+!!         !
+!!         ! create a character string dictionary
+!!         !
+!!         call table%set('A','aye')
+!!         call table%set('B','bee')
+!!         call table%set('C','see')
+!!         call table%set('D','dee')
+!!         !
+!!         write(*,*)'A=',table%get('A')
+!!         write(*,*)'C=',table%get('C')
+!!         write(*,*)'notthere=',table%get('notthere')
+!!         !
+!!         call print_dict()
+!!         !
+!!         ! delete dictionary entires
+!!         !
+!!         call  table%del('A')
+!!         call  table%del('C')
+!!         call  table%del('z') ! a noop as there is no key of 'z'
+!!         !
+!!         call print_dict()
+!!         !
+!!         ! clear dictionary
+!!         !
+!!         call  table%clr()
+!!         !
+!!         call print_dict()
+!!       !
+!!       contains
+!!       !
+!!       subroutine print_dict()
+!!       integer :: i
+!!          !
+!!          write(*,'("DICTIONARY:")')
+!!          write(*,'(*(a,"==>","[",a,"]",/))') &
+!!          & (trim(dict%key(i)),               &
+!!          & dict%value(i)(:dict%count(i)),    &
+!!          & i=1,size(dict%key))
+!!          !
+!!       end subroutine print_dict
+!!       !
+!!       end program dictionary
 !!
 !!##AUTHOR
 !!    John S. Urban
@@ -336,9 +340,8 @@ contains
 !!
 !!##EXAMPLES
 !!
-!!
-!!    Find if a string is in a sorted array, and insert the string into
-!!    the list if it is not present ...
+!!   Find if a string is in a sorted array, and insert the string into
+!!   the list if it is not present ...
 !!
 !!     program demo_locate
 !!     use M_sort, only : sort_shell
@@ -390,19 +393,19 @@ contains
 !!     end subroutine update
 !!     end program demo_locate
 !!
-!!   Results:
+!!   Results
 !!
-!!     for "b" index is            2           5
-!!     for "[" index is           -4           5
-!!    SIZE=5 xxx,b,aaa,[,ZZZ,
-!!     for "c" index is           -2           6
-!!    SIZE=6 xxx,c,b,aaa,[,ZZZ,
-!!     for "ZZ" index is           -7           7
-!!    SIZE=7 xxx,c,b,aaa,[,ZZZ,,
-!!     for "ZZZZ" index is           -6           8
-!!    SIZE=8 xxx,c,b,aaa,[,ZZZZ,ZZZ,,
-!!     for "z" index is           -1           9
-!!    SIZE=9 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,,
+!!       >  for "b" index is            2           5
+!!       >  for "[" index is           -4           5
+!!       > SIZE=5 xxx,b,aaa,[,ZZZ,
+!!       >  for "c" index is           -2           6
+!!       > SIZE=6 xxx,c,b,aaa,[,ZZZ,
+!!       >  for "ZZ" index is           -7           7
+!!       > SIZE=7 xxx,c,b,aaa,[,ZZZ,,
+!!       >  for "ZZZZ" index is           -6           8
+!!       > SIZE=8 xxx,c,b,aaa,[,ZZZZ,ZZZ,,
+!!       >  for "z" index is           -1           9
+!!       > SIZE=9 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,,
 !!
 !!##AUTHOR
 !!    1989,2017 John S. Urban
@@ -751,8 +754,7 @@ end subroutine locate_i
 !!
 !!##EXAMPLES
 !!
-!!
-!!    Sample program
+!!   Sample program
 !!
 !!     program demo_remove
 !!     use M_sort, only : sort_shell
@@ -777,13 +779,11 @@ end subroutine locate_i
 !!
 !!     end program demo_remove
 !!
-!!   Results:
+!!   Results
 !!
-!!    Expected output
-!!
-!!     SIZE=9 xxx,bb,b,b,ab,aaa,ZZZ,Z,,
-!!     SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
-!!     SIZE=7 bb,b,b,aaa,ZZZ,Z,,
+!!       > SIZE=9 xxx,bb,b,b,ab,aaa,ZZZ,Z,,
+!!       > SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
+!!       > SIZE=7 bb,b,b,aaa,ZZZ,Z,,
 !!
 !!##AUTHOR
 !!    1989,2017 John S. Urban
@@ -930,7 +930,6 @@ end subroutine remove_i
 !!
 !!##EXAMPLES
 !!
-!!
 !!   Replace key-value pairs in a dictionary
 !!
 !!     program demo_replace
@@ -980,12 +979,12 @@ end subroutine remove_i
 !!     end subroutine update
 !!    end program demo_replace
 !!
-!!   Expected output
+!!   Results
 !!
-!!    d==>value of d
-!!    c==>value of c again
-!!    b==>value of b
-!!    a==>value of a again
+!!    > d==>value of d
+!!    > c==>value of c again
+!!    > b==>value of b
+!!    > a==>value of a again
 !!
 !!##AUTHOR
 !!    1989,2017 John S. Urban
@@ -1138,9 +1137,8 @@ end subroutine replace_i
 !!
 !!##EXAMPLES
 !!
-!!
-!!    Find if a string is in a sorted array, and insert the string into
-!!    the list if it is not present ...
+!!   Find if a string is in a sorted array, and insert the string into
+!!   the list if it is not present ...
 !!
 !!     program demo_insert
 !!     use M_sort, only : sort_shell
@@ -1182,14 +1180,14 @@ end subroutine replace_i
 !!     end subroutine update
 !!     end program demo_insert
 !!
-!!   Results:
+!!   Results
 !!
-!!     array is now SIZE=5 xxx,b,aaa,ZZZ,,
-!!     array is now SIZE=6 xxx,b,aaa,[,ZZZ,,
-!!     array is now SIZE=7 xxx,c,b,aaa,[,ZZZ,,
-!!     array is now SIZE=8 xxx,c,b,aaa,[,ZZZ,ZZ,,
-!!     array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
-!!     array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+!!        > array is now SIZE=5 xxx,b,aaa,ZZZ,,
+!!        > array is now SIZE=6 xxx,b,aaa,[,ZZZ,,
+!!        > array is now SIZE=7 xxx,c,b,aaa,[,ZZZ,,
+!!        > array is now SIZE=8 xxx,c,b,aaa,[,ZZZ,ZZ,,
+!!        > array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+!!        > array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
 !!
 !!##AUTHOR
 !!    1989,2017 John S. Urban
@@ -1367,8 +1365,7 @@ end subroutine insert_i
 !!
 !!##EXAMPLES
 !!
-!!
-!!    delete an entry from a dictionary by key name.
+!!   Delete an entry from a dictionary by key name.
 !!
 !!     program demo_del
 !!     use M_list, only : dictionary
@@ -1392,10 +1389,10 @@ end subroutine insert_i
 !!     101 format (1x,*(a,"='",a,"'",:,","))
 !!     end program demo_del
 !!
-!!    Results:
+!!   Results
 !!
-!!        D='dee',C='see',B='bee',A='aye'
-!!        D='dee',B='bee'
+!!        > D='dee',C='see',B='bee',A='aye'
+!!        > D='dee',B='bee'
 !!
 !!##AUTHOR
 !!    John S. Urban
@@ -1449,7 +1446,6 @@ end subroutine dict_delete
 !!
 !!##EXAMPLES
 !!
-!!
 !!   Sample program:
 !!
 !!     program demo_get
@@ -1476,9 +1472,18 @@ end subroutine dict_delete
 !!        write(*,*)'G=',table%get('G')
 !!        write(*,*)'H=',table%get('H')
 !!
-!!     end program demo_get
+!!      end program demo_get
 !!
-!!    Results:
+!!   Results
+!!
+!!       >  A=value for A
+!!       >  B=value for B
+!!       >  C=value for C
+!!       >  D=value for D
+!!       >  E=value for E
+!!       >  F=value for F
+!!       >  G=value for G
+!!       >  H=
 !!
 !!##AUTHOR
 !!    John S. Urban
@@ -1527,7 +1532,7 @@ end function dict_get
 !!
 !!##EXAMPLES
 !!
-!!    add or replace a key and value pair in a dictionary
+!!   Add or replace a key and value pair in a dictionary
 !!
 !!     program demo_set
 !!     use M_list, only : dictionary
@@ -1549,17 +1554,17 @@ end function dict_get
 !!          & dict%value(i)(:dict%count(i)),   &
 !!          & i=1,size(dict%key))
 !!
-!!     end program demo_set
+!!      end program demo_set
 !!
-!!    Results:
+!!   Results
 !!
-!!        G==>[z]
-!!        F==>[ZZZZ]
-!!        E==>[ZZ]
-!!        D==>[c]
-!!        C==>[]
-!!        B==>[^]
-!!        A==>[new value for A]
+!!       > G==>[z]
+!!       > F==>[ZZZZ]
+!!       > E==>[ZZ]
+!!       > D==>[c]
+!!       > C==>[]
+!!       > B==>[^]
+!!       > A==>[new value for A]
 !!
 !!##AUTHOR
 !!    John S. Urban
@@ -1609,8 +1614,7 @@ end subroutine dict_add
 !!
 !!##EXAMPLES
 !!
-!!
-!!    clear a basic dictionary
+!!   clear a basic dictionary
 !!
 !!     program demo_clr
 !!     use M_list, only : dictionary
@@ -1623,15 +1627,21 @@ end subroutine dict_add
 !!        call caps%set('C','see')
 !!        call caps%set('D','dee')
 !!        ! show current dictionary
+!!        write(*,'("DICTIONARY BEFORE CLEARED")')
 !!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
 !!        call  caps%clr()
+!!        write(*,'("DICTIONARY AFTER CLEARED")')
 !!        ! show current dictionary
 !!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
 !!
 !!     101 format (1x,*(a,"='",a,"'",:,","))
 !!     end program demo_clr
 !!
-!!    Results:
+!!   Results
+!!
+!!       > DICTIONARY BEFORE CLEARED
+!!       >  D='dee',C='see',B='bee',A='aye'
+!!       > DICTIONARY AFTER CLEARED
 !!
 !!##AUTHOR
 !!    John S. Urban
