@@ -162,12 +162,13 @@
 !!       %set      set or replace value for type(dictionary) given a key
 !!       %del      delete an existing key from type(dictionary)
 !!       %clr      empty a type(dictionary)
+!!       %ifdef    test if name is defined
 !!
 !!##EXAMPLES
 !!
 !!   Sample program
 !!
-!!       program dictionary
+!!       program test_dictionary
 !!       use M_list, only : dictionary
 !!       implicit none
 !!       type(dictionary)             :: table
@@ -206,13 +207,13 @@
 !!          ! the dictionary is just three arrays
 !!          write(*,'("DICTIONARY:")')
 !!          write(*,'(*(a,"==>","[",a,"]",/))') &
-!!          & (trim(dict%key(i)),               &
-!!          & dict%value(i)(:dict%count(i)),    &
-!!          & i=1,size(dict%key))
+!!          & (trim(table%key(i)),               &
+!!          & table%value(i)(:table%count(i)),    &
+!!          & i=1,size(table%key))
 !!          !
 !!       end subroutine print_dict
 !!       !
-!!       end program dictionary
+!!       end program test_dictionary
 !!
 !!##AUTHOR
 !!    John S. Urban
@@ -278,10 +279,11 @@ type dictionary
    character(len=:),allocatable :: value(:)
    integer,allocatable          :: count(:)
    contains
-      procedure,public :: get => dict_get    ! get value associated with a key in a dictionary or return blank
-      procedure,public :: set => dict_add    ! insert or replace entry by name into a dictionary
-      procedure,public :: del => dict_delete ! delete entry by name from a dictionary if entry is present
-      procedure,public :: clr => dict_clear  ! clear dictionary
+      procedure,public :: get   => dict_get    ! get value associated with a key in a dictionary or return blank
+      procedure,public :: set   => dict_add    ! insert or replace entry by name into a dictionary
+      procedure,public :: del   => dict_delete ! delete entry by name from a dictionary if entry is present
+      procedure,public :: clr   => dict_clear  ! clear dictionary
+      procedure,public :: ifdef => dict_ifdef  ! return if defined or not
 end type dictionary
 
 logical,save :: debug=.false.
@@ -1594,7 +1596,7 @@ end subroutine dict_add
 !===================================================================================================================================
 !>
 !!##NAME
-!!    del(3f) - [M_list::dictionary::OOPS] clear basic dictionary
+!!    clr(3f) - [M_list::dictionary::OOPS] clear basic dictionary
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -1613,7 +1615,7 @@ end subroutine dict_add
 !!
 !!##EXAMPLES
 !!
-!!   clear a basic dictionary
+!!   create and clear a basic dictionary
 !!
 !!     program demo_clr
 !!     use M_list, only : dictionary
@@ -1658,6 +1660,90 @@ integer                         :: i
    enddo
 
 end subroutine dict_clear
+!===================================================================================================================================
+!()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
+!===================================================================================================================================
+!>
+!!##NAME
+!!    ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present in dictionary or not
+!!    (LICENSE:PD)
+!!
+!!##SYNOPSIS
+!!
+!!   type(dictionary) :: dict
+!!
+!!    character(len=*),intent(in) :: key
+!!    logical :: value
+!!
+!!    value=dict%ifdef(key)
+!!
+!!
+!!##DESCRIPTION
+!!
+!!    determine if name is already defined in dictionary or not
+!!
+!!##OPTIONS
+!!
+!!    DICT     is the dictionary.
+!!    KEY      key name
+!!
+!!##RETURNS
+!!    VALUE    .FALSE. if name not defined, .TRUE if name is defined.
+!!
+!!##EXAMPLES
+!!
+!!   Sample program:
+!!
+!!     program demo_ifdef
+!!     use M_list, only : dictionary
+!!     implicit none
+!!     type(dictionary)             :: table
+!!     character(len=:),allocatable :: val
+!!     integer                      :: i
+!!
+!!        call table%set('A','value for A')
+!!        call table%set('B','value for B')
+!!        call table%set('C','value for C')
+!!        call table%set('D','value for D')
+!!        call table%set('E','value for E')
+!!        call table%set('F','value for F')
+!!        call table%set('G','value for G')
+!!        call table%del('F')
+!!        call table%del('D')
+!!
+!!        write(*,*)'A=',table%ifdef('A')
+!!        write(*,*)'B=',table%ifdef('B')
+!!        write(*,*)'C=',table%ifdef('C')
+!!        write(*,*)'D=',table%ifdef('D')
+!!        write(*,*)'E=',table%ifdef('E')
+!!        write(*,*)'F=',table%ifdef('F')
+!!        write(*,*)'G=',table%ifdef('G')
+!!        write(*,*)'H=',table%ifdef('H')
+!!
+!!      end program demo_ifdef
+!!
+!!   Results
+!!
+!!
+!!##AUTHOR
+!!    John S. Urban
+!!##LICENSE
+!!    Public Domain
+function dict_ifdef(self,key) result(value)
+
+! ident_28="@(#)M_list::dict_ifdef(3f): return whether name is defined or not"
+
+class(dictionary),intent(in)    :: self
+character(len=*),intent(in)     :: key
+logical                         :: value
+integer                         :: place
+   call locate(self%key,key,place)
+   if(place.lt.1)then
+      value=.false.
+   else
+      value=.true.
+   endif
+end function dict_ifdef
 !===================================================================================================================================
 !()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()()=
 !===================================================================================================================================
