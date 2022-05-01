@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="<p>100.0% of total for derived types.</p>Including implementation: 49 statements, 100.0% of total for derived types.">9 statements</a>
+    title="<p>100.0% of total for derived types.</p>Including implementation: 70 statements, 100.0% of total for derived types.">11 statements</a>
      </li> 
      
      
@@ -207,9 +207,13 @@
   <div id="boundprocs-0" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../type/dictionary.html#boundprocedure-clr">clr</a>
+      
       <a class="list-group-item" href="../type/dictionary.html#boundprocedure-del">del</a>
       
       <a class="list-group-item" href="../type/dictionary.html#boundprocedure-get">get</a>
+      
+      <a class="list-group-item" href="../type/dictionary.html#boundprocedure-ifdef">ifdef</a>
       
       <a class="list-group-item" href="../type/dictionary.html#boundprocedure-set">set</a>
       
@@ -285,9 +289,13 @@
   <div id="boundprocs-1" class="panel-collapse collapse">
     <div class="list-group">
       
+      <a class="list-group-item" href="../type/dictionary.html#boundprocedure-clr">clr</a>
+      
       <a class="list-group-item" href="../type/dictionary.html#boundprocedure-del">del</a>
       
       <a class="list-group-item" href="../type/dictionary.html#boundprocedure-get">get</a>
+      
+      <a class="list-group-item" href="../type/dictionary.html#boundprocedure-ifdef">ifdef</a>
       
       <a class="list-group-item" href="../type/dictionary.html#boundprocedure-set">set</a>
       
@@ -382,7 +390,7 @@
     
      
 <div class="panel panel-default">
-  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-del"></span><h3>procedure, public :: <strong>del</strong>  => dict_delete 
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-clr"></span><h3>procedure, public :: <strong>clr</strong>  => dict_clear 
     
   </h3></div>
   
@@ -394,7 +402,7 @@
           
     
     <h3>
-private subroutine dict_delete(self, key)
+private subroutine dict_clear(self)
     
     
    
@@ -403,7 +411,7 @@ private subroutine dict_delete(self, key)
 
 
 
-<p>subroutine dict_delete(key,dict)</p><a href="../proc/dict_delete.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>type(dictionary) :: dict</p><a href="../proc/dict_clear.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -426,6 +434,74 @@ private subroutine dict_delete(self, key)
   
   <td><span class="anchor" ></span>class(<a href='../type/dictionary.html'>dictionary</a>),</td>
   <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-del"></span><h3>procedure, public :: <strong>del</strong>  => dict_delete 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+private subroutine dict_delete(self, key)
+    
+    
+   
+</h3>
+    
+
+
+
+<p>type(dictionary) :: dict</p><a href="../proc/dict_delete.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/dictionary.html'>dictionary</a>),</td>
+  <td>intent(in)</td>
   <td></td>
   
   <td></td><td>::</td>
@@ -486,7 +562,7 @@ private function dict_get(self, key) result(value)
 
 
 
-<p>subroutine dict_get(dict,key,value)</p><a href="../proc/dict_get.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>type(dictionary) :: dict</p><a href="../proc/dict_get.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -507,8 +583,8 @@ private function dict_get(self, key) result(value)
   
 <tr>
   
-  <td><span class="anchor" ></span>class(<a href='../type/dictionary.html'>dictionary</a>)</td>
-  <td></td>
+  <td><span class="anchor" ></span>class(<a href='../type/dictionary.html'>dictionary</a>),</td>
+  <td>intent(in)</td>
   <td></td>
   
   <td></td><td>::</td>
@@ -557,6 +633,98 @@ private function dict_get(self, key) result(value)
     
      
 <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-ifdef"></span><h3>procedure, public :: <strong>ifdef</strong>  => dict_ifdef 
+    
+  </h3></div>
+  
+  <ul class="list-group">
+    
+      <li class="list-group-item">
+      
+        
+          
+    
+    <h3>
+private function dict_ifdef(self, key) result(value)
+    
+    
+   
+</h3>
+    
+
+
+
+<p>type(dictionary) :: dict</p><a href="../proc/dict_ifdef.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>class(<a href='../type/dictionary.html'>dictionary</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>self</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>character(len=*),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>key</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>logical
+  </small></h4>
+  
+    
+
+        
+      
+      </li>
+    
+  </ul>
+</div>
+
+    
+     
+<div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="boundprocedure-set"></span><h3>procedure, public :: <strong>set</strong>  => dict_add 
     
   </h3></div>
@@ -578,7 +746,7 @@ private subroutine dict_add(self, key, value)
 
 
 
-<p>subroutine dict_add(dict,key,value)</p><a href="../proc/dict_add.html" class="pull-right"><emph>Read more&hellip;</emph></a>
+<p>type(dictionary) :: dict</p><a href="../proc/dict_add.html" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -664,9 +832,11 @@ private subroutine dict_add(self, key, value)
    <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="k">value</span><span class="p">(:)</span>
    <span class="kt">integer</span><span class="p">,</span><span class="k">allocatable</span>          <span class="kd">::</span> <span class="nb">count</span><span class="p">(:)</span>
    <span class="k">contains</span>
-<span class="k">      procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">get</span> <span class="o">=&gt;</span> <span class="n">dict_get</span>
-      <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">set</span> <span class="o">=&gt;</span> <span class="n">dict_add</span>    <span class="c">! insert entry by name into a sorted allocatable character array if it is not present</span>
-      <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">del</span> <span class="o">=&gt;</span> <span class="n">dict_delete</span> <span class="c">! delete entry by name from a sorted allocatable character array if it is present</span>
+<span class="k">      procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">get</span>   <span class="o">=&gt;</span> <span class="n">dict_get</span>    <span class="c">! get value associated with a key in a dictionary or return blank</span>
+      <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">set</span>   <span class="o">=&gt;</span> <span class="n">dict_add</span>    <span class="c">! insert or replace entry by name into a dictionary</span>
+      <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">del</span>   <span class="o">=&gt;</span> <span class="n">dict_delete</span> <span class="c">! delete entry by name from a dictionary if entry is present</span>
+      <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">clr</span>   <span class="o">=&gt;</span> <span class="n">dict_clear</span>  <span class="c">! clear dictionary</span>
+      <span class="k">procedure</span><span class="p">,</span><span class="k">public</span> <span class="kd">::</span> <span class="n">ifdef</span> <span class="o">=&gt;</span> <span class="n">dict_ifdef</span>  <span class="c">! return if defined or not</span>
 <span class="k">end type </span><span class="n">dictionary</span>
 </pre></div>
 
@@ -688,7 +858,7 @@ private subroutine dict_add(self, key, value)
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
-             on 2022-02-28 23:00  
+             on 2022-05-01 11:43  
           </p>
         </div>
         <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_list was developed by John S. Urban</p></div>

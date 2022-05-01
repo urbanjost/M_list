@@ -17,11 +17,12 @@
       call update('d','value of d')
       call update('a','value of a again')
       ! show array
-      write(*,'(*(a,"==>",a,/))')(trim(keywords(i)),trim(values(i)),i=1,size(keywords))
+      write(*,'(*(a,"==>",a,/))')&
+             &(trim(keywords(i)),trim(values(i)),i=1,size(keywords))
 
       call locate(keywords,'a',place)
       if(place.gt.0)then
-         write(*,*)'The value of "a" is',trim(values(place))
+         write(*,*)'The value of "a" is ',trim(values(place))
       else
          write(*,*)'"a" not found'
       endif

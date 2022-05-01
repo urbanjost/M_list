@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="56.2% of total for procedures.">123 statements</a>
+    title="64.1% of total for procedures.">180 statements</a>
      </li> 
      
      
@@ -198,9 +198,13 @@
   <div class="list-group">
     <div id="subs-0" class="panel-collapse collapse">
       
+      <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_clr">test_dict_clr</a>
+      
       <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_delete">test_dict_delete</a>
       
       <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_get">test_dict_get</a>
+      
+      <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_ifdef">test_dict_ifdef</a>
       
       <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_set">test_dict_set</a>
       
@@ -321,9 +325,13 @@ subroutine test_suite_M_list()
   <div class="list-group">
     <div id="subs-1" class="panel-collapse collapse">
       
+      <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_clr">test_dict_clr</a>
+      
       <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_delete">test_dict_delete</a>
       
       <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_get">test_dict_get</a>
+      
+      <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_ifdef">test_dict_ifdef</a>
       
       <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_set">test_dict_set</a>
       
@@ -426,6 +434,28 @@ subroutine test_suite_M_list()
     
     
   <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_clr"></span><h3>
+subroutine test_dict_clr()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
   <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_delete"></span><h3>
 subroutine test_dict_delete()
     
@@ -435,14 +465,6 @@ subroutine test_dict_delete()
   <div class="panel-body">
        
     
-
-
-
-
-
-
-
-<p>call unit_check(&lsquo;dict%del&rsquo;,all(dict.eq.[character(len=20) :: &lsquo;z&rsquo;,&rsquo;c&rsquo;,&rsquo;b&rsquo;,&rsquo;ZZZ&rsquo;,&rsquo;ZZ&rsquo;,&rsquo;A&rsquo;]),&rsquo;string deletes &lsquo;)</p>
     
     <h4>Arguments</h4>
     
@@ -465,14 +487,28 @@ subroutine test_dict_get()
   <div class="panel-body">
        
     
+    
+    <h4>Arguments</h4>
+    
+      <em>None</em>
+    
+    
 
+  </div>
+  </div>
 
-
-
-
-
-
-<p>call unit_check(&lsquo;dict%get&rsquo;,all(dict.eq.[character(len=20) :: &lsquo;z&rsquo;,&rsquo;c&rsquo;,&rsquo;b&rsquo;,&rsquo;ZZZ&rsquo;,&rsquo;ZZ&rsquo;,&rsquo;A&rsquo;]),&rsquo;string deletes &lsquo;)</p>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_ifdef"></span><h3>
+subroutine test_dict_ifdef()
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
     
     <h4>Arguments</h4>
     
@@ -495,14 +531,6 @@ subroutine test_dict_set()
   <div class="panel-body">
        
     
-
-
-
-
-
-
-
-<p>call unit_check(&lsquo;dict%set&rsquo;,all(dict.eq.[character(len=20) :: &lsquo;A&rsquo;]),msg=&rsquo;array should be A&rsquo;)</p><a href="None" class="pull-right"><emph>Read more&hellip;</emph></a>
     
     <h4>Arguments</h4>
     
@@ -615,14 +643,17 @@ subroutine test_replace()
 <span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">parameter</span>   <span class="kd">::</span> <span class="n">share</span><span class="o">=</span><span class="s1">&#39; -library libGPF -filename `pwd`/M_list.FF -documentation y -ufpp y -ccall n -archive GPF.a&#39;</span>
 <span class="kt">integer</span>                      <span class="kd">::</span> <span class="n">place</span>
    <span class="c">! list</span>
-   <span class="k">call </span><span class="n">test_locate</span><span class="p">()</span>
-   <span class="k">call </span><span class="n">test_insert</span><span class="p">()</span>
-   <span class="k">call </span><span class="n">test_remove</span><span class="p">()</span>
-   <span class="k">call </span><span class="n">test_replace</span><span class="p">()</span>
+   <span class="k">call </span><span class="n">test_locate</span><span class="p">()</span>        <span class="c">! finds the index where a string is found or should be in a sorted array </span>
+   <span class="k">call </span><span class="n">test_insert</span><span class="p">()</span>        <span class="c">! insert entry into a string array at specified position </span>
+   <span class="k">call </span><span class="n">test_remove</span><span class="p">()</span>        <span class="c">! remove entry from an allocatable array at specified position </span>
+   <span class="k">call </span><span class="n">test_replace</span><span class="p">()</span>       <span class="c">! replace entry in a string array at specified position </span>
    <span class="c">! dictionary</span>
-   <span class="k">call </span><span class="n">test_dict_set</span><span class="p">()</span>
-   <span class="k">call </span><span class="n">test_dict_delete</span><span class="p">()</span>
-   <span class="k">call </span><span class="n">test_dict_get</span><span class="p">()</span>
+   <span class="k">call </span><span class="n">test_dict_set</span><span class="p">()</span>      <span class="c">! add or replace a key-value pair in a dictionary </span>
+   <span class="k">call </span><span class="n">test_dict_delete</span><span class="p">()</span>   <span class="c">! delete entry by key name from a basic dictionary</span>
+   <span class="k">call </span><span class="n">test_dict_get</span><span class="p">()</span>      <span class="c">! value of key-value pair in a dictionary given key </span>
+   <span class="k">call </span><span class="n">test_dict_ifdef</span><span class="p">()</span>    <span class="c">! return whether name is present in dictionary or not </span>
+   <span class="k">call </span><span class="n">test_dict_clr</span><span class="p">()</span>      <span class="c">! clear basic dictionary </span>
+
    <span class="c">!</span>
 <span class="k">contains</span>
 <span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
@@ -632,18 +663,18 @@ subroutine test_replace()
    <span class="p">&amp;</span> <span class="s1">&#39; -description &quot;add string into allocatable string array by name&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span>
    <span class="k">call  </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;value for a&#39;</span><span class="p">)</span>
 
-   <span class="c">!!call unit_check(&#39;dict%set&#39;,all(dict.eq.[character(len=20) :: &#39;A&#39;]),msg=&#39;array should be A&#39;)</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="n">msg</span><span class="o">=</span><span class="s1">&#39;array should be A&#39;</span><span class="p">)</span>
 
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;value for b&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;value for c&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;value for z&#39;</span><span class="p">)</span>
-   <span class="c">!!call unit_check(&#39;dict%set&#39;,all(dict.eq.[character(len=20) :: &#39;z&#39;,&#39;c&#39;,&#39;b&#39;,&#39;A&#39;]),&#39;array should be z c b A&#39;)</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="s1">&#39;array should be z c b A&#39;</span><span class="p">)</span>
 
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;value for ZZ&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;NOT&#39;</span><span class="p">,</span><span class="s1">&#39;not this one&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="s1">&#39;value for ZZZ&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;value for Z&#39;</span><span class="p">)</span>
-   <span class="c">!!call unit_check(&#39;dict%set&#39;,all(dict.eq.[character(len=20) :: &#39;z&#39;,&#39;not this one&#39;,&#39;c&#39;,&#39;b&#39;,&#39;ZZZ&#39;,&#39;ZZ&#39;,&#39;Z&#39;,&#39;A&#39;]),&#39;string adds &#39;)</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;NOT&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="s1">&#39;strings ok&#39;</span><span class="p">)</span>
 
    <span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">)</span> 
 <span class="k">end subroutine </span><span class="n">test_dict_set</span>
@@ -653,23 +684,89 @@ subroutine test_replace()
    <span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">,&amp;</span>
    <span class="p">&amp;</span> <span class="s1">&#39; -description &quot;delete string by name from allocatable string array&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span>
 
+    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;some A&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;some a&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;some b&#39;</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;some ZZ&#39;</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="s1">&#39;some ZZZ&#39;</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;some ZZ&#39;</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;some Z&#39;</span><span class="p">)</span>
+    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;some z&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;some c&#39;</span><span class="p">)</span>
+   <span class="c">!write(*,&#39;(&quot;built &quot;,a)&#39;)dict%key</span>
+
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>
    <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
-   <span class="c">!!call unit_check(&#39;dict%del&#39;,all(dict.eq.[character(len=20) :: &#39;z&#39;,&#39;c&#39;,&#39;b&#39;,&#39;ZZZ&#39;,&#39;ZZ&#39;,&#39;A&#39;]),&#39;string deletes &#39;)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+   <span class="c">!write(*,&#39;(&quot;remaining &quot;,a)&#39;)dict%key</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]),</span><span class="s1">&#39;string deletes keys&#39;</span><span class="p">)</span>
+   <span class="c">!write(*,&#39;(&quot;remaining key &quot;,a)&#39;)dict%key</span>
+   <span class="c">!write(*,&#39;(&quot;remaining val &quot;,a)&#39;)dict%value</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="k">value</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;some c&#39;</span><span class="p">,</span><span class="s1">&#39;some b&#39;</span><span class="p">,</span><span class="s1">&#39;some a&#39;</span><span class="p">]),</span><span class="s1">&#39;string deletes values&#39;</span><span class="p">)</span>
 
    <span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">)</span>
 <span class="k">end subroutine </span><span class="n">test_dict_delete</span>
 <span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_ifdef</span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">tt</span>
+<span class="kt">logical</span><span class="p">,</span><span class="k">allocatable</span>  <span class="kd">::</span> <span class="n">answers</span><span class="p">(:)</span>
+   <span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%ifdef&#39;</span><span class="p">,&amp;</span>
+   <span class="p">&amp;</span> <span class="s1">&#39; -description &quot;return whether name is present in dictionary or not&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;value for A&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;value for B&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;value for C&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;value for D&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;value for E&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;value for F&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;value for G&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+
+   <span class="n">answers</span><span class="o">=</span><span class="p">[</span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)]</span>
+
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">answers</span><span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">[.</span><span class="n">true</span><span class="p">.,</span> <span class="p">.</span><span class="n">true</span><span class="p">.,</span> <span class="p">.</span><span class="n">true</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">true</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">true</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.]),</span><span class="s1">&#39;ifdef tests&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%ifdef&#39;</span><span class="p">)</span>
+
+<span class="k">end subroutine </span><span class="n">test_dict_ifdef</span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_clr</span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>     <span class="kd">::</span> <span class="n">tt</span>
+<span class="kt">logical</span><span class="p">,</span><span class="k">allocatable</span>  <span class="kd">::</span> <span class="n">answers</span><span class="p">(:)</span>
+   <span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%ifdef&#39;</span><span class="p">,&amp;</span>
+   <span class="p">&amp;</span> <span class="s1">&#39; -description &quot;return whether name is present in dictionary or not&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;value for A&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;value for B&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;value for C&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;value for D&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;value for E&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;value for F&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;value for G&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">clr</span><span class="p">()</span>
+
+   <span class="n">answers</span><span class="o">=</span><span class="p">[</span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">),</span> <span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)]</span>
+
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">answers</span><span class="p">.</span><span class="n">eqv</span><span class="p">.</span> <span class="p">[.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.,</span> <span class="p">.</span><span class="n">false</span><span class="p">.]),</span><span class="s1">&#39;clr tests&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%clr&#39;</span><span class="p">)</span>
+
+<span class="k">end subroutine </span><span class="n">test_dict_clr</span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
 <span class="k">subroutine </span><span class="n">test_dict_get</span>
 <span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>             <span class="kd">::</span> <span class="n">dict</span>
-<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">val</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">),</span><span class="k">allocatable</span> <span class="kd">::</span> <span class="n">val</span><span class="p">(:)</span>
    <span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">,&amp;</span>
    <span class="p">&amp;</span> <span class="s1">&#39; -description &quot;locate and get value from key-value pair by key name from dictionary&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span>
-   <span class="n">val</span><span class="o">=</span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
-   <span class="n">val</span><span class="o">=</span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span>
-   <span class="n">val</span><span class="o">=</span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span>
-   <span class="c">!!call unit_check(&#39;dict%get&#39;,all(dict.eq.[character(len=20) :: &#39;z&#39;,&#39;c&#39;,&#39;b&#39;,&#39;ZZZ&#39;,&#39;ZZ&#39;,&#39;A&#39;]),&#39;string deletes &#39;)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;some A&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;some Z&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="s1">&#39;some X&#39;</span><span class="p">)</span>
+   <span class="n">val</span><span class="o">=</span><span class="p">[</span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">),</span> <span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span> <span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)]</span>
+   <span class="c">!write(*,&#39;(&quot;remaining &quot;,a)&#39;)dict%key</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="s1">&#39;string get keys&#39;</span><span class="p">)</span>
+   <span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="k">value</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span> <span class="kd">::</span> <span class="s1">&#39;some Z&#39;</span><span class="p">,</span><span class="s1">&#39;some X&#39;</span><span class="p">,</span><span class="s1">&#39;some A&#39;</span><span class="p">]),</span><span class="s1">&#39;string get values &#39;</span><span class="p">)</span>
 
    <span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">)</span>
 <span class="k">end subroutine </span><span class="n">test_dict_get</span>
@@ -787,7 +884,7 @@ subroutine test_replace()
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
-             on 2022-02-28 23:00  
+             on 2022-05-01 11:43  
           </p>
         </div>
         <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_list was developed by John S. Urban</p></div>

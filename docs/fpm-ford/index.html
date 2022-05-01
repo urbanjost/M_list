@@ -140,14 +140,16 @@
 <h2 id="m_list3f-maintain-a-sorted-intrinsic-type-array-in-fortran">M_list(3f) - maintain a sorted intrinsic type array in Fortran</h2>
 <h2 id="description">DESCRIPTION</h2>
 <p>As shown in the examples the M_list(3f) module contains simple routines
-   to add, replace  and delete values from an automatically sorted array
-   allow for creating simple dictionaries.</p>
+   to add, replace  and delete values from an automatically sorted array,
+   which allows for creating simple dictionaries.</p>
 <p>The advantage of this routine over more conventional methods is
    that the dictionary components are simple arrays which can be easily
    accessed with standard routines.</p>
 <p>Each time an entry is added or deleted the array is re-allocated.
    Because of the expense of reallocating the data these routines are best
    suited for maintaining small lists that do not change size frequently.</p>
+<p>For more demanding needs, see linked-list methods for maintaining generic
+   dictionaries; several examples of which are available on the Fortran Wiki.</p>
 <h2 id="building-the-module-using-make1">BUILDING THE MODULE USING make(1) <img alt="gmake" src="docs/images/gnu.gif"></h2>
 <p>Just download the github repository, enter the src/ directory and run make(1):</p>
 <div class="codehilite"><pre><span></span><code> <span class="nv">git</span> <span class="nv">clone</span> <span class="nv">https</span>:<span class="o">//</span><span class="nv">github</span>.<span class="nv">com</span><span class="o">/</span><span class="nv">urbanjost</span><span class="o">/</span><span class="nv">M_list</span>.<span class="nv">git</span>
@@ -167,12 +169,12 @@
  <span class="nv">make</span> <span class="nv">F90</span><span class="o">=</span><span class="nv">nvfortran</span> <span class="nv">nvfortran</span>
 
  # <span class="nv">optionally</span>
- <span class="nv">make</span> <span class="nv">run</span>  # <span class="nv">run</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">demo</span> <span class="nv">programs</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">manpages</span>
+ <span class="nv">make</span> <span class="nv">run</span>  # <span class="nv">run</span> <span class="nv">all</span> <span class="nv">the</span> <span class="nv">demo</span> <span class="nv">programs</span> <span class="nv">from</span> <span class="nv">the</span> <span class="nv">man</span><span class="o">-</span><span class="nv">pages</span>
  <span class="nv">make</span> <span class="nv">help</span> # <span class="nv">see</span> <span class="nv">other</span> <span class="nv">developer</span> <span class="nv">options</span>
 </code></pre></div>
 
 <p>This will compile the M_list(3f) module.</p>
-<h2 id="build-and-test-with-fpm">BUILD and TEST with fpm<img alt="fpm" src="docs/images/fpm_logo.gif"></h2>
+<h2 id="build-and-test-with-fpm">BUILD and TEST with fpm  <img alt="fpm" src="docs/images/fpm_logo.gif"></h2>
 <p>Alternatively, download the github repository and build it with 
 fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Package Manager</a> )</p>
 <div class="codehilite"><pre><span></span><code>     git clone https://github.com/urbanjost/M_list.git
@@ -193,15 +195,15 @@ fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Pack
 <ul>
 <li>
 <p>A single page that uses javascript to combine all the HTML descriptions
-   of the manpages is at
+   of the man-pages is at
    <a href="https://urbanjost.github.io/M_list/BOOK_M_list.html">BOOK_M_list</a>.</p>
 </li>
 <li>
 <p>An <a href="https://urbanjost.github.io/M_list/man3.html">index</a> to HTML versions
-   of the manpages </p>
+   of the man-pages </p>
 </li>
 <li>
-<p>manpages in </p>
+<p>man-pages in </p>
 <ul>
 <li><a href="https://urbanjost.github.io/M_list/manpages.zip">manpages.zip</a> </li>
 <li><a href="https://urbanjost.github.io/M_list/manpages.tgz">manpages.tgz</a> </li>
@@ -258,6 +260,26 @@ fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Pack
               <ul>
                 
                   
+                    <li><a href='./sourcefile/demo_clr.f90.html'>demo_clr.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/demo_del.f90.html'>demo_del.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/demo_dictionary.f90.html'>demo_dictionary.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/demo_get.f90.html'>demo_get.f90</a></li>
+                  
+                
+                  
+                    <li><a href='./sourcefile/demo_ifdef.f90.html'>demo_ifdef.f90</a></li>
+                  
+                
+                  
                     <li><a href='./sourcefile/demo_insert.f90.html'>demo_insert.f90</a></li>
                   
                 
@@ -278,11 +300,11 @@ fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Pack
                   
                 
                   
-                    <li><a href='./sourcefile/m_list.f90.html'>M_list.f90</a></li>
+                    <li><a href="./lists/files.html"><em>All source files&hellip;</em></a></li>
                   
                 
                   
-                    <li><a href='./sourcefile/test_suite_m_list.f90.html'>test_suite_M_list.f90</a></li>
+                
                   
                 
               </ul>
@@ -317,6 +339,10 @@ fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Pack
                   
                 
                   
+                    <li><a href='./proc/print_dict.html'>print_dict</a></li>
+                  
+                
+                  
                     <li><a href='./interface/remove.html'>remove</a></li>
                   
                 
@@ -341,7 +367,7 @@ fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Pack
                   
                 
                   
-                    <li><a href='./proc/update~4.html'>update</a></li>
+                    <li><a href="./lists/procedures.html"><em>All procedures&hellip;</em></a></li>
                   
                 
               </ul>
@@ -372,7 +398,7 @@ fpm ( as described at <a href="https://github.com/fortran-lang/fpm">Fortran Pack
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
-             on 2022-02-28 23:00  
+             on 2022-05-01 11:43  
           </p>
         </div>
         <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_list was developed by John S. Urban</p></div>

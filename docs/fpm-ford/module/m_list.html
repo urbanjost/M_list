@@ -130,7 +130,7 @@
      <li><i class="fa fa-list-ol"></i>
        <a data-toggle="tooltip"
     data-placement="bottom" data-html="true"
-    title="100.0% of total for modules and submodules.">658 statements</a>
+    title="100.0% of total for modules and submodules.">679 statements</a>
      </li> 
      
      
@@ -228,55 +228,43 @@
 </code></pre></div>
 
 <h2 id="synopsis">SYNOPSIS</h2>
-<div class="codehilite"><pre><span></span><code>use M_list, only : insert, replace, remove
+<div class="codehilite"><pre><span></span><code>use M_list, only : insert, replace, remove, locate
 use M_list, only : dictionary
 </code></pre></div>
 
 <h2 id="description">DESCRIPTION</h2>
-<div class="codehilite"><pre><span></span><code><span class="n">The</span> <span class="n">M_list</span><span class="p">(</span><span class="mf">3f</span><span class="n">m</span><span class="p">)</span> <span class="k">module</span> <span class="n">allows</span> <span class="k">for</span> <span class="n">maintaining</span> <span class="n">an</span> <span class="n">array</span> <span class="n">as</span> <span class="n">a</span> <span class="n">sorted</span>
-<span class="n">list</span><span class="p">.</span> <span class="n">An</span> <span class="n">example</span> <span class="n">is</span> <span class="n">given</span> <span class="n">that</span> <span class="n">creates</span> <span class="n">a</span> <span class="n">keyword</span><span class="o">-</span><span class="n">value</span> <span class="n">dictionary</span>
-<span class="k">using</span> <span class="n">the</span> <span class="n">lists</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span><code><span class="nv">The</span> <span class="nv">M_list</span><span class="ss">(</span><span class="mi">3</span><span class="nv">fm</span><span class="ss">)</span> <span class="nv">module</span> <span class="nv">allows</span> <span class="k">for</span> <span class="nv">maintaining</span> <span class="nv">an</span> <span class="nv">allocatable</span> <span class="nv">array</span> <span class="nv">of</span>
+<span class="nv">intrinsic</span> <span class="nv">type</span> <span class="ss">(</span><span class="nv">REAL</span>, <span class="nv">INTEGER</span>, <span class="nv">CHARACTER</span><span class="ss">)</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">sorted</span> <span class="nv">list</span>. <span class="nv">An</span> <span class="nv">example</span>
+<span class="nv">is</span> <span class="nv">given</span> <span class="nv">that</span> <span class="nv">creates</span> <span class="nv">a</span> <span class="nv">keyword</span><span class="o">-</span><span class="nv">value</span> <span class="nv">dictionary</span> <span class="nv">using</span> <span class="nv">the</span> <span class="nv">lists</span>.
 
-<span class="n">The</span> <span class="n">lists</span> <span class="n">are</span> <span class="n">maintained</span> <span class="n">as</span> <span class="n">simple</span> <span class="n">allocatable</span> <span class="n">arrays</span><span class="p">.</span> <span class="n">Each</span> <span class="n">time</span> <span class="n">an</span>
-<span class="n">entry</span> <span class="n">is</span> <span class="n">added</span> <span class="n">or</span> <span class="n">deleted</span> <span class="n">the</span> <span class="n">array</span> <span class="n">is</span> <span class="n">re</span><span class="o">-</span><span class="n">allocated</span><span class="p">.</span> <span class="n">Because</span> <span class="n">of</span> <span class="n">the</span>
-<span class="n">expense</span> <span class="n">of</span> <span class="n">reallocating</span> <span class="n">the</span> <span class="n">data</span> <span class="n">these</span> <span class="n">routines</span> <span class="n">are</span> <span class="n">best</span> <span class="n">suited</span> <span class="k">for</span>
-<span class="n">maintaining</span> <span class="n">small</span> <span class="n">lists</span> <span class="n">that</span> <span class="k">do</span> <span class="n">not</span> <span class="n">change</span> <span class="n">size</span> <span class="n">frequently</span><span class="p">.</span>
+<span class="nv">The</span> <span class="nv">lists</span> <span class="nv">are</span> <span class="nv">maintained</span> <span class="nv">as</span> <span class="nv">simple</span> <span class="nv">allocatable</span> <span class="nv">arrays</span>. <span class="nv">Each</span> <span class="nv">time</span> <span class="nv">an</span>
+<span class="nv">entry</span> <span class="nv">is</span> <span class="nv">added</span> <span class="nv">or</span> <span class="nv">deleted</span> <span class="nv">the</span> <span class="nv">array</span> <span class="nv">is</span> <span class="nv">re</span><span class="o">-</span><span class="nv">allocated</span>. <span class="nv">Because</span> <span class="nv">of</span> <span class="nv">the</span>
+<span class="nv">expense</span> <span class="nv">of</span> <span class="nv">reallocating</span> <span class="nv">the</span> <span class="nv">data</span> <span class="nv">these</span> <span class="nv">routines</span> <span class="nv">are</span> <span class="nv">best</span> <span class="nv">suited</span> <span class="k">for</span>
+<span class="nv">maintaining</span> <span class="nv">small</span> <span class="nv">lists</span> <span class="nv">that</span> <span class="k">do</span> <span class="nv">not</span> <span class="nv">change</span> <span class="nv">size</span> <span class="nv">frequently</span>.
 
-<span class="n">The</span> <span class="n">advantage</span> <span class="n">is</span> <span class="n">that</span> <span class="n">the</span> <span class="n">dictionary</span> <span class="n">components</span> <span class="n">are</span> <span class="n">simple</span> <span class="n">arrays</span> <span class="n">of</span>
-<span class="n">intrinsic</span> <span class="n">types</span> <span class="n">which</span> <span class="n">can</span> <span class="n">be</span> <span class="n">easily</span> <span class="n">accessed</span> <span class="n">with</span> <span class="n">standard</span> <span class="n">routines</span><span class="p">.</span>
+<span class="nv">The</span> <span class="nv">advantage</span> <span class="nv">of</span> <span class="nv">this</span> <span class="nv">simplistic</span> <span class="nv">approach</span> <span class="nv">is</span> <span class="nv">that</span> <span class="nv">the</span> <span class="nv">dictionary</span>
+<span class="nv">components</span> <span class="nv">are</span> <span class="nv">simple</span> <span class="nv">arrays</span> <span class="nv">of</span> <span class="nv">intrinsic</span> <span class="nv">types</span> <span class="nv">which</span> <span class="nv">can</span> <span class="nv">be</span> <span class="nv">easily</span>
+<span class="nv">accessed</span> <span class="nv">with</span> <span class="nv">standard</span> <span class="nv">routines</span>. <span class="nv">It</span> <span class="nv">is</span> <span class="nv">easy</span> <span class="nv">to</span> <span class="nv">understand</span>, <span class="nv">as</span> <span class="nv">it</span>
+<span class="nv">works</span> <span class="nv">with</span> <span class="nv">simple</span> <span class="nv">arrays</span>. <span class="k">For</span> <span class="nv">more</span> <span class="nv">demanding</span> <span class="nv">applications</span> <span class="nv">this</span> <span class="nv">would</span>
+<span class="nv">be</span> <span class="nv">implemented</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">linked</span> <span class="nv">list</span>, <span class="nv">which</span> <span class="nv">there</span> <span class="nv">are</span> <span class="nv">a</span> <span class="nv">number</span> <span class="nv">of</span> <span class="nv">freely</span>
+<span class="nv">available</span> <span class="nv">examples</span> <span class="nv">of</span><span class="c1">; several are listed on the Fortran Wiki.</span>
 
-<span class="n">BASIC</span> <span class="n">LIST</span>
+<span class="nv">BASIC</span> <span class="nv">LIST</span>
 
-<span class="n">subroutine</span> <span class="n">locate</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">place</span><span class="p">,</span><span class="n">ier</span><span class="p">,</span><span class="n">errmsg</span><span class="p">)</span>  <span class="n">finds</span> <span class="n">the</span> <span class="n">index</span> <span class="n">where</span> <span class="n">a</span>
-                                                <span class="n">value</span> <span class="n">is</span> <span class="n">found</span> <span class="n">or</span> <span class="n">should</span>
-                                                <span class="n">be</span> <span class="n">in</span> <span class="n">a</span> <span class="n">sorted</span> <span class="n">array</span> <span class="n">and</span>
-                                                <span class="n">flag</span> <span class="k">if</span> <span class="n">the</span> <span class="n">value</span> <span class="n">exists</span>
-                                                <span class="n">already</span>
-<span class="n">subroutine</span> <span class="n">insert</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">place</span><span class="p">)</span>     <span class="n">insert</span> <span class="n">entry</span> <span class="n">into</span> <span class="n">an</span> <span class="n">allocatable</span>
-                                        <span class="n">array</span> <span class="n">at</span> <span class="n">specified</span> <span class="n">position</span>
-<span class="n">subroutine</span> <span class="n">replace</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="n">value</span><span class="p">,</span><span class="n">place</span><span class="p">)</span>    <span class="n">replace</span> <span class="n">entry</span> <span class="n">in</span> <span class="n">an</span> <span class="n">allocatable</span>
-                                        <span class="n">array</span> <span class="n">at</span> <span class="n">specified</span> <span class="n">position</span>
-<span class="n">subroutine</span> <span class="n">remove</span><span class="p">(</span><span class="n">list</span><span class="p">,</span><span class="n">place</span><span class="p">)</span>           <span class="n">remove</span> <span class="n">entry</span> <span class="n">from</span> <span class="n">an</span> <span class="n">allocatable</span>
-                                        <span class="n">array</span> <span class="n">at</span> <span class="n">specified</span> <span class="n">position</span>
-
-<span class="n">BASIC</span> <span class="n">DICTIONARY</span>
-
-<span class="n">Due</span> <span class="n">to</span> <span class="n">bugs</span> <span class="n">in</span> <span class="n">gfortran</span> <span class="n">up</span> <span class="n">to</span> <span class="n">at</span> <span class="n">least</span> <span class="mf">7.4.0</span><span class="p">,</span> <span class="k">this</span> <span class="n">next</span> <span class="n">section</span>
-<span class="n">does</span> <span class="n">not</span> <span class="n">work</span><span class="p">.</span>
-
-<span class="n">type</span> <span class="n">dictionary</span>
-
-   <span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=:</span><span class="p">),</span><span class="n">allocatable</span> <span class="o">::</span> <span class="n">key</span><span class="p">(</span><span class="o">:</span><span class="p">)</span>
-   <span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=:</span><span class="p">),</span><span class="n">allocatable</span> <span class="o">::</span> <span class="n">value</span><span class="p">(</span><span class="o">:</span><span class="p">)</span>
-   <span class="n">integer</span><span class="p">,</span><span class="n">allocatable</span>          <span class="o">::</span> <span class="n">count</span><span class="p">(</span><span class="o">:</span><span class="p">)</span>
-
-<span class="nf">%get</span>      <span class="n">get</span> <span class="n">value</span> <span class="n">from</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span> <span class="n">given</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">key</span>
-<span class="nf">%set</span>      <span class="n">set</span> <span class="n">or</span> <span class="n">replace</span> <span class="n">value</span> <span class="k">for</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span> <span class="n">given</span> <span class="n">a</span> <span class="n">key</span>
-<span class="nf">%del</span>      <span class="k">delete</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">key</span> <span class="n">from</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
-<span class="nf">%clr</span>      <span class="n">empty</span> <span class="n">a</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+<span class="nv">subroutine</span> <span class="nv">locate</span><span class="ss">(</span><span class="nv">list</span>,<span class="nv">value</span>,<span class="nv">place</span>,<span class="nv">ier</span>,<span class="nv">errmsg</span><span class="ss">)</span>  <span class="nv">finds</span> <span class="nv">the</span> <span class="nv">index</span> <span class="nv">where</span> <span class="nv">a</span>
+                                                <span class="nv">value</span> <span class="nv">is</span> <span class="nv">found</span> <span class="nv">or</span> <span class="nv">should</span>
+                                                <span class="nv">be</span> <span class="nv">in</span> <span class="nv">a</span> <span class="nv">sorted</span> <span class="nv">array</span> <span class="nv">and</span>
+                                                <span class="nv">flag</span> <span class="k">if</span> <span class="nv">the</span> <span class="nv">value</span> <span class="nv">exists</span>
+                                                <span class="nv">already</span>
+<span class="nv">subroutine</span> <span class="nv">insert</span><span class="ss">(</span><span class="nv">list</span>,<span class="nv">value</span>,<span class="nv">place</span><span class="ss">)</span>     <span class="nv">insert</span> <span class="nv">entry</span> <span class="nv">into</span> <span class="nv">an</span> <span class="nv">allocatable</span>
+                                        <span class="nv">array</span> <span class="nv">at</span> <span class="nv">specified</span> <span class="nv">position</span>
+<span class="nv">subroutine</span> <span class="nv">replace</span><span class="ss">(</span><span class="nv">list</span>,<span class="nv">value</span>,<span class="nv">place</span><span class="ss">)</span>    <span class="nv">replace</span> <span class="nv">entry</span> <span class="nv">in</span> <span class="nv">an</span> <span class="nv">allocatable</span>
+                                        <span class="nv">array</span> <span class="nv">at</span> <span class="nv">specified</span> <span class="nv">position</span>
+<span class="nv">subroutine</span> <span class="nv">remove</span><span class="ss">(</span><span class="nv">list</span>,<span class="nv">place</span><span class="ss">)</span>           <span class="nv">remove</span> <span class="nv">entry</span> <span class="nv">from</span> <span class="nv">an</span> <span class="nv">allocatable</span>
+                                        <span class="nv">array</span> <span class="nv">at</span> <span class="nv">specified</span> <span class="nv">position</span>
 </code></pre></div>
 
-<h2 id="example">EXAMPLE</h2>
+<h2 id="examples">EXAMPLES</h2>
 <p>Sample program</p>
 <div class="codehilite"><pre><span></span><code><span class="nv">program</span> <span class="nv">demo_M_list</span>
 <span class="nv">use</span> <span class="nv">M_list</span>, <span class="nv">only</span> : <span class="nv">insert</span>, <span class="nv">locate</span>, <span class="nv">replace</span>, <span class="nv">remove</span>
@@ -297,16 +285,18 @@ use M_list, only : dictionary
  <span class="k">call</span> <span class="nl">update</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">d</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">value of d</span><span class="s1">&#39;</span><span class="ss">)</span>
  <span class="k">call</span> <span class="nl">update</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">value of a again</span><span class="s1">&#39;</span><span class="ss">)</span>
  <span class="o">!</span> <span class="k">show</span> <span class="nv">array</span>
- <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(*(a,&quot;==&gt;&quot;,&quot;[&quot;,a,&quot;]&quot;,/))</span><span class="s1">&#39;</span><span class="ss">)(</span><span class="nv">trim</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">values</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)(</span>:<span class="nv">counts</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">size</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">))</span>
+ <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(*(a,&quot;==&gt;&quot;,&quot;[&quot;,a,&quot;]&quot;,/))</span><span class="s1">&#39;</span><span class="ss">)</span><span class="o">&amp;</span>
+  <span class="o">&amp;</span> <span class="ss">(</span><span class="nv">trim</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">values</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)(</span>:<span class="nv">counts</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">size</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">))</span>
  <span class="o">!</span> <span class="nv">remove</span> <span class="nv">some</span> <span class="nv">entries</span>
  <span class="k">call</span> <span class="nl">update</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">a</span><span class="s1">&#39;</span><span class="ss">)</span>
  <span class="k">call</span> <span class="nl">update</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">c</span><span class="s1">&#39;</span><span class="ss">)</span>
- <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(*(a,&quot;==&gt;&quot;,&quot;[&quot;,a,&quot;]&quot;,/))</span><span class="s1">&#39;</span><span class="ss">)(</span><span class="nv">trim</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">values</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)(</span>:<span class="nv">counts</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">size</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">))</span>
+ <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(*(a,&quot;==&gt;&quot;,&quot;[&quot;,a,&quot;]&quot;,/))</span><span class="s1">&#39;</span><span class="ss">)</span><span class="o">&amp;</span>
+  <span class="o">&amp;</span> <span class="ss">(</span><span class="nv">trim</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">values</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)(</span>:<span class="nv">counts</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,<span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">size</span><span class="ss">(</span><span class="nv">keywords</span><span class="ss">))</span>
  <span class="o">!</span> <span class="nv">get</span> <span class="nv">some</span> <span class="nv">values</span>
  <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="o">*</span><span class="ss">)</span><span class="s1">&#39;</span><span class="s">get b=&gt;</span><span class="s1">&#39;</span>,<span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">b</span><span class="s1">&#39;</span><span class="ss">)</span>
  <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="o">*</span><span class="ss">)</span><span class="s1">&#39;</span><span class="s">get d=&gt;</span><span class="s1">&#39;</span>,<span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">d</span><span class="s1">&#39;</span><span class="ss">)</span>
  <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="o">*</span><span class="ss">)</span><span class="s1">&#39;</span><span class="s">get notthere=&gt;</span><span class="s1">&#39;</span>,<span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">notthere</span><span class="s1">&#39;</span><span class="ss">)</span>
-
+ <span class="o">!</span>
  <span class="nv">contains</span>
  <span class="nv">subroutine</span> <span class="nv">update</span><span class="ss">(</span><span class="nv">key</span>,<span class="nv">valin</span><span class="ss">)</span>
  <span class="nv">character</span><span class="ss">(</span><span class="nv">len</span><span class="o">=*</span><span class="ss">)</span>,<span class="nv">intent</span><span class="ss">(</span><span class="nv">in</span><span class="ss">)</span>           :: <span class="nv">key</span>
@@ -349,21 +339,102 @@ use M_list, only : dictionary
        <span class="nv">valout</span><span class="o">=</span><span class="nv">values</span><span class="ss">(</span><span class="nv">place</span><span class="ss">)(</span>:<span class="nv">counts</span><span class="ss">(</span><span class="nv">place</span><span class="ss">))</span>
     <span class="k">endif</span>
  <span class="k">end</span> <span class="nv">function</span> <span class="nv">get</span>
-<span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_M_list</span>
+ <span class="k">end</span> <span class="nv">program</span> <span class="nv">demo_M_list</span>
 </code></pre></div>
 
-<p>Results:</p>
-<div class="codehilite"><pre><span></span><code>d==&gt;[value of d]
-c==&gt;[value of c again]
-b==&gt;[value of b]
-a==&gt;[value of a again]
+<p>Results</p>
+<div class="codehilite"><pre><span></span><code>   <span class="o">&gt;</span>  <span class="n">d</span><span class="o">==&gt;</span><span class="p">[</span><span class="n">value</span> <span class="n">of</span> <span class="n">d</span><span class="p">]</span>
+   <span class="o">&gt;</span>  <span class="n">c</span><span class="o">==&gt;</span><span class="p">[</span><span class="n">value</span> <span class="n">of</span> <span class="n">c</span> <span class="n">again</span><span class="p">]</span>
+   <span class="o">&gt;</span>  <span class="n">b</span><span class="o">==&gt;</span><span class="p">[</span><span class="n">value</span> <span class="n">of</span> <span class="n">b</span><span class="p">]</span>
+   <span class="o">&gt;</span>  <span class="n">a</span><span class="o">==&gt;</span><span class="p">[</span><span class="n">value</span> <span class="n">of</span> <span class="n">a</span> <span class="n">again</span><span class="p">]</span>
+   <span class="o">&gt;</span>
+   <span class="o">&gt;</span> <span class="n">d</span><span class="o">==&gt;</span><span class="p">[</span><span class="n">value</span> <span class="n">of</span> <span class="n">d</span><span class="p">]</span>
+   <span class="o">&gt;</span> <span class="n">b</span><span class="o">==&gt;</span><span class="p">[</span><span class="n">value</span> <span class="n">of</span> <span class="n">b</span><span class="p">]</span>
+   <span class="o">&gt;</span>
+   <span class="o">&gt;</span>  <span class="n">get</span> <span class="n">b</span><span class="o">=&gt;</span><span class="n">value</span> <span class="n">of</span> <span class="n">b</span>
+   <span class="o">&gt;</span>  <span class="n">get</span> <span class="n">d</span><span class="o">=&gt;</span><span class="n">value</span> <span class="n">of</span> <span class="n">d</span>
+   <span class="o">&gt;</span>  <span class="n">get</span> <span class="n">notthere</span><span class="o">=&gt;</span>
 
-d==&gt;[value of d]
-b==&gt;[value of b]
 
- get b=&gt;value of b
- get d=&gt;value of d
- get notthere=&gt;
+<span class="n">BASIC</span> <span class="n">DICTIONARY</span>
+
+<span class="n">A</span> <span class="n">basic</span> <span class="n">dictionary</span> <span class="n">that</span> <span class="n">uses</span> <span class="n">the</span> <span class="n">basic</span> <span class="n">M_list</span> <span class="n">functions</span><span class="p">.</span>
+
+<span class="n">Consider</span> <span class="k">using</span> <span class="n">generic</span> <span class="n">linked</span><span class="o">-</span><span class="n">list</span> <span class="n">based</span> <span class="n">dictionaries</span> <span class="n">when</span> <span class="n">heavy</span>
+<span class="n">usage</span> <span class="n">is</span> <span class="n">required</span><span class="p">,</span> <span class="n">now</span> <span class="n">that</span> <span class="n">that</span> <span class="n">is</span> <span class="n">available</span> <span class="n">in</span> <span class="n">more</span> <span class="n">recent</span> <span class="n">versions</span>
+<span class="n">of</span> <span class="n">Fortran</span><span class="p">.</span>
+
+<span class="nl">Note</span><span class="p">:</span> <span class="k">this</span> <span class="n">does</span> <span class="n">not</span> <span class="n">work</span> <span class="n">with</span> <span class="n">gfortran</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">up</span> <span class="n">to</span> <span class="n">at</span> <span class="n">least</span> <span class="mf">7.4.0</span> <span class="n">but</span>
+<span class="n">works</span> <span class="n">from</span> <span class="n">at</span> <span class="n">least</span> <span class="mf">10.3.0</span> <span class="n">and</span> <span class="n">onward</span><span class="p">.</span>
+
+<span class="n">Dictionary</span> <span class="n">type</span> <span class="nl">definition</span><span class="p">:</span>
+
+   <span class="n">type</span> <span class="n">dictionary</span>
+      <span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=:</span><span class="p">),</span><span class="n">allocatable</span> <span class="o">::</span> <span class="n">key</span><span class="p">(</span><span class="o">:</span><span class="p">)</span>
+      <span class="n">character</span><span class="p">(</span><span class="n">len</span><span class="o">=:</span><span class="p">),</span><span class="n">allocatable</span> <span class="o">::</span> <span class="n">value</span><span class="p">(</span><span class="o">:</span><span class="p">)</span>
+      <span class="n">integer</span><span class="p">,</span><span class="n">allocatable</span>          <span class="o">::</span> <span class="n">count</span><span class="p">(</span><span class="o">:</span><span class="p">)</span>
+      <span class="n">contains</span>
+         <span class="n">procedure</span><span class="p">,</span><span class="k">public</span> <span class="o">::</span> <span class="n">get</span> <span class="o">=&gt;</span> <span class="n">dict_get</span>
+         <span class="n">procedure</span><span class="p">,</span><span class="k">public</span> <span class="o">::</span> <span class="n">set</span> <span class="o">=&gt;</span> <span class="n">dict_add</span>
+         <span class="n">procedure</span><span class="p">,</span><span class="k">public</span> <span class="o">::</span> <span class="n">del</span> <span class="o">=&gt;</span> <span class="n">dict_delete</span>
+         <span class="n">procedure</span><span class="p">,</span><span class="k">public</span> <span class="o">::</span> <span class="n">clr</span> <span class="o">=&gt;</span> <span class="n">dict_clear</span>
+   <span class="n">end</span> <span class="n">type</span> <span class="n">dictionary</span>
+
+   <span class="nf">%get</span>      <span class="n">get</span> <span class="n">value</span> <span class="n">from</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span> <span class="n">given</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">key</span>
+   <span class="nf">%set</span>      <span class="n">set</span> <span class="n">or</span> <span class="n">replace</span> <span class="n">value</span> <span class="k">for</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span> <span class="n">given</span> <span class="n">a</span> <span class="n">key</span>
+   <span class="nf">%del</span>      <span class="k">delete</span> <span class="n">an</span> <span class="n">existing</span> <span class="n">key</span> <span class="n">from</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+   <span class="nf">%clr</span>      <span class="n">empty</span> <span class="n">a</span> <span class="n">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span>
+   <span class="nf">%ifdef</span>    <span class="n">test</span> <span class="k">if</span> <span class="n">name</span> <span class="n">is</span> <span class="n">defined</span>
+</code></pre></div>
+
+<h2 id="examples_1">EXAMPLES</h2>
+<p>Sample program</p>
+<div class="codehilite"><pre><span></span><code>   <span class="nv">program</span> <span class="nv">test_dictionary</span>
+   <span class="nv">use</span> <span class="nv">M_list</span>, <span class="nv">only</span> : <span class="nv">dictionary</span>
+   <span class="nv">implicit</span> <span class="nv">none</span>
+   <span class="nv">type</span><span class="ss">(</span><span class="nv">dictionary</span><span class="ss">)</span>             :: <span class="nv">table</span>
+     <span class="o">!</span>
+     <span class="o">!</span> <span class="nv">create</span> <span class="nv">a</span> <span class="nv">character</span> <span class="nv">string</span> <span class="nv">dictionary</span>
+     <span class="o">!</span>
+     <span class="k">call</span> <span class="nl">table</span><span class="o">%</span><span class="nv">set</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">A</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">aye</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="k">call</span> <span class="nl">table</span><span class="o">%</span><span class="nv">set</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">B</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">bee</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="k">call</span> <span class="nl">table</span><span class="o">%</span><span class="nv">set</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">C</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">see</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="k">call</span> <span class="nl">table</span><span class="o">%</span><span class="nv">set</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">D</span><span class="s1">&#39;</span>,<span class="s1">&#39;</span><span class="s">dee</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="o">!</span>
+     <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="o">*</span><span class="ss">)</span><span class="s1">&#39;</span><span class="s">A=</span><span class="s1">&#39;</span>,<span class="nv">table</span><span class="o">%</span><span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">A</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="o">*</span><span class="ss">)</span><span class="s1">&#39;</span><span class="s">C=</span><span class="s1">&#39;</span>,<span class="nv">table</span><span class="o">%</span><span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">C</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="o">*</span><span class="ss">)</span><span class="s1">&#39;</span><span class="s">notthere=</span><span class="s1">&#39;</span>,<span class="nv">table</span><span class="o">%</span><span class="nv">get</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">notthere</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="o">!</span>
+     <span class="k">call</span> <span class="nl">print_dict</span><span class="ss">()</span>
+     <span class="o">!</span>
+     <span class="o">!</span> <span class="nv">delete</span> <span class="nv">dictionary</span> <span class="nv">entries</span>
+     <span class="o">!</span>
+     <span class="k">call</span>  <span class="nl">table</span><span class="o">%</span><span class="nv">del</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">A</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="k">call</span>  <span class="nl">table</span><span class="o">%</span><span class="nv">del</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">C</span><span class="s1">&#39;</span><span class="ss">)</span>
+     <span class="k">call</span>  <span class="nl">table</span><span class="o">%</span><span class="nv">del</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">z</span><span class="s1">&#39;</span><span class="ss">)</span> <span class="o">!</span> <span class="nv">a</span> <span class="nv">noop</span> <span class="nv">as</span> <span class="nv">there</span> <span class="nv">is</span> <span class="nv">no</span> <span class="nv">key</span> <span class="nv">of</span> <span class="s1">&#39;</span><span class="s">z</span><span class="s1">&#39;</span>
+     <span class="o">!</span>
+     <span class="k">call</span> <span class="nl">print_dict</span><span class="ss">()</span>
+     <span class="o">!</span>
+     <span class="o">!</span> <span class="nv">clear</span> <span class="nv">dictionary</span>
+     <span class="o">!</span>
+     <span class="k">call</span>  <span class="nl">table</span><span class="o">%</span><span class="nv">clr</span><span class="ss">()</span>
+     <span class="o">!</span>
+     <span class="k">call</span> <span class="nl">print_dict</span><span class="ss">()</span>
+   <span class="o">!</span>
+   <span class="nv">contains</span>
+   <span class="o">!</span>
+   <span class="nv">subroutine</span> <span class="nv">print_dict</span><span class="ss">()</span>
+   <span class="nv">integer</span> :: <span class="nv">i</span>
+      <span class="o">!</span> <span class="nv">the</span> <span class="nv">dictionary</span> <span class="nv">is</span> <span class="nv">just</span> <span class="nv">three</span> <span class="nv">arrays</span>
+      <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(&quot;DICTIONARY:&quot;)</span><span class="s1">&#39;</span><span class="ss">)</span>
+      <span class="nv">write</span><span class="ss">(</span><span class="o">*</span>,<span class="s1">&#39;</span><span class="s">(*(a,&quot;==&gt;&quot;,&quot;[&quot;,a,&quot;]&quot;,/))</span><span class="s1">&#39;</span><span class="ss">)</span> <span class="o">&amp;</span>
+      <span class="o">&amp;</span> <span class="ss">(</span><span class="nv">trim</span><span class="ss">(</span><span class="nv">table</span><span class="o">%</span><span class="nv">key</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,               <span class="o">&amp;</span>
+      <span class="o">&amp;</span> <span class="nv">table</span><span class="o">%</span><span class="nv">value</span><span class="ss">(</span><span class="nv">i</span><span class="ss">)(</span>:<span class="nv">table</span><span class="o">%</span><span class="nv">count</span><span class="ss">(</span><span class="nv">i</span><span class="ss">))</span>,    <span class="o">&amp;</span>
+      <span class="o">&amp;</span> <span class="nv">i</span><span class="o">=</span><span class="mi">1</span>,<span class="nv">size</span><span class="ss">(</span><span class="nv">table</span><span class="o">%</span><span class="nv">key</span><span class="ss">))</span>
+      <span class="o">!</span>
+   <span class="k">end</span> <span class="nv">subroutine</span> <span class="nv">print_dict</span>
+   <span class="o">!</span>
+   <span class="k">end</span> <span class="nv">program</span> <span class="nv">test_dictionary</span>
 </code></pre></div>
 
 <h2 id="author">AUTHOR</h2>
@@ -2155,10 +2226,16 @@ private subroutine replace_l(list, value, place)
       <table class="table table-striped varlist">
       <tbody>
       
+       <tr><td>procedure, public :: <strong><a href='../type/dictionary.html#boundprocedure-clr'>clr</a></strong>  => dict_clear </td>
+       <td></td></tr>
+      
        <tr><td>procedure, public :: <strong><a href='../type/dictionary.html#boundprocedure-del'>del</a></strong>  => dict_delete </td>
        <td></td></tr>
       
        <tr><td>procedure, public :: <strong><a href='../type/dictionary.html#boundprocedure-get'>get</a></strong>  => dict_get </td>
+       <td></td></tr>
+      
+       <tr><td>procedure, public :: <strong><a href='../type/dictionary.html#boundprocedure-ifdef'>ifdef</a></strong>  => dict_ifdef </td>
        <td></td></tr>
       
        <tr><td>procedure, public :: <strong><a href='../type/dictionary.html#boundprocedure-set'>set</a></strong>  => dict_add </td>
@@ -2195,7 +2272,7 @@ private subroutine replace_l(list, value, place)
           <p class="text-right">
             Documentation generated by 
             <a href="https://github.com/cmacmackin/ford">FORD</a>
-             on 2022-02-28 23:00  
+             on 2022-05-01 11:43  
           </p>
         </div>
         <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> M_list was developed by John S. Urban</p></div>

@@ -296,7 +296,8 @@ contains
 !===================================================================================================================================
 !>
 !!##NAME
-!!    locate(3f) - [M_list] finds the index where a string is found or should be in a sorted array
+!!    locate(3f) - [M_list] finds the index where a string is found or
+!!                 should be in a sorted array
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -733,7 +734,8 @@ end subroutine locate_i
 !===================================================================================================================================
 !>
 !!##NAME
-!!    remove(3f) - [M_list] remove entry from an allocatable array at specified position
+!!    remove(3f) - [M_list] remove entry from an allocatable array at
+!!                 specified position
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -766,7 +768,7 @@ end subroutine locate_i
 !!     integer                       :: i
 !!     integer                       :: end
 !!
-!!     arr=[character(len=20) :: '', 'ZZZ', 'Z', 'aaa', 'b', 'b', 'ab', 'bb', 'xxx' ]
+!!     arr=[character(len=20) :: '','ZZZ','Z','aaa','b','b','ab','bb','xxx' ]
 !!     ! make sure sorted in descending order
 !!     call sort_shell(arr,order='d')
 !!
@@ -915,12 +917,13 @@ end subroutine remove_i
 !!
 !!##DESCRIPTION
 !!
-!!    replace a value in an allocatable array at the specified index. Unless the
-!!    array needs the string length to increase this is merely an assign of a value
-!!    to an array element.
+!!    replace a value in an allocatable array at the specified index. Unless
+!!    the array needs the string length to increase this is merely an assign
+!!    of a value to an array element.
 !!
 !!    The array may be of type CHARACTER, DOUBLEPRECISION, REAL, or INTEGER>
-!!    It is assumed to be sorted in descending order without duplicate values.
+!!    It is assumed to be sorted in descending order without duplicate
+!!    values.
 !!
 !!    The value and list must be of the same type.
 !!
@@ -953,7 +956,8 @@ end subroutine remove_i
 !!     call update('d','value of d')
 !!     call update('a','value of a again')
 !!     ! show array
-!!     write(*,'(*(a,"==>",a,/))')(trim(keywords(i)),trim(values(i)),i=1,size(keywords))
+!!     write(*,'(*(a,"==>",a,/))')&
+!!            &(trim(keywords(i)),trim(values(i)),i=1,size(keywords))
 !!
 !!     call locate(keywords,'a',place)
 !!     if(place.gt.0)then
@@ -1345,7 +1349,8 @@ end subroutine insert_i
 !===================================================================================================================================
 !>
 !!##NAME
-!!    del(3f) - [M_list::dictionary::OOPS] delete entry by key name from a basic dictionary
+!!    del(3f) - [M_list::dictionary::OOPS] delete entry by key name from
+!!              a basic dictionary
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -1380,13 +1385,13 @@ end subroutine insert_i
 !!        call caps%set('C','see')
 !!        call caps%set('D','dee')
 !!        ! show current dictionary
-!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
+!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
 !!        ! delete dictionary entries
 !!        call  caps%del('A')
 !!        call  caps%del('C')
 !!        call  caps%del('z') ! a noop as there is no key of 'z'
 !!        ! show current dictionary
-!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
+!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
 !!
 !!     101 format (1x,*(a,"='",a,"'",:,","))
 !!     end program demo_del
@@ -1421,7 +1426,8 @@ end subroutine dict_delete
 !===================================================================================================================================
 !>
 !!##NAME
-!!    get(3f) - [M_list::dictionary::OOPS] get value of key-value pair in a dictionary given key
+!!    get(3f) - [M_list::dictionary::OOPS] get value of key-value pair in
+!!              a dictionary given key
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -1511,7 +1517,8 @@ end function dict_get
 !===================================================================================================================================
 !>
 !!##NAME
-!!    set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair in a dictionary
+!!    set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair
+!!              in a dictionary
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -1629,11 +1636,11 @@ end subroutine dict_add
 !!        call caps%set('D','dee')
 !!        ! show current dictionary
 !!        write(*,'("DICTIONARY BEFORE CLEARED")')
-!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
+!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
 !!        call  caps%clr()
 !!        write(*,'("DICTIONARY AFTER CLEARED")')
 !!        ! show current dictionary
-!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key)) ! show array
+!!        write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
 !!
 !!     101 format (1x,*(a,"='",a,"'",:,","))
 !!     end program demo_clr
@@ -1665,7 +1672,8 @@ end subroutine dict_clear
 !===================================================================================================================================
 !>
 !!##NAME
-!!    ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present in dictionary or not
+!!    ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present
+!!                in dictionary or not
 !!    (LICENSE:PD)
 !!
 !!##SYNOPSIS
@@ -1722,8 +1730,16 @@ end subroutine dict_clear
 !!
 !!      end program demo_ifdef
 !!
-!!   Results
+!!   Results:
 !!
+!!     > A= T
+!!     > B= T
+!!     > C= T
+!!     > D= F
+!!     > E= T
+!!     > F= F
+!!     > G= T
+!!     > H= F
 !!
 !!##AUTHOR
 !!    John S. Urban
