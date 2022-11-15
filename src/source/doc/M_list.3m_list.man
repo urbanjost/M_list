@@ -1,0 +1,217 @@
+NAME
+   M_list(3f) - [M_list::INTRO] maintain simple lists
+   (LICENSE:PD)
+
+SYNOPSIS
+   use M_list, only : insert, replace, remove, locate
+   use M_list, only : dictionary
+
+DESCRIPTION
+
+   The M_list(3fm) module allows for maintaining an allocatable array of
+   intrinsic type (REAL, INTEGER, CHARACTER) as a sorted list. An example
+   is given that creates a keyword-value dictionary using the lists.
+
+   The lists are maintained as simple allocatable arrays. Each time an
+   entry is added or deleted the array is re-allocated. Because of the
+   expense of reallocating the data these routines are best suited for
+   maintaining small lists that do not change size frequently.
+
+   The advantage of this simplistic approach is that the dictionary
+   components are simple arrays of intrinsic types which can be easily
+   accessed with standard routines. It is easy to understand, as it
+   works with simple arrays. For more demanding applications this would
+   be implemented as a linked list, which there are a number of freely
+   available examples of; several are listed on the Fortran Wiki.
+
+   BASIC LIST
+
+   subroutine locate(list,value,place,ier,errmsg)  finds the index where a
+                                                   value is found or should
+                                                   be in a sorted array and
+                                                   flag if the value exists
+                                                   already
+   subroutine insert(list,value,place)     insert entry into an allocatable
+                                           array at specified position
+   subroutine replace(list,value,place)    replace entry in an allocatable
+                                           array at specified position
+   subroutine remove(list,place)           remove entry from an allocatable
+                                           array at specified position
+
+EXAMPLES
+  Sample program
+
+   program demo_M_list
+   use M_list, only : insert, locate, replace, remove
+   ! create a dictionary with character keywords, values, and value lengths
+   ! using the routines for maintaining a list
+
+    use M_list, only : locate, insert, replace
+    implicit none
+    character(len=:),allocatable   :: keywords(:)
+    character(len=:),allocatable   :: values(:)
+    integer,allocatable            :: counts(:)
+    integer                        :: i
+    ! insert and replace entries
+    call update('b','value of b')
+    call update('a','value of a')
+    call update('c','value of c')
+    call update('c','value of c again')
+    call update('d','value of d')
+    call update('a','value of a again')
+    ! show array
+    write(*,'(*(a,"==>","[",a,"]",/))')&
+     & (trim(keywords(i)),values(i)(:counts(i)),i=1,size(keywords))
+    ! remove some entries
+    call update('a')
+    call update('c')
+    write(*,'(*(a,"==>","[",a,"]",/))')&
+     & (trim(keywords(i)),values(i)(:counts(i)),i=1,size(keywords))
+    ! get some values
+    write(*,*)'get b=>',get('b')
+    write(*,*)'get d=>',get('d')
+    write(*,*)'get notthere=>',get('notthere')
+    !
+    contains
+    subroutine update(key,valin)
+    character(len=*),intent(in)           :: key
+    character(len=*),intent(in),optional  :: valin
+    integer                               :: place
+    integer                               :: ilen
+    character(len=:),allocatable          :: val
+    if(present(valin))then
+       val=valin
+       ilen=len_trim(val)
+       ! find where string is or should be
+       call locate(keywords,key,place)
+       ! if string was not found insert it
+       if(place.lt.1)then
+          call insert(keywords,key,iabs(place))
+          call insert(values,val,iabs(place))
+          call insert(counts,ilen,iabs(place))
+       else
+          call replace(values,val,place)
+          call replace(counts,ilen,place)
+       endif
+    else
+       call locate(keywords,key,place)
+       if(place.gt.0)then
+          call remove(keywords,place)
+          call remove(values,place)
+          call remove(counts,place)
+       endif
+    endif
+    end subroutine update
+    function get(key) result(valout)
+    character(len=*),intent(in)   :: key
+    character(len=:),allocatable  :: valout
+    integer                       :: place
+       ! find where string is or should be
+       call locate(keywords,key,place)
+       if(place.lt.1)then
+          valout=''
+       else
+          valout=values(place)(:counts(place))
+       endif
+    end function get
+    end program demo_M_list
+
+  Results
+
+      >  d==>[value of d]
+      >  c==>[value of c again]
+      >  b==>[value of b]
+      >  a==>[value of a again]
+      >
+      > d==>[value of d]
+      > b==>[value of b]
+      >
+      >  get b=>value of b
+      >  get d=>value of d
+      >  get notthere=>
+
+
+   BASIC DICTIONARY
+
+   A basic dictionary that uses the basic M_list functions.
+
+   Consider using generic linked-list based dictionaries when heavy
+   usage is required, now that that is available in more recent versions
+   of Fortran.
+
+   Note: this does not work with gfortran(1) up to at least 7.4.0 but
+   works from at least 10.3.0 and onward.
+
+   Dictionary type definition:
+
+      type dictionary
+         character(len=:),allocatable :: key(:)
+         character(len=:),allocatable :: value(:)
+         integer,allocatable          :: count(:)
+         contains
+            procedure,public :: get => dict_get
+            procedure,public :: set => dict_add
+            procedure,public :: del => dict_delete
+            procedure,public :: clr => dict_clear
+      end type dictionary
+
+      %get      get value from type(dictionary) given an existing key
+      %set      set or replace value for type(dictionary) given a key
+      %del      delete an existing key from type(dictionary)
+      %clr      empty a type(dictionary)
+      %ifdef    test if name is defined
+
+EXAMPLES
+  Sample program
+
+      program test_dictionary
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary)             :: table
+        !
+        ! create a character string dictionary
+        !
+        call table%set('A','aye')
+        call table%set('B','bee')
+        call table%set('C','see')
+        call table%set('D','dee')
+        !
+        write(*,*)'A=',table%get('A')
+        write(*,*)'C=',table%get('C')
+        write(*,*)'notthere=',table%get('notthere')
+        !
+        call print_dict()
+        !
+        ! delete dictionary entries
+        !
+        call  table%del('A')
+        call  table%del('C')
+        call  table%del('z') ! a noop as there is no key of 'z'
+        !
+        call print_dict()
+        !
+        ! clear dictionary
+        !
+        call  table%clr()
+        !
+        call print_dict()
+      !
+      contains
+      !
+      subroutine print_dict()
+      integer :: i
+         ! the dictionary is just three arrays
+         write(*,'("DICTIONARY:")')
+         write(*,'(*(a,"==>","[",a,"]",/))') &
+         & (trim(table%key(i)),               &
+         & table%value(i)(:table%count(i)),    &
+         & i=1,size(table%key))
+         !
+      end subroutine print_dict
+      !
+      end program test_dictionary
+
+AUTHOR
+   John S. Urban
+LICENSE
+   Public Domain

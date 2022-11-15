@@ -1,0 +1,80 @@
+NAME
+   insert(3f) - [M_list] insert entry into a string array at specified position
+   (LICENSE:PD)
+
+SYNOPSIS
+  subroutine insert(list,value,place)
+
+   character(len=*)|doubleprecision|real|integer,intent(in) :: value
+   character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
+   integer,intent(in)    :: place
+
+DESCRIPTION
+
+   Insert a value into an allocatable array at the specified index.
+   The list and value must be of the same type (CHARACTER, DOUBLEPRECISION,
+   REAL, or INTEGER)
+
+OPTIONS
+
+   list    is the list array. Must be sorted in descending order.
+   value   the value to place in the array
+   PLACE   is the subscript that the entry should be placed at
+
+EXAMPLES
+  Find if a string is in a sorted array, and insert the string into
+  the list if it is not present ...
+
+    program demo_insert
+    use M_sort, only : sort_shell
+    use M_list, only : locate, insert
+    implicit none
+    character(len=:),allocatable :: arr(:)
+    integer                       :: i
+
+    arr=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+    ! make sure sorted in descending order
+    call sort_shell(arr,order='d')
+    ! add or replace values
+    call update(arr,'b')
+    call update(arr,'[')
+    call update(arr,'c')
+    call update(arr,'ZZ')
+    call update(arr,'ZZZ')
+    call update(arr,'ZZZZ')
+    call update(arr,'')
+    call update(arr,'z')
+
+    contains
+    subroutine update(arr,string)
+    character(len=:),allocatable :: arr(:)
+    character(len=*)             :: string
+    integer                      :: place, end
+
+    end=size(arr)
+    ! find where string is or should be
+    call locate(arr,string,place)
+    ! if string was not found insert it
+    if(place.lt.1)then
+       call insert(arr,string,abs(place))
+    endif
+    ! show array
+    end=size(arr)
+    write(*,'("array is now SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+
+    end subroutine update
+    end program demo_insert
+
+  Results
+
+       > array is now SIZE=5 xxx,b,aaa,ZZZ,,
+       > array is now SIZE=6 xxx,b,aaa,[,ZZZ,,
+       > array is now SIZE=7 xxx,c,b,aaa,[,ZZZ,,
+       > array is now SIZE=8 xxx,c,b,aaa,[,ZZZ,ZZ,,
+       > array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+       > array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+
+AUTHOR
+   1989,2017 John S. Urban
+LICENSE
+   Public Domain

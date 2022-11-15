@@ -1,0 +1,55 @@
+NAME
+   del(3f) - [M_list::dictionary::OOPS] delete entry by key name from
+             a basic dictionary
+   (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+   character(len=*),intent(in) :: key
+
+   dict%del(key)
+
+DESCRIPTION
+
+   Delete an entry from a basic dictionary if it is present.
+
+OPTIONS
+
+   DICT   the dictionary.
+   KEY    the key name to find and delete from the dictionary.
+
+EXAMPLES
+  Delete an entry from a dictionary by key name.
+
+    program demo_del
+    use M_list, only : dictionary
+    implicit none
+    type(dictionary) :: caps
+    integer                       :: i
+       ! create a character string dictionary
+       call caps%set('A','aye')
+       call caps%set('B','bee')
+       call caps%set('C','see')
+       call caps%set('D','dee')
+       ! show current dictionary
+       write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+       ! delete dictionary entries
+       call  caps%del('A')
+       call  caps%del('C')
+       call  caps%del('z') ! a noop as there is no key of 'z'
+       ! show current dictionary
+       write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+
+    101 format (1x,*(a,"='",a,"'",:,","))
+    end program demo_del
+
+  Results
+
+       > D='dee',C='see',B='bee',A='aye'
+       > D='dee',B='bee'
+
+AUTHOR
+   John S. Urban
+LICENSE
+   Public Domain

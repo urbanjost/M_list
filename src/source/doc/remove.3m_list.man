@@ -1,0 +1,58 @@
+NAME
+   remove(3f) - [M_list] remove entry from an allocatable array at
+                specified position
+   (LICENSE:PD)
+
+SYNOPSIS
+  subroutine remove(list,place)
+
+   character(len=:)|doubleprecision|real|integer,intent(inout) :: list(:)
+   integer, intent(out) :: PLACE
+
+DESCRIPTION
+
+   Remove a value from an allocatable array at the specified index.
+   The array is assumed to be sorted in descending order. It may be of
+   type CHARACTER, DOUBLEPRECISION, REAL, or INTEGER.
+
+OPTIONS
+
+   list    is the list array.
+   PLACE   is the subscript for the entry that should be removed
+
+EXAMPLES
+  Sample program
+
+    program demo_remove
+    use M_sort, only : sort_shell
+    use M_list, only : locate, remove
+    implicit none
+    character(len=:),allocatable :: arr(:)
+    integer                       :: i
+    integer                       :: end
+
+    arr=[character(len=20) :: '','ZZZ','Z','aaa','b','b','ab','bb','xxx' ]
+    ! make sure sorted in descending order
+    call sort_shell(arr,order='d')
+
+    end=size(arr)
+    write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+    call remove(arr,1)
+    end=size(arr)
+    write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+    call remove(arr,4)
+    end=size(arr)
+    write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+
+    end program demo_remove
+
+  Results
+
+      > SIZE=9 xxx,bb,b,b,ab,aaa,ZZZ,Z,,
+      > SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
+      > SIZE=7 bb,b,b,aaa,ZZZ,Z,,
+
+AUTHOR
+   1989,2017 John S. Urban
+LICENSE
+   Public Domain

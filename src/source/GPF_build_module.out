@@ -1,0 +1,2789 @@
+>>>> MODULE IS                       M_list
+>>>> DOCUMENT DIRECTORY IS           /home/urbanjs/venus/V600/github/M_list/src/source
+>>>> MANPAGES PROCEDURE DIRECTORY IS /home/urbanjs/venus/V600/github/M_list/man
+>>>> MAN_EXTENSION IS                m_list
++ grep -q '^#' M_list.FF
++ SUFFIX=f90
++ '[' TRUE = '' ']'
++ prep F90 GITHUB --noenv --comment doxygen --verbose -i M_list.FF -o ../M_list.f90
++ verbose mode on
++ grep -qi '^$IFDEF  *C *$' M_list.FF
++ cd doc
++ set -xv
++ cat
+>>>>>>>> .man files to MAN DIRECTORY as ROFF and HTML
+>>>>>>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
+>>>>>>>> MAN_EXTENSION => 
+>>>>>>>> DOCS          => /home/urbanjs/venus/V600/github/M_list/docs
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man1
+++ ls '*.1.man' '*.1m_list.man'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man2
+++ ls '*.2.man' '*.2m_list.man'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man3
+++ ls '*.3.man' clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
+++ sort
+++ uniq
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for clr.3m_list.man'
+>>>> processing manpage and HTML for clr.3m_list.man
+++ basename clr.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
+++ basename clr.3m_list.man .3m_list.man
++ SHORTNAME=clr
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list SHORTNAME clr
++ txt2man -s 3m_list -t clr clr.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
++ env AUX_FILENAME=clr man2html
+man2html fcddf632-6122-4ba4-90a8-ac7ede9ce9d1
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for del.3m_list.man'
+>>>> processing manpage and HTML for del.3m_list.man
+++ basename del.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
+++ basename del.3m_list.man .3m_list.man
++ SHORTNAME=del
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list SHORTNAME del
++ txt2man -s 3m_list -t del del.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
++ env AUX_FILENAME=del man2html
+man2html e17119e3-0b6a-4994-8c78-530ea9b985d0
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for get.3m_list.man'
+>>>> processing manpage and HTML for get.3m_list.man
+++ basename get.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
+++ basename get.3m_list.man .3m_list.man
++ SHORTNAME=get
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list SHORTNAME get
++ txt2man -s 3m_list -t get get.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
++ env AUX_FILENAME=get man2html
+man2html 8e24e81d-1c14-4ba2-b55b-46573306af3b
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for ifdef.3m_list.man'
+>>>> processing manpage and HTML for ifdef.3m_list.man
+++ basename ifdef.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
+++ basename ifdef.3m_list.man .3m_list.man
++ SHORTNAME=ifdef
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list SHORTNAME ifdef
++ txt2man -s 3m_list -t ifdef ifdef.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
++ env AUX_FILENAME=ifdef man2html
+man2html 6803c8ac-95ee-466e-803b-634fc213a42b
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for insert.3m_list.man'
+>>>> processing manpage and HTML for insert.3m_list.man
+++ basename insert.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
+++ basename insert.3m_list.man .3m_list.man
++ SHORTNAME=insert
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list SHORTNAME insert
++ txt2man -s 3m_list -t insert insert.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
++ env AUX_FILENAME=insert man2html
+man2html 58130354-8a5a-4a86-a940-2ef6d538bc44
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for locate.3m_list.man'
+>>>> processing manpage and HTML for locate.3m_list.man
+++ basename locate.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
+++ basename locate.3m_list.man .3m_list.man
++ SHORTNAME=locate
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list SHORTNAME locate
++ txt2man -s 3m_list -t locate locate.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
++ env AUX_FILENAME=locate man2html
+man2html 19d888c0-8753-4d56-a3bb-b5e37a13b803
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for M_list.3m_list.man'
+>>>> processing manpage and HTML for M_list.3m_list.man
+++ basename M_list.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
+++ basename M_list.3m_list.man .3m_list.man
++ SHORTNAME=M_list
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list SHORTNAME M_list
++ txt2man -s 3m_list -t M_list M_list.3m_list.man
++ env AUX_FILENAME=M_list man2html
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
+man2html 5ddb3acb-65f7-42c8-8365-4daadd1f4a23
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for remove.3m_list.man'
+>>>> processing manpage and HTML for remove.3m_list.man
+++ basename remove.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
+++ basename remove.3m_list.man .3m_list.man
++ SHORTNAME=remove
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list SHORTNAME remove
++ txt2man -s 3m_list -t remove remove.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
++ env AUX_FILENAME=remove man2html
+man2html 23f61678-fd1a-443b-bc16-5027f1787665
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for replace.3m_list.man'
+>>>> processing manpage and HTML for replace.3m_list.man
+++ basename replace.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
+++ basename replace.3m_list.man .3m_list.man
++ SHORTNAME=replace
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list SHORTNAME replace
++ txt2man -s 3m_list -t replace replace.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
++ env AUX_FILENAME=replace man2html
+man2html 02678660-087e-4f62-94a9-610318482b4c
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
++ for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
++ echo '>>>> processing manpage and HTML for set.3m_list.man'
+>>>> processing manpage and HTML for set.3m_list.man
+++ basename set.3m_list.man .man
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
+++ basename set.3m_list.man .3m_list.man
++ SHORTNAME=set
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list SHORTNAME set
++ txt2man -s 3m_list -t set set.3m_list.man
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
++ env AUX_FILENAME=set man2html
+man2html c255cf5f-8c59-45ed-a32f-d8b57abebf2d
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man4
+++ ls '*.4.man' '*.4m_list.man'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man5
+++ ls '*.5.man' '*.5m_list.man'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man6
+++ ls '*.6.man' '*.6m_list.man'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man7
+++ ls '*.7.man' '*.7m_list.man'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man8
+++ ls '*.8.man' '*.8m_list.man'
+++ sort
+++ uniq
++ cat
+>>>>>>>> .txt files to MAN DIRECTORY
+>>>>>>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
+>>>>>>>> MAN_EXTENSION => 
++ cd doc
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man1
+++ ls '*.1.txt' '*.1m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man2
+++ ls '*.2.txt' '*.2m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man3
+++ ls '*.3.txt' '*.3m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man4
+++ ls '*.4.txt' '*.4m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man5
+++ ls '*.5.txt' '*.5m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man6
+++ ls '*.6.txt' '*.6m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man7
+++ ls '*.7.txt' '*.7m_list.txt'
+++ sort
+++ uniq
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man8
+++ sort
+++ uniq
+++ ls '*.8.txt' '*.8m_list.txt'
++ cd doc
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.htm'
++ cd doc
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.1m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.2m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.3m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.4m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.5m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.6m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.7m_list.html'
++ for NUM in 1 2 3 4 5 6 7 8
+++ ls '*.8m_list.html'
++ echo '>>>> Build manpage index'
+>>>> Build manpage index
++ cd ../../man
++ mandb -c .
+mandb: warning: $MANPATH set, appending /etc/manpath.config
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man1'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man3'. Wait...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/....
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man2'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man4'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man6'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man7'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man8'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man5'. Wait...
+done.
+Checking for stray cats under /home/urbanjs/venus/V600/github/M_list/man/....
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat8...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat1...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat3...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat4...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat6...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat2...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat5...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat7...
+8 man subdirectories contained newer manual pages.
+10 manual pages were added.
+0 stray cats were added.
+++ pwd
++ env MANPATH=/home/urbanjs/venus/V600/github/M_list/man man -k .
+clr (3m_list)        - [M_list::dictionary::OOPS] clear basic dictionary (LIC...
+del (3m_list)        - [M_list::dictionary::OOPS] delete entry by key name fr...
+get (3m_list)        - [M_list::dictionary::OOPS] get value of key-value pair...
+ifdef (3m_list)      - [M_list::dictionary::OOPS] return whether name is pres...
+insert (3m_list)     - [M_list] insert entry into a string array at specified...
+locate (3m_list)     - [M_list] finds the index where a string is found or sh...
+M_list (3m_list)     - [M_list::INTRO] maintain simple lists (LICENSE:PD)
+remove (3m_list)     - [M_list] remove entry from an allocatable array at spe...
+replace (3m_list)    - [M_list] replace entry in a string array at specified ...
+set (3m_list)        - [M_list::dictionary::OOPS] add or replace a key-value ...
++ mkdir -p ../../docs
++ cd ../../man
++ gzip man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
+gzip: man3/clr.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/del.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/get.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/ifdef.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/insert.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/locate.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/M_list.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/remove.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/replace.3m_list.gz already has .gz suffix -- unchanged
+gzip: man3/set.3m_list.gz already has .gz suffix -- unchanged
++ zip -r ../docs/manpages.zip man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
+updating: man3/insert.3m_list.gz (stored 0%)
+updating: man3/locate.3m_list.gz (stored 0%)
+updating: man3/M_list.3m_list.gz (stored 0%)
+updating: man3/remove.3m_list.gz (stored 0%)
+updating: man3/replace.3m_list.gz (stored 0%)
+updating: man3/clr.3m_list.gz (stored 0%)
+updating: man3/del.3m_list.gz (stored 0%)
+updating: man3/get.3m_list.gz (stored 0%)
+updating: man3/set.3m_list.gz (stored 0%)
+updating: man3/ifdef.3m_list.gz (stored 0%)
++ tar cvfz ../docs/manpages.tgz man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
+man3/clr.3m_list.gz
+man3/del.3m_list.gz
+man3/get.3m_list.gz
+man3/ifdef.3m_list.gz
+man3/insert.3m_list.gz
+man3/locate.3m_list.gz
+man3/M_list.3m_list.gz
+man3/remove.3m_list.gz
+man3/replace.3m_list.gz
+man3/set.3m_list.gz
++ gunzip man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
++ cd /home/urbanjs/venus/V600/github/M_list/man
+++ pwd
++ MANPATH=/home/urbanjs/venus/V600/github/M_list/man
++ SECTION=3m_list
++ DEMO_OUTDIR=../../example/
++ GPF_extract_manpage_demos /home/urbanjs/venus/V600/github/M_list/man 3m_list ../../example/
+>>>> Extract demo program from manpages with 
+     MANPATH=/home/urbanjs/venus/V600/github/M_list/man
+     SECTION=3m_list
+     DEMO_OUTDIR=../../example/
+     DEMO_SUBDIR=FALSE
+     1	clr (3m_list)        - [M_list::dictionary::OOPS] clear basic dictionary (LIC...
+     2	del (3m_list)        - [M_list::dictionary::OOPS] delete entry by key name fr...
+     3	get (3m_list)        - [M_list::dictionary::OOPS] get value of key-value pair...
+     4	ifdef (3m_list)      - [M_list::dictionary::OOPS] return whether name is pres...
+     5	insert (3m_list)     - [M_list] insert entry into a string array at specified...
+     6	locate (3m_list)     - [M_list] finds the index where a string is found or sh...
+     7	M_list (3m_list)     - [M_list::INTRO] maintain simple lists (LICENSE:PD)
+     8	remove (3m_list)     - [M_list] remove entry from an allocatable array at spe...
+     9	replace (3m_list)    - [M_list] replace entry in a string array at specified ...
+    10	set (3m_list)        - [M_list::dictionary::OOPS] add or replace a key-value ...
+>>>> clr.3m_list
+
+gzip: stdout: Permission denied
+>>>> del.3m_list
+
+gzip: stdout: Permission denied
+>>>> get.3m_list
+
+gzip: stdout: Permission denied
+>>>> ifdef.3m_list
+
+gzip: stdout: Permission denied
+>>>> insert.3m_list
+
+gzip: stdout: Permission denied
+>>>> locate.3m_list
+
+gzip: stdout: Permission denied
+>>>> M_list.3m_list
+
+gzip: stdout: Permission denied
+>>>> remove.3m_list
+
+gzip: stdout: Permission denied
+>>>> replace.3m_list
+
+gzip: stdout: Permission denied
+>>>> set.3m_list
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+del(3m_list)							  del(3m_list)
+
+NAME
+  del(3f) - [M_list::dictionary::OOPS] delete entry by key name from a basic
+  dictionary (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+
+     dict%del(key)
+
+DESCRIPTION
+  Delete an entry from a basic dictionary if it is present.
+
+OPTIONS
+  DICT
+    the dictionary.
+
+  KEY
+    the key name to find and delete from the dictionary.
+
+EXAMPLES
+  Delete an entry from a dictionary by key name.
+
+      program demo_del
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary) :: caps
+      integer			    :: i
+	 ! create a character string dictionary
+	 call caps%set('A','aye')
+	 call caps%set('B','bee')
+	 call caps%set('C','see')
+	 call caps%set('D','dee')
+	 ! show current dictionary
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+	 ! delete dictionary entries
+	 call  caps%del('A')
+	 call  caps%del('C')
+	 call  caps%del('z') ! a noop as there is no key of 'z'
+	 ! show current dictionary
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+
+      101 format (1x,*(a,"='",a,"'",:,","))
+      end program demo_del
+
+  Results
+
+	 > D='dee',C='see',B='bee',A='aye'
+	 > D='dee',B='bee'
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  del(3m_list)
+ifdef(3m_list)							ifdef(3m_list)
+
+NAME
+  ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present in
+  dictionary or not (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+     logical :: value
+
+     value=dict%ifdef(key)
+
+DESCRIPTION
+  determine if name is already defined in dictionary or not
+
+OPTIONS
+  DICT
+    is the dictionary.
+
+  KEY
+    key name
+
+RETURNS
+  VALUE
+
+EXAMPLES
+  Sample program:
+
+      program demo_ifdef
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary)		   :: table
+      character(len=:),allocatable :: val
+      integer			   :: i
+
+	 call table%set('A','value for A')
+	 call table%set('B','value for B')
+	 call table%set('C','value for C')
+	 call table%set('D','value for D')
+	 call table%set('E','value for E')
+	 call table%set('F','value for F')
+	 call table%set('G','value for G')
+	 call table%del('F')
+	 call table%del('D')
+
+	 write(*,*)'A=',table%ifdef('A')
+	 write(*,*)'B=',table%ifdef('B')
+	 write(*,*)'C=',table%ifdef('C')
+	 write(*,*)'D=',table%ifdef('D')
+	 write(*,*)'E=',table%ifdef('E')
+	 write(*,*)'F=',table%ifdef('F')
+	 write(*,*)'G=',table%ifdef('G')
+	 write(*,*)'H=',table%ifdef('H')
+
+       end program demo_ifdef
+
+  Results:
+
+      > A= T
+      > B= T
+      > C= T
+      > D= F
+      > E= T
+      > F= F
+      > G= T
+      > H= F
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		ifdef(3m_list)
+insert(3m_list) 					       insert(3m_list)
+
+NAME
+  insert(3f) - [M_list] insert entry into a string array at specified position
+  (LICENSE:PD)
+
+SYNOPSIS
+  subroutine insert(list,value,place)
+
+     character(len=*)|doubleprecision|real|integer,intent(in) :: value
+     character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
+     integer,intent(in)    :: place
+
+DESCRIPTION
+  Insert a value into an allocatable array at the specified index.  The list
+  and value must be of the same type (CHARACTER, DOUBLEPRECISION, REAL, or
+  INTEGER)
+
+OPTIONS
+  list
+    is the list array. Must be sorted in descending order.
+
+  value
+    the value to place in the array
+
+  PLACE
+    is the subscript that the entry should be placed at
+
+EXAMPLES
+  Find if a string is in a sorted array, and insert the string into the list
+  if it is not present ...
+
+      program demo_insert
+      use M_sort, only : sort_shell
+      use M_list, only : locate, insert
+      implicit none
+      character(len=:),allocatable :: arr(:)
+      integer			    :: i
+
+      arr=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      ! make sure sorted in descending order
+      call sort_shell(arr,order='d')
+      ! add or replace values
+      call update(arr,'b')
+      call update(arr,'[')
+      call update(arr,'c')
+      call update(arr,
+gzip: stdout: Permission denied
+'ZZ')
+      call update(arr,'ZZZ')
+      call update(arr,'ZZZZ')
+      call update(arr,'')
+      call update(arr,'z')
+
+      contains
+      subroutine update(arr,string)
+      character(len=:),allocatable :: arr(:)
+      character(len=*)		   :: string
+      integer			   :: place, end
+
+      end=size(arr)
+      ! find where string is or should be
+      call locate(arr,string,place)
+      ! if string was not found insert it
+      if(place.lt.1)then
+	 call insert(arr,string,abs(place))
+      endif
+      ! show array
+      end=size(arr)
+      write(*,'("array is now SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+
+      end subroutine update
+      end program demo_insert
+
+  Results
+
+	 > array is now SIZE=5 xxx,b,aaa,ZZZ,,
+	 > array is now SIZE=6 xxx,b,aaa,[,ZZZ,,
+	 > array is now SIZE=7 xxx,c,b,aaa,[,ZZZ,,
+	 > array is now SIZE=8 xxx,c,b,aaa,[,ZZZ,ZZ,,
+	 > array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+	 > array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       insert(3m_list)
+replace(3m_list)					      replace(3m_list)
+
+NAME
+  replace(3f) - [M_list] replace entry in a string array at specified position
+  (LICENSE:PD)
+
+SYNOPSIS
+  subroutine replace(list,value,place)
+
+     character(len=*)|doubleprecision|real|integer,intent(in) :: value
+     character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
+     integer, intent(out)	   :: PLACE
+
+DESCRIPTION
+  replace a value in an allocatable array at the specified index. Unless the
+  array needs the string length to increase this is merely an assign of a
+  value to an array element.
+
+  The array may be of type CHARACTER, DOUBLEPRECISION, REAL, or INTEGER> It is
+  assumed to be sorted in descending order without duplicate values.
+
+  The value and list must be of the same type.
+
+OPTIONS
+  VALUE
+    the value to place in the array
+
+  LIST
+    is the array.
+
+  PLACE
+    is the subscript that the entry should be placed at
+
+EXAMPLES
+  Replace key-value pairs in a dictionary
+
+      program demo_replace
+      use M_list, only	: insert, locate, replace
+      ! Find if a key is in a list and insert it
+      ! into the key list and value list if it is not present
+      ! or replace the associated value if the key existed
+      implicit none
+      character(len=20) 	   :: key
+      character(len=100)	   :: val
+      character(len=:),allocatable :: keywords(:)
+      character(len=:),allocatable :: values(:)
+      integer			   :: i
+      integer			   :: place
+      call update('b','value of b')
+      call update('a','value of a')
+      call update('c','value of c')
+      call update('c','value of c again')
+      call update('d','value of d')
+      call update('a','value of a again')
+      ! show array
+      write(*,'(*(a,"==>",a,/))')&
+	     &(trim(keywords(i)),trim(values(i)),i=1,size(keywords))
+
+      call locate(keywords,'a',place)
+      if(place.gt.0)then
+	 write(*,*)'The value of "a" is ',trim(values(place))
+      else
+	 write(*,*)'"a" not found'
+      endif
+
+      contains
+      subroutine update(key,val)
+      character(len=*),intent(in)  :: key
+      character(len=*),intent(in)  :: val
+      integer			   :: place
+
+      ! find where string is or should be
+      call locate(keywords,key,place)
+      ! if string was not found insert it
+      if(place.lt.1)then
+	 call insert(keywords,key,abs(place))
+	 call insert(values,val,abs(place))
+      else ! replace
+	 call replace(values,val,place)
+      endif
+
+      end subroutine update
+  end program demo_replace
+
+  Results
+
+     > d==>value of d
+     > c==>value of c again
+     > b==>value of b
+     > a==>value of a again
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	      replace(3m_list)
+set(3m_list)							  set(3m_list)
+
+NAME
+  set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair in a
+  dictionary (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+     character(len=*),intent(in) :: VALUE
+
+     call dict%rep(key,value)
+
+DESCRIPTION
+  Add or replac
+gzip: stdout: Permission denied
+e a key-value pair in a dictionary.
+
+OPTIONS
+  DICT
+    is the dictionary.
+
+  key
+    key name
+
+  VALUE
+    value associated with key
+
+EXAMPLES
+  Add or replace a key and value pair in a dictionary
+
+      program demo_set
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary) :: dict
+      integer	       :: i
+
+	  call dict%set('A','b')
+	  call dict%set('B','^')
+	  call dict%set('C',' ')
+	  call dict%set('D','c')
+	  call dict%set('E','ZZ')
+	  call dict%set('F','ZZZZ')
+	  call dict%set('G','z')
+	  call dict%set('A','new value for A')
+
+	  write(*,'(*(a,"==>","[",a,"]",/))') &
+	   & (trim(dict%key(i)),	      &
+	   & dict%value(i)(:dict%count(i)),   &
+	   & i=1,size(dict%key))
+
+       end program demo_set
+
+  Results
+
+	> G==>[z]
+	> F==>[ZZZZ]
+	> E==>[ZZ]
+	> D==>[c]
+	> C==>[]
+	> B==>[^]
+	> A==>[new value for A]
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  set(3m_list)
+locate(3m_list) 					       locate(3m_list)
+
+NAME
+  locate(3f) - [M_list] finds the index where a string is found or should be
+  in a sorted array (LICENSE:PD)
+
+SYNOPSIS
+  subroutine locate(list,value,place,ier,errmsg)
+
+     character(len=:)|doubleprecision|real|integer,allocatable :: list(:)
+     character(len=*)|doubleprecision|real|integer,intent(in)  :: value
+     integer, intent(out)		   :: PLACE
+
+     integer, intent(out),optional	   :: IER
+     character(len=*),intent(out),optional :: ERRMSG
+
+DESCRIPTION
+  LOCATE(3f) finds the index where the VALUE is found or should be found in an
+  array. The array must be sorted in descending order (highest at top). If
+  VALUE is not found it returns the index where the name should be placed at
+  with a negative sign.
+
+  The array and list must be of the same type (CHARACTER, DOUBLEPRECISION,
+  REAL,INTEGER)
+
+OPTIONS
+  VALUE
+    the value to locate in the list.
+
+  LIST
+    is the list array.
+
+RETURNS
+  PLACE
+    is the subscript that the entry was found at if it is greater than
+    zero(0).
+
+    If PLACE is negative, the absolute value of PLACE indicates the subscript
+    value where the new entry should be placed in order to keep the list
+    alphabetized.
+
+  IER
+    is zero(0) if no error occurs.  If an error occurs and IER is not present,
+    the program is stopped.
+
+  ERRMSG
+    description of any error
+
+EXAMPLES
+  Find if a string is in a sorted array, and insert the string into the list
+  if it is not present ...
+
+      program demo_locate
+      use M_sort, only : sort_shell
+      use M_list, only : locate
+      implicit none
+      character(len=:),allocatable  :: arr(:)
+      integer			    :: i
+
+      arr=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      ! make sure sorted in descending order
+      call sort_shell(arr,order='d')
+
+      call update(arr,'b')
+      call update(arr,'[')
+      call update(arr,'c')
+      call update(arr,'ZZ')
+      call update(arr,'ZZZZ')
+      call update(arr,'z')
+
+      contains
+      subroutine update(arr,string)
+      character(len=:),allocatable :: arr(:)
+      character(len=*)		   :: string
+      integer			   :: place, plus, ii, end
+      ! find where string is or should be
+      call locate(arr,string,place)
+      write(*,*)'for "'//string//'" index is ',place, size(arr)
+      ! if string was not found insert it
+      if(place.lt.1)then
+	 plus=abs(place)
+	 ii=len(arr)
+	 end=size(arr)
+	 ! empty array
+	 if(end.eq.0)then
+	    arr=[character(len=ii) :: string ]
+	 ! put in front of array
+	 elseif(plus.eq.1)then
+	    arr=[character(len=ii) :: string, arr]
+	 ! put at end of array
+	 elseif(plus.eq.end)then
+	    arr=[character(len=ii) :: arr, string ]
+	 ! put in middle of array
+	 else
+	    arr=[character(len=ii) :: arr(:plus-1), string,arr(plus:) ]
+	 endif
+	 ! show array
+	 write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+      endif
+      end subroutine update
+      end program demo_locate
+
+  Results
+
+	>  for "b" index is	       2	   5
+	>  for "[" index is	      -4	   5
+	> SIZE=5 xxx,b,aaa,[,ZZZ,
+	>  for "c" index is	      -2	   6
+	> SIZE=6 xxx,c,b,aaa,[,ZZZ,
+	>  for "ZZ" index is	       -7	    7
+	> SIZE=7 x
+gzip: stdout: Permission denied
+xx,c,b,aaa,[,ZZZ,,
+	>  for "ZZZZ" index is		 -6	      8
+	> SIZE=8 xxx,c,b,aaa,[,ZZZZ,ZZZ,,
+	>  for "z" index is	      -1	   9
+	> SIZE=9 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,,
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       locate(3m_list)
+M_list(3m_list) 					       M_list(3m_list)
+
+NAME
+  M_list(3f) - [M_list::INTRO] maintain simple lists (LICENSE:PD)
+
+SYNOPSIS
+  use M_list, only : insert, replace, remove, locate use M_list, only :
+  dictionary
+
+DESCRIPTION
+  The M_list(3fm) module allows for maintaining an allocatable array of
+  intrinsic type (REAL, INTEGER, CHARACTER) as a sorted list. An example is
+  given that creates a keyword-value dictionary using the lists.
+
+  The lists are maintained as simple allocatable arrays. Each time an entry is
+  added or deleted the array is re-allocated. Because of the expense of
+  reallocating the data these routines are best suited for maintaining small
+  lists that do not change size frequently.
+
+  The advantage of this simplistic approach is that the dictionary components
+  are simple arrays of intrinsic types which can be easily accessed with
+  standard routines. It is easy to understand, as it works with simple arrays.
+  For more demanding applications this would be implemented as a linked list,
+  which there are a number of freely available examples of; several are listed
+  on the Fortran Wiki.
+
+   BASIC LIST
+  subroutine locate(list,value,place,ier,errmsg)
+    finds the index where a value is found or should be in a sorted array and
+    flag if the value exists already
+
+  subroutine insert(list,value,place)
+    insert entry into an allocatable array at specified position
+
+  subroutine replace(list,value,place)
+    replace entry in an allocatable array at specified position
+
+  subroutine remove(list,place)
+    remove entry from an allocatable array at specified position
+
+EXAMPLES
+  Sample program
+
+     program demo_M_list
+     use M_list, only : insert, locate, replace, remove
+     ! create a dictionary with character keywords, values, and value lengths
+     ! using the routines for maintaining a list
+
+      use M_list, only : locate, insert, replace
+      implicit none
+      character(len=:),allocatable   :: keywords(:)
+      character(len=:),allocatable   :: values(:)
+      integer,allocatable	     :: counts(:)
+      integer			     :: i
+      ! insert and replace entries
+      call update('b','value of b')
+      call update('a','value of a')
+      call update('c','value of c')
+      call update('c','value of c again')
+      call update('d','value of d')
+      call update('a','value of a again')
+      ! show array
+      write(*,'(*(a,"==>","[",a,"]",/))')&
+       & (trim(keywords(i)),values(i)(:counts(i)),i=1,size(keywords))
+      ! remove some entries
+      call update('a')
+      call update('c')
+      write(*,'(*(a,"==>","[",a,"]",/))')&
+       & (trim(keywords(i)),values(i)(:counts(i)),i=1,size(keywords))
+      ! get some values
+      write(*,*)'get b=>',get('b')
+      write(*,*)'get d=>',get('d')
+      write(*,*)'get notthere=>',get('notthere')
+      !
+      contains
+      subroutine update(key,valin)
+      character(len=*),intent(in)	    :: key
+      character(len=*),intent(in),optional  :: valin
+      integer				    :: place
+      integer				    :: ilen
+      character(len=:),allocatable	    :: val
+      if(present(valin))then
+	 val=valin
+	 ilen=len_trim(val)
+	 ! find where string is or should be
+	 call locate(keywords,key,place)
+	 ! if string was not found insert it
+	 if(place.lt.1)then
+	    call insert(keywords,key,iabs(place))
+	    call insert(values,val,iabs(place))
+	    call insert(counts,ilen,iabs(place))
+	 else
+	    call replace(values,val,place)
+	    call replace(counts,ilen,place)
+	 endif
+      else
+	 call locate(keywords,key,place)
+	 if(place.gt.0)then
+	    call remove(keywords,place)
+	    call remove(values,place)
+	    call remove(counts,place)
+	 endif
+      endif
+      end subroutine update
+      function get(key) result(valout)
+      character(len=*),intent(in)   :: key
+      character(len=:),allocatable  :: valout
+      in
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+teger			    :: place
+	 ! find where string is or should be
+	 call locate(keywords,key,place)
+	 if(place.lt.1)then
+	    valout=''
+	 else
+	    valout=values(place)(:counts(place))
+	 endif
+      end function get
+      end program demo_M_list
+
+  Results
+
+	>  d==>[value of d]
+	>  c==>[value of c again]
+	>  b==>[value of b]
+	>  a==>[value of a again]
+	>
+	> d==>[value of d]
+	> b==>[value of b]
+	>
+	>  get b=>value of b
+	>  get d=>value of d
+	>  get notthere=>
+
+   BASIC DICTIONARY
+  A basic dictionary that uses the basic M_list functions.
+
+  Consider using generic linked-list based dictionaries when heavy usage is
+  required, now that that is available in more recent versions of Fortran.
+
+  Note: this does not work with gfortran(1) up to at least 7.4.0 but works
+  from at least 10.3.0 and onward.
+
+  Dictionary type definition:
+
+	type dictionary
+	   character(len=:),allocatable :: key(:)
+	   character(len=:),allocatable :: value(:)
+	   integer,allocatable		:: count(:)
+	   contains
+	      procedure,public :: get => dict_get
+	      procedure,public :: set => dict_add
+	      procedure,public :: del => dict_delete
+	      procedure,public :: clr => dict_clear
+	end type dictionary
+
+	%get	  get value from type(dictionary) given an existing key
+	%set	  set or replace value for type(dictionary) given a key
+	%del	  delete an existing key from type(dictionary)
+	%clr	  empty a type(dictionary)
+	%ifdef	  test if name is defined
+
+EXAMPLES
+  Sample program
+
+	program test_dictionary
+	use M_list, only : dictionary
+	implicit none
+	type(dictionary)	     :: table
+	  !
+	  ! create a character string dictionary
+	  !
+	  call table%set('A','aye')
+	  call table%set('B','bee')
+	  call table%set('C','see')
+	  call table%set('D','dee')
+	  !
+	  write(*,*)'A=',table%get('A')
+	  write(*,*)'C=',table%get('C')
+	  write(*,*)'notthere=',table%get('notthere')
+	  !
+	  call print_dict()
+	  !
+	  ! delete dictionary entries
+	  !
+	  call	table%del('A')
+	  call	table%del('C')
+	  call	table%del('z') ! a noop as there is no key of 'z'
+	  !
+	  call print_dict()
+	  !
+	  ! clear dictionary
+	  !
+	  call	table%clr()
+	  !
+	  call print_dict()
+	!
+	contains
+	!
+	subroutine print_dict()
+	integer :: i
+	   ! the dictionary is just three arrays
+	   write(*,'("DICTIONARY:")')
+	   write(*,'(*(a,"==>","[",a,"]",/))') &
+	   & (trim(table%key(i)),		&
+	   & table%value(i)(:table%count(i)),	 &
+	   & i=1,size(table%key))
+	   !
+	end subroutine print_dict
+	!
+	end program test_dictionary
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       M_list(3m_list)
+remove(3m_list) 					       remove(3m_list)
+
+NAME
+  remove(3f) - [M_list] remove entry from an allocatable array at specified
+  position (LICENSE:PD)
+
+SYNOPSIS
+  subroutine remove(list,place)
+
+     character(len=:)|doubleprecision|real|integer,intent(inout) :: list(:)
+     integer, intent(out) :: PLACE
+
+DESCRIPTION
+  Remove a value from an allocatable array at the specified index.  The array
+  is assumed to be sorted in descending order. It may be of type CHARACTER,
+  DOUBLEPRECISION, REAL, or INTEGER.
+
+OPTIONS
+  list
+    is the list array.
+
+  PLACE
+    is the subscript for the entry that should be removed
+
+EXAMPLES
+  Sample program
+
+      program demo_remove
+      use M_sort, only : sort_shell
+      use M_list, only : locate, remove
+      implicit none
+      character(len=:),allocatable :: arr(:)
+      integer			    :: i
+      integer			    :: end
+
+      arr=[character(len=20) :: '','ZZZ','Z','aaa','b','b','ab','bb','xxx' ]
+      ! make sure sorted in descending order
+      call sort_shell(arr,order='d')
+
+      end=size(arr)
+      write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+      call remove(arr,1)
+      end=size(arr)
+      write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+      call remove(arr,4)
+      end=size(arr)
+      write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+
+      end program demo_remove
+
+  Results
+
+	> SIZE=9 xxx,bb,b,b,ab,aaa,ZZZ,Z,,
+	> SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
+	> SIZE=7 bb,b,b,aaa,ZZZ,Z,,
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       remove(3m_list)
+get(3m_list)							  get(3m_list)
+
+NAME
+  get(3f) - [M_list::dictionary::OOPS] get value of key-value pair in a
+  dictionary given key (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+     character(len=*),intent(in) :: VALUE
+
+     value=dict%get(key)
+
+DESCRIPTION
+  get a value given a key from a key-value dictionary
+
+  If key is not found in dictionary , return a blank
+
+OPTIONS
+  DICT
+    is the dictionary.
+
+  KEY
+    key name
+
+  VALUE
+    value associated with key
+
+EXAMPLES
+  Sample program:
+
+      program demo_get
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary)		   :: table
+      character(len=:),allocatable :: val
+      integer			   :: i
+
+	 call table%set('A','value for A')
+	 call table%set('B','value for B')
+	 call table%set('C','value for C')
+	 call table%set('D','value for D')
+	 call table%set('E','value for E')
+	 call table%set('F','value for F')
+	 call table%set('G','value for G')
+
+	 write(*,*)'A=',table%get('A')
+	 write(*,*)'B=',table%get('B')
+	 write(*,*)'C=',table%get('C')
+	 write(*,*)'D=',table%get('D')
+	 write(*,*)'E=',table%get('E')
+	 write(*,*)'F=',table%get('F')
+	 write(*,*)'G=',table%get('G')
+	 write(*,*)'H=',table%get('H')
+
+       end program demo_get
+
+  Results
+
+	>  A=value for A
+	>  B=value for B
+	>  C=value for C
+	>  D=value for D
+	>  E=value for E
+	>  F=value for F
+	>  G=value for G
+	>  H=
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  get(3m_list)
+clr(3m_list)							  clr(3m_list)
+
+NAME
+  clr(3f) - [M_list::dictionary::OOPS] clear basic dictionary (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     call dict%clr()
+
+DESCRIPTION
+  clear a basic dictionary.
+
+OPTIONS
+  DICT
+    the dictionary.
+
+EXAMPLES
+  create and clear a basic dictionary
+
+      program demo_clr
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary) :: caps
+      integer			    :: i
+	 ! create a character string dictionary
+	 call caps%set('A','aye')
+	 call caps%set('B','bee')
+	 call caps%set('C','see')
+	 call caps%set('D','dee')
+	 ! show current dictionary
+	 write(*,'("DICTIONARY BEFORE CLEARED")')
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+	 call  caps%clr()
+	 write(*,'("DICTIONARY AFTER CLEARED")')
+	 ! show current dictionary
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+
+      101 format (1x,*(a,"='",a,"'",:,","))
+      end program demo_clr
+
+  Results
+
+	> DICTIONARY BEFORE CLEARED
+	>  D='dee',C='see',B='bee',A='aye'
+	> DICTIONARY AFTER CLEARED
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  clr(3m_list)
++ cd ..
++ make clean
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+rm -f ../example/demo_insert ../example/demo_locate ../example/demo_M_list ../example/demo_remove ../example/demo_replace ../example/demo_M_list  M_list.o  *.mod ../test/test_suite_M_list 
++ make F90=gfortran gfortran
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+gfortran -g -O -Wall -std=f2018 -Wextra -Wno-maybe-uninitialized -Wno-uninitialized -c M_list.f90
+M_list.f90:614:9:
+
+  614 |       if(value.eq.list(PLACE))then
+      |         1
+Warning: Equality comparison for REAL(4) at (1) [-Wcompare-reals]
+M_list.f90:534:9:
+
+  534 |       if(value.eq.list(PLACE))then
+      |         1
+Warning: Equality comparison for REAL(8) at (1) [-Wcompare-reals]
+That's all folks!
+built with gfortran
++ make doxygen
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+doxygen dox.in
+make: doxygen: Command not found
+make: *** [Makefile:114: doxygen] Error 127
++ make man
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+mandb: warning: $MANPATH set, appending /etc/manpath.config
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/../man/man3'. Wait...
+Purging old database entries in /home/urbanjs/venus/V600/github/M_list/src/../man...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man...
+mandb: warning: failed to store entry for clr(3m_list)
+mandb: warning: failed to store entry for remove(3m_list)
+mandb: warning: failed to store entry for set(3m_list)
+mandb: warning: failed to store entry for ifdef(3m_list)
+mandb: warning: failed to store entry for M_list(3m_list)
+mandb: warning: failed to store entry for del(3m_list)
+mandb: warning: failed to store entry for get(3m_list)
+mandb: warning: failed to store entry for insert(3m_list)
+mandb: warning: failed to store entry for locate(3m_list)
+mandb: warning: failed to store entry for replace(3m_list)
+done.
+Checking for stray cats under /home/urbanjs/venus/V600/github/M_list/src/../man...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat8...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat1...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat3...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat4...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat6...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat2...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat5...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat7...
+1 man subdirectory contained newer manual pages.
+10 manual pages were added.
+0 stray cats were added.
+0 old database entries were purged.
+clr(3f) (3m_list) [clr] - (unknown subject)
+del(3f) (3m_list) [del] - (unknown subject)
+get(3f) (3m_list) [get] - (unknown subject)
+ifdef(3f) (3m_list) [ifdef] - (unknown subject)
+insert(3f) (3m_list) [insert] - (unknown subject)
+locate(3f) (3m_list) [locate] - (unknown subject)
+M_list(3f) (3m_list) [M_list] - (unknown subject)
+remove(3f) (3m_list) [remove] - (unknown subject)
+replace(3f) (3m_list) [replace] - (unknown subject)
+set(3f) (3m_list) [set] - (unknown subject)
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+del(3m_list)							  del(3m_list)
+
+NAME
+  del(3f) - [M_list::dictionary::OOPS] delete entry by key name from a basic
+  dictionary (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+
+     dict%del(key)
+
+DESCRIPTION
+  Delete an entry from a basic dictionary if it is present.
+
+OPTIONS
+  DICT
+    the dictionary.
+
+  KEY
+    the key name to find and delete from the dictionary.
+
+EXAMPLES
+  Delete an entry from a dictionary by key name.
+
+      program demo_del
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary) :: caps
+      integer			    :: i
+	 ! create a character string dictionary
+	 call caps%set('A','aye')
+	 call caps%set('B','bee')
+	 call caps%set('C','see')
+	 call caps%set('D','dee')
+	 ! show current dictionary
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+	 ! delete dictionary entries
+	 call  caps%del('A')
+	 call  caps%del('C')
+	 call  caps%del('z') ! a noop as there is no key of 'z'
+	 ! show current dictionary
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+
+      101 format (1x,*(a,"='",a,"'",:,","))
+      end program demo_del
+
+  Results
+
+	 > D='dee',C='see',B='bee',A='aye'
+	 > D='dee',B='bee'
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  del(3m_list)
+ifdef(3m_list)							ifdef(3m_list)
+
+NAME
+  ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present in
+  dictionary or not (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+     logical :: value
+
+     value=dict%ifdef(key)
+
+DESCRIPTION
+  determine if name is already defined in dictionary or not
+
+OPTIONS
+  DICT
+    is the dictionary.
+
+  KEY
+    key name
+
+RETURNS
+  VALUE
+
+EXAMPLES
+  Sample program:
+
+      program demo_ifdef
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary)		   :: table
+      character(len=:),allocatable :: val
+      integer			   :: i
+
+	 call table%set('A','value for A')
+	 call table%set('B','value for B')
+	 call table%set('C','value for C')
+	 call table%set('D','value for D')
+	 call table%set('E','value for E')
+	 call table%set('F','value for F')
+	 call table%set('G','value for G')
+	 call table%del('F')
+	 call table%del('D')
+
+	 write(*,*)'A=',table%ifdef('A')
+	 write(*,*)'B=',table%ifdef('B')
+	 write(*,*)'C=',table%ifdef('C')
+	 write(*,*)'D=',table%ifdef('D')
+	 write(*,*)'E=',table%ifdef('E')
+	 write(*,*)'F=',table%ifdef('F')
+	 write(*,*)'G=',table%ifdef('G')
+	 write(*,*)'H=',table%ifdef('H')
+
+       end program demo_ifdef
+
+  Results:
+
+      > A= T
+      > B= T
+      > C= T
+      > D= F
+      > E= T
+      > F= F
+      > G= T
+      > H= F
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		ifdef(3m_list)
+insert(3m_list) 					       insert(3m_list)
+
+NAME
+  insert(3f) - [M_list] insert entry into a string array at specified position
+  (LICENSE:PD)
+
+SYNOPSIS
+  subroutine insert(list,value,place)
+
+     character(len=*)|doubleprecision|real|integer,intent(in) :: value
+     character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
+     integer,intent(in)    :: place
+
+DESCRIPTION
+  Insert a value into an allocatable array at the specified index.  The list
+  and value must be of the same type (CHARACTER, DOUBLEPRECISION, REAL, or
+  INTEGER)
+
+OPTIONS
+  list
+    is the list array. Must be sorted in descending order.
+
+  value
+    the value to place in the array
+
+  PLACE
+    is the subscript that the entry should be placed at
+
+EXAMPLES
+  Find if a string is in a sorted array, and insert the string into the list
+  if it is not present ...
+
+      program demo_insert
+      use M_sort, only : sort_shell
+      use M_list, only : locate, insert
+      implicit none
+      character(len=:),allocatable :: arr(:)
+      integer			    :: i
+
+      arr=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      ! make sure sorted in descending order
+      call sort_shell(arr,order='d')
+      ! add or replace values
+      call update(arr,'b')
+      call update(arr,'[')
+      call update(arr,'c')
+      call update(arr,
+gzip: stdout: Permission denied
+'ZZ')
+      call update(arr,'ZZZ')
+      call update(arr,'ZZZZ')
+      call update(arr,'')
+      call update(arr,'z')
+
+      contains
+      subroutine update(arr,string)
+      character(len=:),allocatable :: arr(:)
+      character(len=*)		   :: string
+      integer			   :: place, end
+
+      end=size(arr)
+      ! find where string is or should be
+      call locate(arr,string,place)
+      ! if string was not found insert it
+      if(place.lt.1)then
+	 call insert(arr,string,abs(place))
+      endif
+      ! show array
+      end=size(arr)
+      write(*,'("array is now SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+
+      end subroutine update
+      end program demo_insert
+
+  Results
+
+	 > array is now SIZE=5 xxx,b,aaa,ZZZ,,
+	 > array is now SIZE=6 xxx,b,aaa,[,ZZZ,,
+	 > array is now SIZE=7 xxx,c,b,aaa,[,ZZZ,,
+	 > array is now SIZE=8 xxx,c,b,aaa,[,ZZZ,ZZ,,
+	 > array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+	 > array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       insert(3m_list)
+replace(3m_list)					      replace(3m_list)
+
+NAME
+  replace(3f) - [M_list] replace entry in a string array at specified position
+  (LICENSE:PD)
+
+SYNOPSIS
+  subroutine replace(list,value,place)
+
+     character(len=*)|doubleprecision|real|integer,intent(in) :: value
+     character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
+     integer, intent(out)	   :: PLACE
+
+DESCRIPTION
+  replace a value in an allocatable array at the specified index. Unless the
+  array needs the string length to increase this is merely an assign of a
+  value to an array element.
+
+  The array may be of type CHARACTER, DOUBLEPRECISION, REAL, or INTEGER> It is
+  assumed to be sorted in descending order without duplicate values.
+
+  The value and list must be of the same type.
+
+OPTIONS
+  VALUE
+    the value to place in the array
+
+  LIST
+    is the array.
+
+  PLACE
+    is the subscript that the entry should be placed at
+
+EXAMPLES
+  Replace key-value pairs in a dictionary
+
+      program demo_replace
+      use M_list, only	: insert, locate, replace
+      ! Find if a key is in a list and insert it
+      ! into the key list and value list if it is not present
+      ! or replace the associated value if the key existed
+      implicit none
+      character(len=20) 	   :: key
+      character(len=100)	   :: val
+      character(len=:),allocatable :: keywords(:)
+      character(len=:),allocatable :: values(:)
+      integer			   :: i
+      integer			   :: place
+      call update('b','value of b')
+      call update('a','value of a')
+      call update('c','value of c')
+      call update('c','value of c again')
+      call update('d','value of d')
+      call update('a','value of a again')
+      ! show array
+      write(*,'(*(a,"==>",a,/))')&
+	     &(trim(keywords(i)),trim(values(i)),i=1,size(keywords))
+
+      call locate(keywords,'a',place)
+      if(place.gt.0)then
+	 write(*,*)'The value of "a" is ',trim(values(place))
+      else
+	 write(*,*)'"a" not found'
+      endif
+
+      contains
+      subroutine update(key,val)
+      character(len=*),intent(in)  :: key
+      character(len=*),intent(in)  :: val
+      integer			   :: place
+
+      ! find where string is or should be
+      call locate(keywords,key,place)
+      ! if string was not found insert it
+      if(place.lt.1)then
+	 call insert(keywords,key,abs(place))
+	 call insert(values,val,abs(place))
+      else ! replace
+	 call replace(values,val,place)
+      endif
+
+      end subroutine update
+  end program demo_replace
+
+  Results
+
+     > d==>value of d
+     > c==>value of c again
+     > b==>value of b
+     > a==>value of a again
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	      replace(3m_list)
+set(3m_list)							  set(3m_list)
+
+NAME
+  set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair in a
+  dictionary (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+     character(len=*),intent(in) :: VALUE
+
+     call dict%rep(key,value)
+
+DESCRIPTION
+  Add or replac
+gzip: stdout: Permission denied
+e a key-value pair in a dictionary.
+
+OPTIONS
+  DICT
+    is the dictionary.
+
+  key
+    key name
+
+  VALUE
+    value associated with key
+
+EXAMPLES
+  Add or replace a key and value pair in a dictionary
+
+      program demo_set
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary) :: dict
+      integer	       :: i
+
+	  call dict%set('A','b')
+	  call dict%set('B','^')
+	  call dict%set('C',' ')
+	  call dict%set('D','c')
+	  call dict%set('E','ZZ')
+	  call dict%set('F','ZZZZ')
+	  call dict%set('G','z')
+	  call dict%set('A','new value for A')
+
+	  write(*,'(*(a,"==>","[",a,"]",/))') &
+	   & (trim(dict%key(i)),	      &
+	   & dict%value(i)(:dict%count(i)),   &
+	   & i=1,size(dict%key))
+
+       end program demo_set
+
+  Results
+
+	> G==>[z]
+	> F==>[ZZZZ]
+	> E==>[ZZ]
+	> D==>[c]
+	> C==>[]
+	> B==>[^]
+	> A==>[new value for A]
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  set(3m_list)
+locate(3m_list) 					       locate(3m_list)
+
+NAME
+  locate(3f) - [M_list] finds the index where a string is found or should be
+  in a sorted array (LICENSE:PD)
+
+SYNOPSIS
+  subroutine locate(list,value,place,ier,errmsg)
+
+     character(len=:)|doubleprecision|real|integer,allocatable :: list(:)
+     character(len=*)|doubleprecision|real|integer,intent(in)  :: value
+     integer, intent(out)		   :: PLACE
+
+     integer, intent(out),optional	   :: IER
+     character(len=*),intent(out),optional :: ERRMSG
+
+DESCRIPTION
+  LOCATE(3f) finds the index where the VALUE is found or should be found in an
+  array. The array must be sorted in descending order (highest at top). If
+  VALUE is not found it returns the index where the name should be placed at
+  with a negative sign.
+
+  The array and list must be of the same type (CHARACTER, DOUBLEPRECISION,
+  REAL,INTEGER)
+
+OPTIONS
+  VALUE
+    the value to locate in the list.
+
+  LIST
+    is the list array.
+
+RETURNS
+  PLACE
+    is the subscript that the entry was found at if it is greater than
+    zero(0).
+
+    If PLACE is negative, the absolute value of PLACE indicates the subscript
+    value where the new entry should be placed in order to keep the list
+    alphabetized.
+
+  IER
+    is zero(0) if no error occurs.  If an error occurs and IER is not present,
+    the program is stopped.
+
+  ERRMSG
+    description of any error
+
+EXAMPLES
+  Find if a string is in a sorted array, and insert the string into the list
+  if it is not present ...
+
+      program demo_locate
+      use M_sort, only : sort_shell
+      use M_list, only : locate
+      implicit none
+      character(len=:),allocatable  :: arr(:)
+      integer			    :: i
+
+      arr=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      ! make sure sorted in descending order
+      call sort_shell(arr,order='d')
+
+      call update(arr,'b')
+      call update(arr,'[')
+      call update(arr,'c')
+      call update(arr,'ZZ')
+      call update(arr,'ZZZZ')
+      call update(arr,'z')
+
+      contains
+      subroutine update(arr,string)
+      character(len=:),allocatable :: arr(:)
+      character(len=*)		   :: string
+      integer			   :: place, plus, ii, end
+      ! find where string is or should be
+      call locate(arr,string,place)
+      write(*,*)'for "'//string//'" index is ',place, size(arr)
+      ! if string was not found insert it
+      if(place.lt.1)then
+	 plus=abs(place)
+	 ii=len(arr)
+	 end=size(arr)
+	 ! empty array
+	 if(end.eq.0)then
+	    arr=[character(len=ii) :: string ]
+	 ! put in front of array
+	 elseif(plus.eq.1)then
+	    arr=[character(len=ii) :: string, arr]
+	 ! put at end of array
+	 elseif(plus.eq.end)then
+	    arr=[character(len=ii) :: arr, string ]
+	 ! put in middle of array
+	 else
+	    arr=[character(len=ii) :: arr(:plus-1), string,arr(plus:) ]
+	 endif
+	 ! show array
+	 write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+      endif
+      end subroutine update
+      end program demo_locate
+
+  Results
+
+	>  for "b" index is	       2	   5
+	>  for "[" index is	      -4	   5
+	> SIZE=5 xxx,b,aaa,[,ZZZ,
+	>  for "c" index is	      -2	   6
+	> SIZE=6 xxx,c,b,aaa,[,ZZZ,
+	>  for "ZZ" index is	       -7	    7
+	> SIZE=7 x
+gzip: stdout: Permission denied
+xx,c,b,aaa,[,ZZZ,,
+	>  for "ZZZZ" index is		 -6	      8
+	> SIZE=8 xxx,c,b,aaa,[,ZZZZ,ZZZ,,
+	>  for "z" index is	      -1	   9
+	> SIZE=9 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,,
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       locate(3m_list)
+M_list(3m_list) 					       M_list(3m_list)
+
+NAME
+  M_list(3f) - [M_list::INTRO] maintain simple lists (LICENSE:PD)
+
+SYNOPSIS
+  use M_list, only : insert, replace, remove, locate use M_list, only :
+  dictionary
+
+DESCRIPTION
+  The M_list(3fm) module allows for maintaining an allocatable array of
+  intrinsic type (REAL, INTEGER, CHARACTER) as a sorted list. An example is
+  given that creates a keyword-value dictionary using the lists.
+
+  The lists are maintained as simple allocatable arrays. Each time an entry is
+  added or deleted the array is re-allocated. Because of the expense of
+  reallocating the data these routines are best suited for maintaining small
+  lists that do not change size frequently.
+
+  The advantage of this simplistic approach is that the dictionary components
+  are simple arrays of intrinsic types which can be easily accessed with
+  standard routines. It is easy to understand, as it works with simple arrays.
+  For more demanding applications this would be implemented as a linked list,
+  which there are a number of freely available examples of; several are listed
+  on the Fortran Wiki.
+
+   BASIC LIST
+  subroutine locate(list,value,place,ier,errmsg)
+    finds the index where a value is found or should be in a sorted array and
+    flag if the value exists already
+
+  subroutine insert(list,value,place)
+    insert entry into an allocatable array at specified position
+
+  subroutine replace(list,value,place)
+    replace entry in an allocatable array at specified position
+
+  subroutine remove(list,place)
+    remove entry from an allocatable array at specified position
+
+EXAMPLES
+  Sample program
+
+     program demo_M_list
+     use M_list, only : insert, locate, replace, remove
+     ! create a dictionary with character keywords, values, and value lengths
+     ! using the routines for maintaining a list
+
+      use M_list, only : locate, insert, replace
+      implicit none
+      character(len=:),allocatable   :: keywords(:)
+      character(len=:),allocatable   :: values(:)
+      integer,allocatable	     :: counts(:)
+      integer			     :: i
+      ! insert and replace entries
+      call update('b','value of b')
+      call update('a','value of a')
+      call update('c','value of c')
+      call update('c','value of c again')
+      call update('d','value of d')
+      call update('a','value of a again')
+      ! show array
+      write(*,'(*(a,"==>","[",a,"]",/))')&
+       & (trim(keywords(i)),values(i)(:counts(i)),i=1,size(keywords))
+      ! remove some entries
+      call update('a')
+      call update('c')
+      write(*,'(*(a,"==>","[",a,"]",/))')&
+       & (trim(keywords(i)),values(i)(:counts(i)),i=1,size(keywords))
+      ! get some values
+      write(*,*)'get b=>',get('b')
+      write(*,*)'get d=>',get('d')
+      write(*,*)'get notthere=>',get('notthere')
+      !
+      contains
+      subroutine update(key,valin)
+      character(len=*),intent(in)	    :: key
+      character(len=*),intent(in),optional  :: valin
+      integer				    :: place
+      integer				    :: ilen
+      character(len=:),allocatable	    :: val
+      if(present(valin))then
+	 val=valin
+	 ilen=len_trim(val)
+	 ! find where string is or should be
+	 call locate(keywords,key,place)
+	 ! if string was not found insert it
+	 if(place.lt.1)then
+	    call insert(keywords,key,iabs(place))
+	    call insert(values,val,iabs(place))
+	    call insert(counts,ilen,iabs(place))
+	 else
+	    call replace(values,val,place)
+	    call replace(counts,ilen,place)
+	 endif
+      else
+	 call locate(keywords,key,place)
+	 if(place.gt.0)then
+	    call remove(keywords,place)
+	    call remove(values,place)
+	    call remove(counts,place)
+	 endif
+      endif
+      end subroutine update
+      function get(key) result(valout)
+      character(len=*),intent(in)   :: key
+      character(len=:),allocatable  :: valout
+      in
+gzip: stdout: Permission denied
+
+gzip: stdout: Permission denied
+teger			    :: place
+	 ! find where string is or should be
+	 call locate(keywords,key,place)
+	 if(place.lt.1)then
+	    valout=''
+	 else
+	    valout=values(place)(:counts(place))
+	 endif
+      end function get
+      end program demo_M_list
+
+  Results
+
+	>  d==>[value of d]
+	>  c==>[value of c again]
+	>  b==>[value of b]
+	>  a==>[value of a again]
+	>
+	> d==>[value of d]
+	> b==>[value of b]
+	>
+	>  get b=>value of b
+	>  get d=>value of d
+	>  get notthere=>
+
+   BASIC DICTIONARY
+  A basic dictionary that uses the basic M_list functions.
+
+  Consider using generic linked-list based dictionaries when heavy usage is
+  required, now that that is available in more recent versions of Fortran.
+
+  Note: this does not work with gfortran(1) up to at least 7.4.0 but works
+  from at least 10.3.0 and onward.
+
+  Dictionary type definition:
+
+	type dictionary
+	   character(len=:),allocatable :: key(:)
+	   character(len=:),allocatable :: value(:)
+	   integer,allocatable		:: count(:)
+	   contains
+	      procedure,public :: get => dict_get
+	      procedure,public :: set => dict_add
+	      procedure,public :: del => dict_delete
+	      procedure,public :: clr => dict_clear
+	end type dictionary
+
+	%get	  get value from type(dictionary) given an existing key
+	%set	  set or replace value for type(dictionary) given a key
+	%del	  delete an existing key from type(dictionary)
+	%clr	  empty a type(dictionary)
+	%ifdef	  test if name is defined
+
+EXAMPLES
+  Sample program
+
+	program test_dictionary
+	use M_list, only : dictionary
+	implicit none
+	type(dictionary)	     :: table
+	  !
+	  ! create a character string dictionary
+	  !
+	  call table%set('A','aye')
+	  call table%set('B','bee')
+	  call table%set('C','see')
+	  call table%set('D','dee')
+	  !
+	  write(*,*)'A=',table%get('A')
+	  write(*,*)'C=',table%get('C')
+	  write(*,*)'notthere=',table%get('notthere')
+	  !
+	  call print_dict()
+	  !
+	  ! delete dictionary entries
+	  !
+	  call	table%del('A')
+	  call	table%del('C')
+	  call	table%del('z') ! a noop as there is no key of 'z'
+	  !
+	  call print_dict()
+	  !
+	  ! clear dictionary
+	  !
+	  call	table%clr()
+	  !
+	  call print_dict()
+	!
+	contains
+	!
+	subroutine print_dict()
+	integer :: i
+	   ! the dictionary is just three arrays
+	   write(*,'("DICTIONARY:")')
+	   write(*,'(*(a,"==>","[",a,"]",/))') &
+	   & (trim(table%key(i)),		&
+	   & table%value(i)(:table%count(i)),	 &
+	   & i=1,size(table%key))
+	   !
+	end subroutine print_dict
+	!
+	end program test_dictionary
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       M_list(3m_list)
+remove(3m_list) 					       remove(3m_list)
+
+NAME
+  remove(3f) - [M_list] remove entry from an allocatable array at specified
+  position (LICENSE:PD)
+
+SYNOPSIS
+  subroutine remove(list,place)
+
+     character(len=:)|doubleprecision|real|integer,intent(inout) :: list(:)
+     integer, intent(out) :: PLACE
+
+DESCRIPTION
+  Remove a value from an allocatable array at the specified index.  The array
+  is assumed to be sorted in descending order. It may be of type CHARACTER,
+  DOUBLEPRECISION, REAL, or INTEGER.
+
+OPTIONS
+  list
+    is the list array.
+
+  PLACE
+    is the subscript for the entry that should be removed
+
+EXAMPLES
+  Sample program
+
+      program demo_remove
+      use M_sort, only : sort_shell
+      use M_list, only : locate, remove
+      implicit none
+      character(len=:),allocatable :: arr(:)
+      integer			    :: i
+      integer			    :: end
+
+      arr=[character(len=20) :: '','ZZZ','Z','aaa','b','b','ab','bb','xxx' ]
+      ! make sure sorted in descending order
+      call sort_shell(arr,order='d')
+
+      end=size(arr)
+      write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+      call remove(arr,1)
+      end=size(arr)
+      write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+      call remove(arr,4)
+      end=size(arr)
+      write(*,'("SIZE=",i0,1x,*(a,","))')end,(trim(arr(i)),i=1,end)
+
+      end program demo_remove
+
+  Results
+
+	> SIZE=9 xxx,bb,b,b,ab,aaa,ZZZ,Z,,
+	> SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
+	> SIZE=7 bb,b,b,aaa,ZZZ,Z,,
+
+AUTHOR
+  1989,2017 John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022	       remove(3m_list)
+get(3m_list)							  get(3m_list)
+
+NAME
+  get(3f) - [M_list::dictionary::OOPS] get value of key-value pair in a
+  dictionary given key (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     character(len=*),intent(in) :: key
+     character(len=*),intent(in) :: VALUE
+
+     value=dict%get(key)
+
+DESCRIPTION
+  get a value given a key from a key-value dictionary
+
+  If key is not found in dictionary , return a blank
+
+OPTIONS
+  DICT
+    is the dictionary.
+
+  KEY
+    key name
+
+  VALUE
+    value associated with key
+
+EXAMPLES
+  Sample program:
+
+      program demo_get
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary)		   :: table
+      character(len=:),allocatable :: val
+      integer			   :: i
+
+	 call table%set('A','value for A')
+	 call table%set('B','value for B')
+	 call table%set('C','value for C')
+	 call table%set('D','value for D')
+	 call table%set('E','value for E')
+	 call table%set('F','value for F')
+	 call table%set('G','value for G')
+
+	 write(*,*)'A=',table%get('A')
+	 write(*,*)'B=',table%get('B')
+	 write(*,*)'C=',table%get('C')
+	 write(*,*)'D=',table%get('D')
+	 write(*,*)'E=',table%get('E')
+	 write(*,*)'F=',table%get('F')
+	 write(*,*)'G=',table%get('G')
+	 write(*,*)'H=',table%get('H')
+
+       end program demo_get
+
+  Results
+
+	>  A=value for A
+	>  B=value for B
+	>  C=value for C
+	>  D=value for D
+	>  E=value for E
+	>  F=value for F
+	>  G=value for G
+	>  H=
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  get(3m_list)
+clr(3m_list)							  clr(3m_list)
+
+NAME
+  clr(3f) - [M_list::dictionary::OOPS] clear basic dictionary (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+     call dict%clr()
+
+DESCRIPTION
+  clear a basic dictionary.
+
+OPTIONS
+  DICT
+    the dictionary.
+
+EXAMPLES
+  create and clear a basic dictionary
+
+      program demo_clr
+      use M_list, only : dictionary
+      implicit none
+      type(dictionary) :: caps
+      integer			    :: i
+	 ! create a character string dictionary
+	 call caps%set('A','aye')
+	 call caps%set('B','bee')
+	 call caps%set('C','see')
+	 call caps%set('D','dee')
+	 ! show current dictionary
+	 write(*,'("DICTIONARY BEFORE CLEARED")')
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+	 call  caps%clr()
+	 write(*,'("DICTIONARY AFTER CLEARED")')
+	 ! show current dictionary
+	 write(*,101)(trim(caps%key(i)),trim(caps%value(i)),i=1,size(caps%key))
+
+      101 format (1x,*(a,"='",a,"'",:,","))
+      end program demo_clr
+
+  Results
+
+	> DICTIONARY BEFORE CLEARED
+	>  D='dee',C='see',B='bee',A='aye'
+	> DICTIONARY AFTER CLEARED
+
+AUTHOR
+  John S. Urban
+
+LICENSE
+  Public Domain
+
+			       November 15, 2022		  clr(3m_list)
++ make ship
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+: make easily distributed archive files of manpages
+mkdir -p ../docs
+cd ../man/man3;\
+   gzip *.3m_list;\
+   zip -r ../../docs/manpages.zip *gz;\
+   tar cvfz ../../docs/manpages.tgz *gz;\
+   gunzip *.3m_list.gz
+updating: insert.3m_list.gz (stored 0%)
+updating: locate.3m_list.gz (stored 0%)
+updating: M_list.3m_list.gz (stored 0%)
+updating: remove.3m_list.gz (stored 0%)
+updating: replace.3m_list.gz (stored 0%)
+updating: clr.3m_list.gz (stored 0%)
+updating: del.3m_list.gz (stored 0%)
+updating: get.3m_list.gz (stored 0%)
+updating: set.3m_list.gz (stored 0%)
+updating: ifdef.3m_list.gz (stored 0%)
+M_list.3m_list.gz
+clr.3m_list.gz
+del.3m_list.gz
+get.3m_list.gz
+ifdef.3m_list.gz
+insert.3m_list.gz
+locate.3m_list.gz
+remove.3m_list.gz
+replace.3m_list.gz
+set.3m_list.gz
++ make help
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+: make    '-- build M_list module'
+: run     '-- run manpage demo programs and test program'
+: man     '-- show all manpages as text'
+: ship    '-- rebuild archive files of manpages'
+: clean   '-- clean directory of object files and executables'
+: doxygen '-- run doxygen(1) if you have it'
+: ford    '-- run ford(1) if you have it'
+: help    '-- display this text'
++ make clean
+Makefile:64: target '../example/demo_M_list' given more than once in the same rule
+rm -f ../example/demo_insert ../example/demo_locate ../example/demo_M_list ../example/demo_remove ../example/demo_replace ../example/demo_M_list  M_list.o  *.mod ../test/test_suite_M_list 
++ cd ../..
++ fpm test
+ + mkdir -p build/dependencies
+Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_sort/.git/
+From https://github.com/urbanjost/M_sort
+ * branch            HEAD       -> FETCH_HEAD
+Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_msg/.git/
+From https://github.com/urbanjost/M_msg
+ * branch            HEAD       -> FETCH_HEAD
+[  0%]                     M_list.f90
+[  3%]                     M_list.f90  done.
+[  3%]                     M_sort.f90
+[  6%]                     M_sort.f90  done.
+[  6%]                      M_msg.F90
+[ 10%]                      M_msg.F90  done.
+[ 10%]                   demo_clr.f90
+[ 13%]                   demo_clr.f90  done.
+[ 13%]                 demo_ifdef.f90
+[ 16%]                 demo_ifdef.f90  done.
+[ 16%]                demo_insert.f90
+[ 20%]                demo_insert.f90  done.
+[ 20%]                   demo_get.f90
+[ 23%]                   demo_get.f90  done.
+[ 23%]               demo_replace.f90
+[ 26%]               demo_replace.f90  done.
+[ 26%]                demo_remove.f90
+[ 30%]                demo_remove.f90  done.
+[ 30%]                demo_locate.f90
+[ 33%]                demo_locate.f90  done.
+[ 33%]            demo_dictionary.f90
+[ 36%]            demo_dictionary.f90  done.
+[ 36%]                demo_M_list.f90
+[ 40%]                demo_M_list.f90  done.
+[ 40%]                   demo_set.f90
+[ 43%]                   demo_set.f90  done.
+[ 43%]                   demo_del.f90
+[ 46%]                   demo_del.f90  done.
+[ 46%]                  M_journal.f90
+[ 50%]                  M_journal.f90  done.
+[ 50%]                   M_verify.F90
+[ 53%]                   M_verify.F90  done.
+[ 53%]                    libM_list.a
+[ 56%]                    libM_list.a  done.
+[ 56%]          test_suite_M_list.f90
+[ 60%]          test_suite_M_list.f90  done.
+[ 60%]                       demo_clr
+[ 63%]                       demo_clr  done.
+[ 63%]                     demo_ifdef
+[ 66%]                     demo_ifdef  done.
+[ 66%]                    demo_insert
+[ 70%]                    demo_insert  done.
+[ 70%]                       demo_get
+[ 73%]                       demo_get  done.
+[ 73%]                   demo_replace
+[ 76%]                   demo_replace  done.
+[ 76%]                    demo_remove
+[ 80%]                    demo_remove  done.
+[ 80%]                    demo_locate
+[ 83%]                    demo_locate  done.
+[ 83%]                demo_dictionary
+[ 86%]                demo_dictionary  done.
+[ 86%]                    demo_M_list
+[ 90%]                    demo_M_list  done.
+[ 90%]                       demo_set
+[ 93%]                       demo_set  done.
+[ 93%]                       demo_del
+[ 96%]                       demo_del  done.
+[ 96%]                     test_suite
+[100%]                     test_suite  done.
+[100%] Project compiled successfully.
+unit_check:       locate               SUCCESS : ZZZ 4 should be 4
+unit_check:       locate               SUCCESS : zqj -1 should be -1
+unit_check_done:  locate               PASSED  : DURATION:00000000000001 GOOD:2  BAD:0
+unit_check:       insert               SUCCESS : should not be located -5
+unit_check:       insert               SUCCESS : NEW should be "NEW"
+unit_check:       insert               SUCCESS : array now bigger 5 to 6
+unit_check_done:  insert               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       remove               SUCCESS : found the element to remove 5
+unit_check:       remove               SUCCESS : did not find the element to remove -5
+unit_check:       remove               SUCCESS : shrunk by two
+unit_check_done:  remove               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       replace              SUCCESS : location= 5
+unit_check:       replace              SUCCESS : no change in size 9
+unit_check:       replace              SUCCESS : new value for ab
+unit_check_done:  replace              PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       dict%set             SUCCESS : array should be A
+unit_check:       dict%set             SUCCESS : array should be z c b A
+unit_check:       dict%set             SUCCESS : strings ok
+unit_check_done:  dict%set             PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       dict%del             SUCCESS : string deletes keys
+unit_check:       dict%del             SUCCESS : string deletes values
+unit_check_done:  dict%del             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
+unit_check:       dict%get             SUCCESS : string get keys
+unit_check:       dict%get             SUCCESS : string get values
+unit_check_done:  dict%get             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
+unit_check:       dict%                SUCCESS : ifdef tests
+unit_check_done:  dict%ifdef           PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
+unit_check:       dict%                SUCCESS : clr tests
+unit_check_done:  dict%clr             PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
+unit_check_stop:  TALLY:               PASSED  : DURATION:00000000000002 GOOD:20  BAD:0
+STOP 0
++ env MANPATH=../../man mandb -c
+mandb: warning: $MANPATH set, ignoring /etc/manpath.config
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man1'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man3'. Wait...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man2'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man4'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man6'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man7'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man8'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man5'. Wait...
+done.
+Checking for stray cats under /home/urbanjs/venus/V600/github/M_list/src/source/../../man...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat8...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat1...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat3...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat4...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat6...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat2...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat5...
+Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat7...
+8 man subdirectories contained newer manual pages.
+10 manual pages were added.
+0 stray cats were added.
++ env OUTPUT_DIR=../../docs/ MAN_CMD=man MANPATH=../../man GPF_book M_list m_list
+Creating book M_list
+                                                
+                                                
+ XX   XX           XX       X                   
+  X   X             X                      X    
+  XX XX             X                      X    
+  XX XX             X     XXX     XXXXX   XXXX  
+  X X X             X       X    X     X   X    
+  X X X             X       X     XXX      X    
+  X   X             X       X        XX    X    
+  X   X             X       X    X     X   X  X 
+ XXX XXX          XXXXX   XXXXX   XXXXX     XX  
+                                                
+        XXXXXXXX                                
+/home/urbanjs/venus/V600/github/github_scripts/bash/GPF_book:
+________________________________________________________________________________
+   TOPIC      M_list
+   SECTION    m_list
+   OUTPUT_DIR ../../docs/
+   MAN_CMD    man
+   MANPATH    ../../man
+________________________________________________________________________________
++ HTML
++ cat
++ cat
+++ date +%Y-%m-%d
++ cat
++ cat
++ cat
++ echo 'function loadthem(){'
++ '[' M_list = INDEX ']'
++ uniq
++ read NAME
++ tr -d '()'
++ awk '{printf "%s.%s.html\n",$1,$2}'
++ echo M_list.3m_list.html
++ env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
++ uniq
++ grep -i '(3M_list)'
++ man -k '\[M_list\>'
++ man --section 3m_list -k .
++ grep -i '(3M_list)'
++ env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
++ man -k '\[M_list\>'
++ grep -vi '(3M_list)'
++ '[' -r ../../docs//M_list.3m_list.html..html ']'
++ read NAME
++ '[' -r ../../docs//M_list.3m_list.html ']'
++ echo 'append("M_list.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//clr.3m_list.html ']'
++ echo 'append("clr.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//del.3m_list.html ']'
++ echo 'append("del.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//get.3m_list.html ']'
++ echo 'append("get.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//ifdef.3m_list.html ']'
++ echo 'append("ifdef.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//insert.3m_list.html ']'
++ echo 'append("insert.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//locate.3m_list.html ']'
++ echo 'append("locate.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//remove.3m_list.html ']'
++ echo 'append("remove.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//replace.3m_list.html ']'
++ echo 'append("replace.3m_list.html");'
++ read NAME
++ '[' -r ../../docs//set.3m_list.html ']'
++ echo 'append("set.3m_list.html");'
++ read NAME
++ echo '}'
++ exit
++ env MANPATH=../../man OUTDIR=../../docs GPF_manpage_index
+making HTML index for section 1 in ../../docs/man1.html
+FOUND 0 for section 1
+making HTML index for section 2 in ../../docs/man2.html
+FOUND 0 for section 2
+making HTML index for section 3 in ../../docs/man3.html
+FOUND 10 for section 3
+<GPF_manpage_index><MANPATH>../../man
+<GPF_manpage_index><NAME>M_list<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>clr<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>del<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>get<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>ifdef<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>set<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>insert<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>locate<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>remove<SECT>(3m_list)<DASH>-
+<GPF_manpage_index><NAME>replace<SECT>(3m_list)<DASH>-
+making HTML index for section 4 in ../../docs/man4.html
+FOUND 0 for section 4
+making HTML index for section 5 in ../../docs/man5.html
+FOUND 0 for section 5
+making HTML index for section 6 in ../../docs/man6.html
+FOUND 0 for section 6
+making HTML index for section 7 in ../../docs/man7.html
+FOUND 0 for section 7
+making HTML index for section 8 in ../../docs/man8.html
+FOUND 0 for section 8
+making HTML index for Fortran Intrinsics for section 3 in ../../docs/man3i.html
+FOUND 0 for section 3
+making HTML index for Fortran Intrinsics for section 7 in ../../docs/man7i.html
+FOUND 0 for section 7
+sed: can't read ../../docs/*.[37]fortran.html: No such file or directory
++ spell ../../README.md
++ xargs -n 8
++ column -t
+Fortran   Makefile  cd         doxygen  fortran  fpm   gfortran    gif
+github    gmake     html       https    ifort    io    javascript  lang
+manpages  md        nvfortran  src      tgz      toml  urbanjost
++ unset GITHUB
++ make.one libGPF
+/home/urbanjs/venus/V600/github/github_scripts/bash/GPF_build_module: line 190: make.one: command not found
++ cd ../../test
++ ccall test_suite_M_list.f90
+*ccall*: MAKING TEMPORARY DIRECTORY /tmp/CCALL_Linux_ifort_77799
++ mkdir -m 755 -p /tmp/CCALL_Linux_ifort_77799
++ chmod u=xrw,g-xrw,o-xrw /tmp/CCALL_Linux_ifort_77799
++ CCALL_DELETE_DIR=TRUE
++ FULLNAME=/tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ SPLIT
++ sed -e 's/ -/@ -/g'
++ tr @ '\012'
++ cp test_suite_M_list.f90 /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ echo NAME test_suite_M_list.f90
+NAME test_suite_M_list.f90
++ echo /home/urbanjs/venus/V600/bin/Linux_ifort/test_suite_M_list
+/home/urbanjs/venus/V600/bin/Linux_ifort/test_suite_M_list
++ ADDOPTIONS /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ INPUTFILENAME=/tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ grep
+ -qi '\<use\>  *\<M_readline\>' /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ grep
+ -qi '\<use\>  *\<M_curl\>' /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ set
+ -x
++ set
+ -v
++ ifort
+ -I.
+ -DTESTPRG
+ -DTESTPRG90 /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
+ -o /home/urbanjs/venus/V600/bin/Linux_ifort/test_suite_M_list
+ -fp-model precise
+ -pc 64
+ -align all
+ -reentrancy threaded
+ -nogen-interfaces
+ -L/home/urbanjs/venus/V600/lib/Linux_ifort
+ -lkon
+ -lDL
+ -lMULTI
+ -lrandlib
+ -lrandlibf90
+ -lncarsa
+ -lvopl
+ -lvogle
+ -lGPF
+ -lGPF_C
+ -lncurses
+ -lcurl
+ -lSTUG
+ -lwif97
+ -lsqlite3
+ -g
+ -O0
+ -traceback
+ -I /home/urbanjs/venus/V600/lib/Linux_ifort
+ -module /home/urbanjs/venus/V600/lib/Linux_ifort
+ -assume byterecl
+ -assume nounderscore
+ -fpp
+ -L/usr/X11R6/lib64
+ -L/usr/X11R6/lib
+ -lX11
+/tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90(3): remark #6536: All symbols from this module are already visible due to another USE; the ONLY clause will have no effect. Rename clauses, if any, will be honored.   [M_VERIFY]
+use M_verify
+----^
+ld: cannot find
+ -lncurses
+ld: cannot find
+ -lcurl
+ld: cannot find
+ -lsqlite3
+ld: cannot find
+ -lX11
++ ar rv /home/urbanjs/venus/V600/lib/Linux_ifort/PROGRAM.a /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
+a - /tmp/CCALL_Linux_ifort_77799/test_suite_M_list.77799.f90
++ set +x
+/home/urbanjs/venus/V600/LIBRARY/CYGWIN/scripts_regression/goodbad: test_suite_M_list.1 0 test_suite_M_list start --section 1
+/home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
+*ccall*: REMOVING /tmp/CCALL_Linux_ifort_77799
++ test_suite_M_list
+unit_check:       locate               SUCCESS : ZZZ 4 should be 4
+unit_check:       locate               SUCCESS : zqj -1 should be -1
+unit_check_done:  locate               PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
+unit_check:       insert               SUCCESS : should not be located -5
+unit_check:       insert               SUCCESS : NEW should be "NEW"
+unit_check:       insert               SUCCESS : array now bigger 5 to 6
+unit_check_done:  insert               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       remove               SUCCESS : found the element to remove 5
+unit_check:       remove               SUCCESS : did not find the element to remove -5
+unit_check:       remove               SUCCESS : shrunk by two
+unit_check_done:  remove               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       replace              SUCCESS : location= 5
+unit_check:       replace              SUCCESS : no change in size 9
+unit_check:       replace              SUCCESS : new value for ab
+unit_check_done:  replace              PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       dict%set             SUCCESS : array should be A
+unit_check:       dict%set             SUCCESS : array should be z c b A
+unit_check:       dict%set             SUCCESS : strings ok
+unit_check_done:  dict%set             PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
+unit_check:       dict%del             SUCCESS : string deletes keys
+unit_check:       dict%del             SUCCESS : string deletes values
+unit_check_done:  dict%del             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
+unit_check:       dict%get             SUCCESS : string get keys
+unit_check:       dict%get             SUCCESS : string get values
+unit_check_done:  dict%get             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
+unit_check:       dict%                SUCCESS : ifdef tests
+unit_check_done:  dict%ifdef           PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
+unit_check:       dict%                SUCCESS : clr tests
+unit_check_done:  dict%clr             PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
+unit_check_stop:  TALLY:               PASSED  : DURATION:00000000000001 GOOD:20  BAD:0
+STOP 0
++ '[' -d doc/ ']'
++ GPF_fman m_list doc
+/home/urbanjs/venus/V600/github/github_scripts/bash/GPF_fman: line 397: /home/urbanjs/venus/V600/github/plugins/fpm-docs/src/m_list_docs.f90: No such file or directory
+ls: cannot access '/home/urbanjs/venus/V600/github/plugins/fpm-docs/src/m_list_docs.f90': No such file or directory
+/home/urbanjs/venus/V600/github/github_scripts/bash/GPF_fman: line 403: /home/urbanjs/venus/V600/github/plugins/fpm-docs/app/fpm-m_list.f90: No such file or directory

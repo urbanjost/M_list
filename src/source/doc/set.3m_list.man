@@ -1,0 +1,60 @@
+NAME
+   set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair
+             in a dictionary
+   (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+   character(len=*),intent(in) :: key
+   character(len=*),intent(in) :: VALUE
+
+   call dict%rep(key,value)
+
+DESCRIPTION
+   Add or replace a key-value pair in a dictionary.
+
+OPTIONS
+   DICT     is the dictionary.
+   key      key name
+   VALUE    value associated with key
+
+EXAMPLES
+  Add or replace a key and value pair in a dictionary
+
+    program demo_set
+    use M_list, only : dictionary
+    implicit none
+    type(dictionary) :: dict
+    integer          :: i
+
+        call dict%set('A','b')
+        call dict%set('B','^')
+        call dict%set('C',' ')
+        call dict%set('D','c')
+        call dict%set('E','ZZ')
+        call dict%set('F','ZZZZ')
+        call dict%set('G','z')
+        call dict%set('A','new value for A')
+
+        write(*,'(*(a,"==>","[",a,"]",/))') &
+         & (trim(dict%key(i)),              &
+         & dict%value(i)(:dict%count(i)),   &
+         & i=1,size(dict%key))
+
+     end program demo_set
+
+  Results
+
+      > G==>[z]
+      > F==>[ZZZZ]
+      > E==>[ZZ]
+      > D==>[c]
+      > C==>[]
+      > B==>[^]
+      > A==>[new value for A]
+
+AUTHOR
+   John S. Urban
+LICENSE
+   Public Domain

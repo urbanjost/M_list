@@ -1,0 +1,72 @@
+NAME
+   ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present
+               in dictionary or not
+   (LICENSE:PD)
+
+SYNOPSIS
+  type(dictionary) :: dict
+
+   character(len=*),intent(in) :: key
+   logical :: value
+
+   value=dict%ifdef(key)
+
+
+DESCRIPTION
+
+   determine if name is already defined in dictionary or not
+
+OPTIONS
+
+   DICT     is the dictionary.
+   KEY      key name
+
+RETURNS
+   VALUE    .FALSE. if name not defined, .TRUE if name is defined.
+
+EXAMPLES
+  Sample program:
+
+    program demo_ifdef
+    use M_list, only : dictionary
+    implicit none
+    type(dictionary)             :: table
+    character(len=:),allocatable :: val
+    integer                      :: i
+
+       call table%set('A','value for A')
+       call table%set('B','value for B')
+       call table%set('C','value for C')
+       call table%set('D','value for D')
+       call table%set('E','value for E')
+       call table%set('F','value for F')
+       call table%set('G','value for G')
+       call table%del('F')
+       call table%del('D')
+
+       write(*,*)'A=',table%ifdef('A')
+       write(*,*)'B=',table%ifdef('B')
+       write(*,*)'C=',table%ifdef('C')
+       write(*,*)'D=',table%ifdef('D')
+       write(*,*)'E=',table%ifdef('E')
+       write(*,*)'F=',table%ifdef('F')
+       write(*,*)'G=',table%ifdef('G')
+       write(*,*)'H=',table%ifdef('H')
+
+     end program demo_ifdef
+
+  Results:
+
+    > A= T
+    > B= T
+    > C= T
+    > D= F
+    > E= T
+    > F= F
+    > G= T
+    > H= F
+
+AUTHOR
+   John S. Urban
+LICENSE
+   Public Domain
