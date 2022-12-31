@@ -921,7 +921,7 @@ end subroutine remove_i
 !!    the array needs the string length to increase this is merely an assign
 !!    of a value to an array element.
 !!
-!!    The array may be of type CHARACTER, DOUBLEPRECISION, REAL, or INTEGER>
+!!    The array may be of type CHARACTER, DOUBLEPRECISION, REAL, or INTEGER.
 !!    It is assumed to be sorted in descending order without duplicate
 !!    values.
 !!
