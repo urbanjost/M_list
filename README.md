@@ -5,7 +5,7 @@
 
 ## M_list(3f) - maintain a sorted intrinsic type array in Fortran
 
-## DESCRIPTION
+## Description
 
    As shown in the examples the M_list(3f) module contains simple routines
    to add, replace  and delete values from an automatically sorted array,
@@ -22,7 +22,7 @@
    For more demanding needs, see linked-list methods for maintaining generic
    dictionaries; several examples of which are available on the Fortran Wiki.
 
-## BUILDING THE MODULE USING make(1) ![gmake](docs/images/gnu.gif)
+## Building the Module Using make(1) ![gmake](docs/images/gnu.gif)
 Just download the github repository, enter the src/ directory and run make(1):
 
      git clone https://github.com/urbanjost/M_list.git
@@ -48,7 +48,7 @@ Just download the github repository, enter the src/ directory and run make(1):
 This will compile the M_list(3f) module.
 
 
-## BUILD and TEST with fpm  ![fpm](docs/images/fpm_logo.gif)
+## Build and Test with fpm  ![fpm](docs/images/fpm_logo.gif)
 
 Alternatively, download the github repository and build it with 
 fpm ( as described at [Fortran Package Manager](https://github.com/fortran-lang/fpm) )
@@ -69,9 +69,9 @@ or just list it as a dependency in your fpm.toml project file.
 ```
 #### (registered at the [fpm(1) registry](https://github.com/fortran-lang/fpm-registry) )
 
-## DOCUMENTATION   ![docs](docs/images/docs.gif)
+## Documentation   ![docs](docs/images/docs.gif)
 
-### USER
+### User
  - A single page that uses javascript to combine all the HTML descriptions
    of the man-pages is at
    [BOOK_M_list](https://urbanjost.github.io/M_list/BOOK_M_list.html).
@@ -83,14 +83,14 @@ or just list it as a dependency in your fpm.toml project file.
     + [manpages.zip](https://urbanjost.github.io/M_list/manpages.zip) 
     + [manpages.tgz](https://urbanjost.github.io/M_list/manpages.tgz) 
 
-### DEVELOPER
+### Developer
    - [ford(1) output](https://urbanjost.github.io/M_list/fpm-ford/index.html).
 <!--
    - [doxygen(1) output](https://urbanjost.github.io/M_list/doxygen_out/html/index.html).
 -->
    - [github action status](docs/STATUS.md) 
 
-## DEMO PROGRAMS![demos](docs/images/demo.gif)
+## Demo Programs![demos](docs/images/demo.gif)
 
-   There are demo programs extracted from the man pages in the example/ directory
+   There are demo programs extracted from the man pages in the [example/](example/) directory
 
