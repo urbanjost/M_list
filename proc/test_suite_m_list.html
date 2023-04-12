@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="maintain sorted lists of INTRINSIC type">
+    <meta name="author" content="John S. Urban" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>test_suite_M_list &ndash; M_list</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+      <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+         <script src="../js/jquery-2.1.3.min.js"></script>
+         <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">M_list </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+                 data-toggle="dropdown" role="button"
+                 aria-haspopup="true"
+                 aria-expanded="false">
+                 Contents <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                    <li><a href="../lists/files.html">Source Files</a></li>
+                  <li><a href="../lists/modules.html">Modules</a></li>
+                  <li><a href="../lists/procedures.html">Procedures</a></li>
+                  <li><a href="../lists/types.html">Derived Types</a></li>
+                  <li><a href="../lists/programs.html">Programs</a></li>
+              </ul>
+            </li>
+                <li class="visible-xs hidden-sm visible-lg">
+                  <a href="../lists/files.html">Source Files</a>
+                </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/modules.html">Modules</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/procedures.html">Procedures</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/types.html">Derived Types</a>
+              </li>
+              <li class="visible-xs hidden-sm visible-lg">
+                <a href="../lists/programs.html">Programs</a>
+              </li>
+          </ul>
+            <form action="../search.html" class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+              </div>
+              <!--
+                  <button type="submit" class="btn btn-default">Submit</button>
+                  -->
+            </form>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+  <div class="row">
+    <h1>test_suite_M_list
+      <small>Subroutine</small>
+      
+    </h1>
+      <div class="row" id="info-bar">
+    <div class="col-lg-12">
+      <div class="well well-sm">
+        <ul class="list-inline" style="margin-bottom:0px;display:inline">
+
+          <li id="statements"><i class="fa fa-list-ol"></i>
+            <a data-toggle="tooltip"
+               data-placement="bottom" data-html="true"
+               title="63.2% of total for procedures.">180 statements</a>
+          </li>
+
+            <li id="source-file">
+              <i class="fa fa-code"></i>
+              <a href="../src/test_suite_M_list.f90"> Source File</a>
+            </li>
+        </ul>
+        <ol class="breadcrumb in-well text-right">
+              <li><a href='../sourcefile/test_suite_m_list.f90.html'>test_suite_M_list.f90</a></li>
+          <li class="active">test_suite_M_list</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+    })
+  </script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+      <div id="sidebar">
+      <h3>Contents</h3>
+  
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#vars-0">Variables</a>
+        </h3>
+      </div>
+      <div id="vars-0" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#variable-place">place</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#variable-share">share</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#subs-0">Subroutines</a>
+        </h3>
+      </div>
+      <div id="subs-0" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_clr">test_dict_clr</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_delete">test_dict_delete</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_get">test_dict_get</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_ifdef">test_dict_ifdef</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_set">test_dict_set</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_insert">test_insert</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_locate">test_locate</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_remove">test_remove</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_replace">test_replace</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/test_suite_m_list.html#src">test_suite_M_list</a>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2> subroutine test_suite_M_list()  
+</h2>
+        <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+          <li class="list-group-item">
+            <ul class="list-inline">
+                <li>M_sort</li>
+                <li>M_verify</li>
+                <li><a href='../module/m_list.html'>M_list</a></li>
+            </ul>
+          </li>
+      </ul>
+    </div>
+
+
+
+    <h3>Arguments</h3>
+    <em>None</em>
+    <br>
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+        <h3>Contents</h3>
+  
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#vars-1">Variables</a>
+        </h3>
+      </div>
+      <div id="vars-1" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#variable-place">place</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#variable-share">share</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+      <div class="panel panel-primary">
+      <div class="panel-heading text-left">
+        <h3 class="panel-title">
+          <a data-toggle="collapse" href="#subs-1">Subroutines</a>
+        </h3>
+      </div>
+      <div id="subs-1" class="panel-collapse collapse">
+        <div class="list-group">
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_clr">test_dict_clr</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_delete">test_dict_delete</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_get">test_dict_get</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_ifdef">test_dict_ifdef</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_dict_set">test_dict_set</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_insert">test_insert</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_locate">test_locate</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_remove">test_remove</a>
+            <a class="list-group-item" href="../proc/test_suite_m_list.html#proc-test_replace">test_replace</a>
+        </div>
+      </div>
+    </div>
+
+  
+  
+  
+  
+  
+  
+    <div class="panel panel-primary">
+      <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+      <div class="list-group">
+        <a class="list-group-item" href="../proc/test_suite_m_list.html#src">test_suite_M_list</a>
+      </div>
+    </div>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+
+    <section>    
+      <h2>Variables</h2>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th>Type</th>
+<th>Visibility</th>        <th>Attributes</th>
+        <th></th>
+        <th>Name</th>
+<th></th><th>Initial</th>        <th></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-place"></span>
+              integer,
+            </td>
+              <td>public</td>
+            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>place</strong></td>
+                <td></td>
+                <td></td>
+            <td>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-share"></span>
+              character(len=*),
+            </td>
+              <td>public,</td>
+            <td>
+parameter               
+            </td>
+            <td>::</td>
+            <td><strong>share</strong></td>
+<td> =</td>
+                <td>' -library libGPF -filename `pwd`/M_list.FF -documentation y -ufpp y -ccall n -archive GPF.a'</td>
+            <td>
+                
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+    </section>
+    <br>
+    
+    
+
+    
+    
+
+
+    <section>
+    <h2>Subroutines</h2>
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_clr"></span><h3> subroutine test_dict_clr()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_delete"></span><h3> subroutine test_dict_delete()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_get"></span><h3> subroutine test_dict_get()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_ifdef"></span><h3> subroutine test_dict_ifdef()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_dict_set"></span><h3> subroutine test_dict_set()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_insert"></span><h3> subroutine test_insert()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_locate"></span><h3> subroutine test_locate()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_remove"></span><h3> subroutine test_remove()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+      <div class="panel panel-default">
+    <div class="panel-heading codesum"><span class="anchor" id="proc-test_replace"></span><h3> subroutine test_replace()  
+</h3></div>
+    <div class="panel-body">
+          
+  
+
+  <h4>Arguments</h4>
+    <em>None</em>
+
+    </div>
+  </div>
+
+    </section>    
+    
+    <section>
+    <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="highlight"><pre><span></span><span class="k">subroutine </span><span class="n">test_suite_M_list</span><span class="w">  </span>
+<span class="k">use </span><span class="n">M_sort</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">sort_shell</span><span class="w"></span>
+<span class="k">use </span><span class="n">M_verify</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">unit_check</span><span class="p">,</span><span class="w"> </span><span class="n">unit_check_start</span><span class="p">,</span><span class="w"> </span><span class="n">unit_check_good</span><span class="p">,</span><span class="w"> </span><span class="n">unit_check_bad</span><span class="p">,</span><span class="w"> </span><span class="n">unit_check_done</span><span class="p">,</span><span class="w"> </span><span class="n">unit_check_level</span><span class="w"></span>
+<span class="k">use </span><span class="n">M_list</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">locate</span><span class="p">,</span><span class="w"> </span><span class="n">insert</span><span class="p">,</span><span class="w"> </span><span class="n">remove</span><span class="p">,</span><span class="w"> </span><span class="n">replace</span><span class="p">,</span><span class="w"> </span><span class="n">dictionary</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">parameter</span><span class="w">   </span><span class="kd">::</span><span class="w"> </span><span class="n">share</span><span class="o">=</span><span class="s1">&#39; -library libGPF -filename `pwd`/M_list.FF -documentation y -ufpp y -ccall n -archive GPF.a&#39;</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">place</span><span class="w"></span>
+<span class="w">   </span><span class="c">! list</span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_locate</span><span class="p">()</span><span class="w">        </span><span class="c">! finds the index where a string is found or should be in a sorted array </span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_insert</span><span class="p">()</span><span class="w">        </span><span class="c">! insert entry into a string array at specified position </span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_remove</span><span class="p">()</span><span class="w">        </span><span class="c">! remove entry from an allocatable array at specified position </span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_replace</span><span class="p">()</span><span class="w">       </span><span class="c">! replace entry in a string array at specified position </span>
+<span class="w">   </span><span class="c">! dictionary</span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_dict_set</span><span class="p">()</span><span class="w">      </span><span class="c">! add or replace a key-value pair in a dictionary </span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_dict_delete</span><span class="p">()</span><span class="w">   </span><span class="c">! delete entry by key name from a basic dictionary</span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_dict_get</span><span class="p">()</span><span class="w">      </span><span class="c">! value of key-value pair in a dictionary given key </span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_dict_ifdef</span><span class="p">()</span><span class="w">    </span><span class="c">! return whether name is present in dictionary or not </span>
+<span class="w">   </span><span class="k">call </span><span class="n">test_dict_clr</span><span class="p">()</span><span class="w">      </span><span class="c">! clear basic dictionary </span>
+
+<span class="w">   </span><span class="c">!</span>
+<span class="k">contains</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_set</span><span class="w"></span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dict</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="w">   </span><span class="p">&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;add string into allocatable string array by name&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call  </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;value for a&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="n">msg</span><span class="o">=</span><span class="s1">&#39;array should be A&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;value for b&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;value for c&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;value for z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="s1">&#39;array should be z c b A&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;value for ZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;NOT&#39;</span><span class="p">,</span><span class="s1">&#39;not this one&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="s1">&#39;value for ZZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;value for Z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;NOT&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="s1">&#39;strings ok&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%set&#39;</span><span class="p">)</span><span class="w"> </span>
+<span class="k">end subroutine </span><span class="n">test_dict_set</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_delete</span><span class="w"></span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">dict</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;delete string by name from allocatable string array&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;some A&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;some a&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;some b&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;some ZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="s1">&#39;some ZZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">,</span><span class="s1">&#39;some ZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;some Z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">,</span><span class="s1">&#39;some z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;some c&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="c">!write(*,&#39;(&quot;built &quot;,a)&#39;)dict%key</span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;ZZ&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="c">!write(*,&#39;(&quot;remaining &quot;,a)&#39;)dict%key</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">]),</span><span class="s1">&#39;string deletes keys&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="c">!write(*,&#39;(&quot;remaining key &quot;,a)&#39;)dict%key</span>
+<span class="w">   </span><span class="c">!write(*,&#39;(&quot;remaining val &quot;,a)&#39;)dict%value</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="k">value</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;some c&#39;</span><span class="p">,</span><span class="s1">&#39;some b&#39;</span><span class="p">,</span><span class="s1">&#39;some a&#39;</span><span class="p">]),</span><span class="s1">&#39;string deletes values&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%del&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">test_dict_delete</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_ifdef</span><span class="w"></span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">tt</span><span class="w"></span>
+<span class="kt">logical</span><span class="p">,</span><span class="k">allocatable</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">answers</span><span class="p">(:)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%ifdef&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;return whether name is present in dictionary or not&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;value for A&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;value for B&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;value for C&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;value for D&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;value for E&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;value for F&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;value for G&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="n">answers</span><span class="o">=</span><span class="p">[</span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)]</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">answers</span><span class="p">.</span><span class="n">eqv</span><span class="p">.</span><span class="w"> </span><span class="p">[.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">true</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.]),</span><span class="s1">&#39;ifdef tests&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%ifdef&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="k">end subroutine </span><span class="n">test_dict_ifdef</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_clr</span><span class="w"></span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span><span class="w">     </span><span class="kd">::</span><span class="w"> </span><span class="n">tt</span><span class="w"></span>
+<span class="kt">logical</span><span class="p">,</span><span class="k">allocatable</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">answers</span><span class="p">(:)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%ifdef&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;return whether name is present in dictionary or not&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;value for A&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;value for B&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;value for C&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;value for D&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;value for E&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span><span class="s1">&#39;value for F&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;value for G&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">del</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">tt</span><span class="p">%</span><span class="n">clr</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">   </span><span class="n">answers</span><span class="o">=</span><span class="p">[</span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;F&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">tt</span><span class="p">%</span><span class="n">ifdef</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">)]</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">answers</span><span class="p">.</span><span class="n">eqv</span><span class="p">.</span><span class="w"> </span><span class="p">[.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.,</span><span class="w"> </span><span class="p">.</span><span class="n">false</span><span class="p">.]),</span><span class="s1">&#39;clr tests&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%clr&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="k">end subroutine </span><span class="n">test_dict_clr</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_dict_get</span><span class="w"></span>
+<span class="k">type</span><span class="p">(</span><span class="n">dictionary</span><span class="p">)</span><span class="w">             </span><span class="kd">::</span><span class="w"> </span><span class="n">dict</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">),</span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">val</span><span class="p">(:)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;locate and get value from key-value pair by key name from dictionary&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;some A&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;some Z&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">dict</span><span class="p">%</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="s1">&#39;some X&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">val</span><span class="o">=</span><span class="p">[</span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Z&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">),</span><span class="w"> </span><span class="n">dict</span><span class="p">%</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;X&#39;</span><span class="p">)]</span><span class="w"></span>
+<span class="w">   </span><span class="c">!write(*,&#39;(&quot;remaining &quot;,a)&#39;)dict%key</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="n">key</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="s1">&#39;X&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">]),</span><span class="s1">&#39;string get keys&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">,</span><span class="k">all</span><span class="p">(</span><span class="n">dict</span><span class="p">%</span><span class="k">value</span><span class="p">.</span><span class="n">eq</span><span class="p">.[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;some Z&#39;</span><span class="p">,</span><span class="s1">&#39;some X&#39;</span><span class="p">,</span><span class="s1">&#39;some A&#39;</span><span class="p">]),</span><span class="s1">&#39;string get values &#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;dict%get&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">test_dict_get</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_locate</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">lst</span><span class="p">(:)</span><span class="w"></span>
+<span class="w">   </span><span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xxx&#39;</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="w">   </span><span class="c">! make sure sorted in descending order</span>
+<span class="w">   </span><span class="k">call </span><span class="n">sort_shell</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;locate&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;locate string in allocatable string array sorted in descending order&quot; &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;locate&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">,</span><span class="s1">&#39;should be &#39;</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span><span class="s1">&#39;zqj&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;locate&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;zqj&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">,</span><span class="s1">&#39;should be &#39;</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;locate&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">test_locate</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_insert</span><span class="w"></span>
+<span class="k">implicit none</span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">arr</span><span class="p">(:)</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">place</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">newkey</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;insert value into allocatable array by index&quot;  &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="c">! make sure sorted in descending order</span>
+<span class="w">   </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xxx&#39;</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">sort_shell</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">newkey</span><span class="o">=</span><span class="s1">&#39;NEW&#39;</span><span class="w"></span>
+<span class="w">   </span><span class="n">i1</span><span class="o">=</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">newkey</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w">         </span><span class="c">! find where string is or should be</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;should not be located&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">place</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="k">then</span><span class="w">                    </span><span class="c">! if string was not found insert it</span>
+<span class="w">      </span><span class="k">call </span><span class="n">insert</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">newkey</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">place</span><span class="p">))</span><span class="w"> </span><span class="c">! not found so insert</span>
+<span class="w">      </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">newkey</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w">      </span><span class="c">! find where string is or should be</span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">place</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">         call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,</span><span class="n">arr</span><span class="p">(</span><span class="n">place</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="s1">&#39;NEW&#39;</span><span class="p">,</span><span class="n">arr</span><span class="p">(</span><span class="n">place</span><span class="p">),</span><span class="s1">&#39;should be &quot;NEW&quot;&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">else</span>
+<span class="k">         call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,.</span><span class="n">false</span><span class="p">.,</span><span class="n">arr</span><span class="p">(</span><span class="n">place</span><span class="p">),</span><span class="s1">&#39;should be positive for &quot;NEW&quot;&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="k">endif</span>
+<span class="k">   else</span>
+<span class="k">      call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">.</span><span class="n">le</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;found but should not have been&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">endif</span>
+<span class="k">   </span><span class="n">i2</span><span class="o">=</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">,</span><span class="n">i1</span><span class="o">+</span><span class="mf">1.</span><span class="n">eq</span><span class="p">.</span><span class="n">i2</span><span class="p">,</span><span class="s1">&#39;array now bigger&#39;</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span><span class="s1">&#39;to&#39;</span><span class="p">,</span><span class="n">i2</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;insert&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">test_insert</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_remove</span><span class="w"></span>
+<span class="k">use </span><span class="n">M_sort</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">sort_shell</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">arr</span><span class="p">(:)</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">                       </span><span class="kd">::</span><span class="w"> </span><span class="n">place</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">                       </span><span class="kd">::</span><span class="w"> </span><span class="n">isize</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span><span class="s1">&#39; -description &quot;remove value from allocatable array by index&quot;  &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ab&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bb&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xxx&#39;</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">sort_shell</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span><span class="w">     </span><span class="c">! make sure sorted in descending order</span>
+
+<span class="w">   </span><span class="n">isize</span><span class="o">=</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w">        </span><span class="c">! find where string is or should be</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;found the element to remove&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">remove</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w">        </span><span class="c">! find where string is or should be</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;did not find the element to remove&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="s1">&#39;bb&#39;</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w">        </span><span class="c">! find where string is or should be</span>
+<span class="w">   </span><span class="k">call </span><span class="n">remove</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">,</span><span class="n">isize</span><span class="o">-</span><span class="mf">2.</span><span class="n">eq</span><span class="p">.</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">),</span><span class="s1">&#39;shrunk by two&#39;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;remove&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">test_remove</span><span class="w"></span>
+<span class="c">!TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT</span>
+<span class="k">subroutine </span><span class="n">test_replace</span><span class="w"></span>
+<span class="k">use </span><span class="n">M_sort</span><span class="p">,</span><span class="w"> </span><span class="k">only</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">sort_shell</span><span class="w"></span>
+<span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">arr</span><span class="p">(:)</span><span class="w"></span>
+<span class="kt">integer</span><span class="w">                       </span><span class="kd">::</span><span class="w"> </span><span class="n">place1</span><span class="w"> </span>
+<span class="kt">integer</span><span class="w">                       </span><span class="kd">::</span><span class="w"> </span><span class="n">isize</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check_start</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,&amp;</span><span class="w"></span>
+<span class="w">   </span><span class="p">&amp;</span><span class="w"> </span><span class="s1">&#39; -description &quot;replace value from allocatable array by index&quot;  &#39;</span><span class="o">//</span><span class="n">share</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ZZZ&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Z&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;aaa&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;x&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;ab&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bb&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;xxx&#39;</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">sort_shell</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">order</span><span class="o">=</span><span class="s1">&#39;d&#39;</span><span class="p">)</span><span class="w">     </span><span class="c">! make sure sorted in descending order</span>
+<span class="w">   </span><span class="n">isize</span><span class="o">=</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="s1">&#39;ab&#39;</span><span class="p">,</span><span class="n">place1</span><span class="p">)</span><span class="w"> </span><span class="c">! find where string is or should be</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span><span class="n">place1</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;location=&#39;</span><span class="p">,</span><span class="n">place1</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">call </span><span class="n">replace</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="s1">&#39;new value for ab&#39;</span><span class="p">,</span><span class="n">place1</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="c">! add 0+ to avoid gfortran-11 bug</span>
+<span class="w">   </span><span class="k">call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="n">isize</span><span class="p">,</span><span class="s1">&#39;no change in size&#39;</span><span class="p">,</span><span class="mi">0</span><span class="o">+</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">))</span><span class="w"></span>
+<span class="w">   </span><span class="k">if</span><span class="p">(</span><span class="n">place1</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mf">0.</span><span class="nb">and</span><span class="p">.</span><span class="n">place1</span><span class="p">.</span><span class="n">le</span><span class="p">.</span><span class="n">isize</span><span class="p">)</span><span class="k">then</span>
+<span class="k">      call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span><span class="n">arr</span><span class="p">(</span><span class="n">place1</span><span class="p">).</span><span class="n">eq</span><span class="p">.</span><span class="s1">&#39;new value for ab&#39;</span><span class="p">,</span><span class="n">arr</span><span class="p">(</span><span class="n">place1</span><span class="p">))</span><span class="w"></span>
+<span class="w">   </span><span class="k">else</span>
+<span class="k">      call </span><span class="n">unit_check</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,.</span><span class="n">false</span><span class="p">.,</span><span class="s1">&#39;bad location&#39;</span><span class="p">,</span><span class="n">place1</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="k">endif</span>
+<span class="k">   call </span><span class="n">unit_check_done</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="k">end subroutine </span><span class="n">test_replace</span><span class="w"></span>
+<span class="c">!===================================================================================================================================</span>
+<span class="k">end subroutine </span><span class="n">test_suite_M_list</span><span class="w">  </span>
+</pre></div>
+
+    </section>
+    <br>
+    
+    </div>
+  </div>
+
+      <hr>
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-md-6"><p>M_list was developed by John S. Urban<br>&copy; 2023 
+</p>
+          </div>
+          <div class="col-xs-6 col-md-6">
+            <p class="text-right">
+              Documentation generated by
+              <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
+ on 2023-04-12 03:23              </p>
+          </div>
+        </div>
+        <br>
+      </div> <!-- /container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+         ================================================== -->
+         <!-- Placed at the end of the document so the pages load faster -->
+    <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        -->
+        <script src="../js/bootstrap.min.js"></script>
+        <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+        <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+        <!-- MathJax JavaScript
+             ================================================== -->
+             <!-- Placed at the end of the document so the pages load faster -->
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+          TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+          jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+          extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+          });
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+          <script src="../tipuesearch/tipuesearch_content.js"></script>
+          <script src="../tipuesearch/tipuesearch_set.js"></script>
+          <script src="../tipuesearch/tipuesearch.js"></script>
+
+  </body>
+</html>
