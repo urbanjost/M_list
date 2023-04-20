@@ -11,10 +11,10 @@
 + cd doc
 + set -xv
 + cat
->>>>>>>> .man files to MAN DIRECTORY as ROFF and HTML
->>>>>>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
->>>>>>>> MAN_EXTENSION => 
->>>>>>>> DOCS          => /home/urbanjs/venus/V600/github/M_list/docs
+>>>> .man files to MAN DIRECTORY as ROFF and HTML
+>>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
+>>>> MAN_EXTENSION => 
+>>>> DOCS          => /home/urbanjs/venus/V600/github/M_list/docs
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man1
 ++ ls '*.1.man' '*.1m_list.man'
@@ -27,9 +27,9 @@
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man3
-++ ls '*.3.man' clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
-++ sort
 ++ uniq
+++ sort
+++ ls '*.3.man' clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for clr.3m_list.man'
 >>>> processing manpage and HTML for clr.3m_list.man
@@ -39,10 +39,10 @@
 + SHORTNAME=clr
 + : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list SHORTNAME clr
 + txt2man -s 3m_list -t clr clr.3m_list.man
-+ env AUX_FILENAME=clr man2html
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
++ env AUX_FILENAME=clr man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 5e5da61c-9b8b-4633-928c-79f0d1e053a1
+man2html d83b47c3-f888-4d9f-8fd0-4c4675b2d44f
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -60,7 +60,7 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html:45:<h5><a h
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
 + env AUX_FILENAME=del man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 8dc5fc30-30dc-46c0-992f-2621183ed08c
+man2html 4a6239e0-1712-490d-a88c-e0340578fdf1
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -75,10 +75,10 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html:45:<h5><a h
 + SHORTNAME=get
 + : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list SHORTNAME get
 + txt2man -s 3m_list -t get get.3m_list.man
-+ env AUX_FILENAME=get man2html
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
++ env AUX_FILENAME=get man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 06e87abe-696d-42ee-a60c-2398a7f7f44b
+man2html 64ab0da0-5e00-42aa-add6-4e60e0bccefb
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -92,11 +92,11 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html:45:<h5><a h
 ++ basename ifdef.3m_list.man .3m_list.man
 + SHORTNAME=ifdef
 + : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list SHORTNAME ifdef
-+ txt2man -s 3m_list -t ifdef ifdef.3m_list.man
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
++ txt2man -s 3m_list -t ifdef ifdef.3m_list.man
 + env AUX_FILENAME=ifdef man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 65fabf2e-2ec4-497d-826a-8c073bb5a792
+man2html 326d1d53-f694-43e2-bb6d-430329272c7f
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -111,10 +111,10 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html:45:<h5><a
 + SHORTNAME=insert
 + : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list SHORTNAME insert
 + txt2man -s 3m_list -t insert insert.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
 + env AUX_FILENAME=insert man2html
++ tee /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 70788fd2-115f-47a5-a228-f14ef49d093e
+man2html 3a5de17e-d229-4bc8-bc7a-3286cbd9a1df
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -128,11 +128,11 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html:45:<h5><
 ++ basename locate.3m_list.man .3m_list.man
 + SHORTNAME=locate
 + : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list SHORTNAME locate
++ txt2man -s 3m_list -t locate locate.3m_list.man
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
 + env AUX_FILENAME=locate man2html
-+ txt2man -s 3m_list -t locate locate.3m_list.man
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html e947f05d-d40a-4ff8-b029-b4ac1aaf1baf
+man2html b0baba75-697c-4951-8c29-4b84d1547688
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -150,7 +150,7 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html:45:<h5><
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
 + env AUX_FILENAME=M_list man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 20938e4d-eeb9-448c-8685-2be9f2f77048
+man2html ba0799d4-f2c0-4e93-9108-fe3188cfc83d
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -165,10 +165,10 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html:45:<h5><
 + SHORTNAME=remove
 + : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list SHORTNAME remove
 + txt2man -s 3m_list -t remove remove.3m_list.man
-+ env AUX_FILENAME=remove man2html
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
++ env AUX_FILENAME=remove man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 23f2403d-2833-453c-9952-4a5bff63b038
+man2html 445d23b5-b02d-49bc-a08a-4b67a9adbcd7
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -186,7 +186,7 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html:45:<h5><
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
 + env AUX_FILENAME=replace man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 1507a85a-5c23-4638-ba8e-c913a899914e
+man2html 314a164e-db62-4ea3-b3c4-a7be866abfd5
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -204,7 +204,7 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html:45:<h5>
 + tee /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
 + env AUX_FILENAME=set man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 7af9b3a3-502d-43d5-8d4d-1f1bf84c9c8f
+man2html b482bd6e-309b-4131-818d-a9f15fef383b
 + replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html
 CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
 BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
@@ -218,8 +218,8 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man5
 ++ ls '*.5.man' '*.5m_list.man'
-++ sort
 ++ uniq
+++ sort
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man6
 ++ ls '*.6.man' '*.6m_list.man'
@@ -232,13 +232,13 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man8
-++ sort
 ++ ls '*.8.man' '*.8m_list.man'
+++ sort
 ++ uniq
 + cat
->>>>>>>> .txt files to MAN DIRECTORY
->>>>>>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
->>>>>>>> MAN_EXTENSION => 
+>>>> .txt files to MAN DIRECTORY
+>>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
+>>>> MAN_EXTENSION => 
 + cd doc
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man1
@@ -267,9 +267,9 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man6
+++ ls '*.6.txt' '*.6m_list.txt'
 ++ sort
 ++ uniq
-++ ls '*.6.txt' '*.6m_list.txt'
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man7
 ++ ls '*.7.txt' '*.7m_list.txt'
@@ -278,8 +278,10 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 + for NUM in 1 2 3 4 5 6 7 8
 + mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man8
 ++ ls '*.8.txt' '*.8m_list.txt'
-++ sort
 ++ uniq
+++ sort
++ echo '>>>> *.htm files to HTML and ROFF'
+>>>> *.htm files to HTML and ROFF
 + cd doc
 + for NUM in 1 2 3 4 5 6 7 8
 ++ ls '*.htm'
@@ -297,6 +299,8 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 ++ ls '*.htm'
 + for NUM in 1 2 3 4 5 6 7 8
 ++ ls '*.htm'
++ echo '>>>> *.html files to DOC DIRECTORY'
+>>>> *.html files to DOC DIRECTORY
 + cd doc
 + for NUM in 1 2 3 4 5 6 7 8
 ++ ls '*.1m_list.html'
@@ -318,7 +322,7 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 >>>> Build manpage index
 + cd ../../man
 + mandb -c .
-mandb: warning: $MANPATH set, appending /etc/manpath.config
+mandb: warning: $MANPATH set, inserting /etc/manpath.config
 Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man1'. Wait...
 Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man3'. Wait...
 Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/....
@@ -353,6 +357,8 @@ M_list (3m_list)     - [M_list::INTRO] maintain simple lists (LICENSE:PD)
 remove (3m_list)     - [M_list] remove entry from an allocatable array at spe...
 replace (3m_list)    - [M_list] replace entry in a string array at specified ...
 set (3m_list)        - [M_list::dictionary::OOPS] add or replace a key-value ...
++ echo '>>>> make easily distributed archive files of manpages'
+>>>> make easily distributed archive files of manpages
 + mkdir -p ../../docs
 + cd ../../man
 + gzip man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
@@ -389,13 +395,15 @@ man3/remove.3m_list.gz
 man3/replace.3m_list.gz
 man3/set.3m_list.gz
 + gunzip man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
++ echo '>>>> extract demo pages from manpages'
+>>>> extract demo pages from manpages
 + cd /home/urbanjs/venus/V600/github/M_list/man
 ++ pwd
 + MANPATH=/home/urbanjs/venus/V600/github/M_list/man
 + SECTION=3m_list
 + DEMO_OUTDIR=../../example/
 + GPF_extract_manpage_demos /home/urbanjs/venus/V600/github/M_list/man 3m_list ../../example/
->>>> Extract demo program from manpages with 
+>>>> Extract demo program from manpages with
      MANPATH=/home/urbanjs/venus/V600/github/M_list/man
      SECTION=3m_list
      DEMO_OUTDIR=../../example/
@@ -411,48 +419,23 @@ man3/set.3m_list.gz
      9	replace (3m_list)    - [M_list] replace entry in a string array at specified ...
     10	set (3m_list)        - [M_list::dictionary::OOPS] add or replace a key-value ...
 >>>> clr.3m_list
-
-gzip: stdout: Permission denied
 >>>> del.3m_list
-
-gzip: stdout: Permission denied
 >>>> get.3m_list
-
-gzip: stdout: Permission denied
 >>>> ifdef.3m_list
-
-gzip: stdout: Permission denied
 >>>> insert.3m_list
-
-gzip: stdout: Permission denied
 >>>> locate.3m_list
-
-gzip: stdout: Permission denied
 >>>> M_list.3m_list
-
-gzip: stdout: Permission denied
 >>>> remove.3m_list
-
-gzip: stdout: Permission denied
 >>>> replace.3m_list
-
-gzip: stdout: Permission denied
 >>>> set.3m_list
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
 del(3m_list)							  del(3m_list)
+
+
 
 NAME
   del(3f) - [M_list::dictionary::OOPS] delete entry by key name from a basic
   dictionary (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
@@ -460,6 +443,7 @@ SYNOPSIS
      character(len=*),intent(in) :: key
 
      dict%del(key)
+
 
 DESCRIPTION
   Delete an entry from a basic dictionary if it is present.
@@ -501,18 +485,24 @@ EXAMPLES
 	 > D='dee',C='see',B='bee',A='aye'
 	 > D='dee',B='bee'
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  del(3m_list)
+
+
+				April 19, 2023			  del(3m_list)
 ifdef(3m_list)							ifdef(3m_list)
+
+
 
 NAME
   ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present in
   dictionary or not (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
@@ -521,6 +511,8 @@ SYNOPSIS
      logical :: value
 
      value=dict%ifdef(key)
+
+
 
 DESCRIPTION
   determine if name is already defined in dictionary or not
@@ -578,18 +570,24 @@ EXAMPLES
       > G= T
       > H= F
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		ifdef(3m_list)
+
+
+				April 19, 2023			ifdef(3m_list)
 insert(3m_list) 					       insert(3m_list)
+
+
 
 NAME
   insert(3f) - [M_list] insert entry into a string array at specified position
   (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine insert(list,value,place)
@@ -597,6 +595,7 @@ SYNOPSIS
      character(len=*)|doubleprecision|real|integer,intent(in) :: value
      character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
      integer,intent(in)    :: place
+
 
 DESCRIPTION
   Insert a value into an allocatable array at the specified index.  The list
@@ -629,11 +628,7 @@ EXAMPLES
       call sort_shell(arr,order='d')
       ! add or replace values
       call update(arr,'b')
-      call update
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-(arr,'[')
+      call update(arr,'[')
       call update(arr,'c')
       call update(arr,'ZZ')
       call update(arr,'ZZZ')
@@ -670,18 +665,24 @@ gzip: stdout: Permission denied
 	 > array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
 	 > array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       insert(3m_list)
+
+
+				April 19, 2023		       insert(3m_list)
 replace(3m_list)					      replace(3m_list)
+
+
 
 NAME
   replace(3f) - [M_list] replace entry in a string array at specified position
   (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine replace(list,value,place)
@@ -689,6 +690,7 @@ SYNOPSIS
      character(len=*)|doubleprecision|real|integer,intent(in) :: value
      character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
      integer, intent(out)	   :: PLACE
+
 
 DESCRIPTION
   replace a value in an allocatable array at the specified index. Unless the
@@ -768,28 +770,33 @@ EXAMPLES
      > b==>value of b
      > a==>value of a again
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	      replace(3m_list)
+
+
+				April 19, 2023		      replace(3m_list)
 set(3m_list)							  set(3m_list)
+
+
 
 NAME
   set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair in a
   dictionary (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
 
      character(len=*),intent(in) :: key
      character(len=*),intent(in) :: VALUE
-gzip: stdout: Permission denied
-
 
      call dict%rep(key,value)
+
 
 DESCRIPTION
   Add or replace a key-value pair in a dictionary.
@@ -839,18 +846,24 @@ EXAMPLES
 	> B==>[^]
 	> A==>[new value for A]
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  set(3m_list)
+
+
+				April 19, 2023			  set(3m_list)
 locate(3m_list) 					       locate(3m_list)
+
+
 
 NAME
   locate(3f) - [M_list] finds the index where a string is found or should be
   in a sorted array (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine locate(list,value,place,ier,errmsg)
@@ -861,6 +874,7 @@ SYNOPSIS
 
      integer, intent(out),optional	   :: IER
      character(len=*),intent(out),optional :: ERRMSG
+
 
 DESCRIPTION
   LOCATE(3f) finds the index where the VALUE is found or should be found in an
@@ -954,9 +968,7 @@ EXAMPLES
 	>  for "[" index is	      -4	   5
 	> SIZE=5 xxx,b,aaa,[,ZZZ,
 	>  for "c" index is	      -2	   6
-	> SIZE=6 xxx,c,b,
-gzip: stdout: Permission denied
-aaa,[,ZZZ,
+	> SIZE=6 xxx,c,b,aaa,[,ZZZ,
 	>  for "ZZ" index is	       -7	    7
 	> SIZE=7 xxx,c,b,aaa,[,ZZZ,,
 	>  for "ZZZZ" index is		 -6	      8
@@ -964,17 +976,23 @@ aaa,[,ZZZ,
 	>  for "z" index is	      -1	   9
 	> SIZE=9 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,,
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       locate(3m_list)
+
+
+				April 19, 2023		       locate(3m_list)
 M_list(3m_list) 					       M_list(3m_list)
+
+
 
 NAME
   M_list(3f) - [M_list::INTRO] maintain simple lists (LICENSE:PD)
+
 
 SYNOPSIS
   use M_list, only : insert, replace, remove, locate use M_list, only :
@@ -1076,11 +1094,7 @@ EXAMPLES
       endif
       end subroutine update
       function get(key) result(valout)
-      character(len=*),intent(in)   :
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-: key
+      character(len=*),intent(in)   :: key
       character(len=:),allocatable  :: valout
       integer			    :: place
 	 ! find where string is or should be
@@ -1106,6 +1120,8 @@ gzip: stdout: Permission denied
 	>  get b=>value of b
 	>  get d=>value of d
 	>  get notthere=>
+
+
 
    BASIC DICTIONARY
   A basic dictionary that uses the basic M_list functions.
@@ -1134,6 +1150,7 @@ gzip: stdout: Permission denied
 	%del	  delete an existing key from type(dictionary)
 	%clr	  empty a type(dictionary)
 	%ifdef	  test if name is defined
+
 
 EXAMPLES
   Sample program
@@ -1185,24 +1202,31 @@ EXAMPLES
 	!
 	end program test_dictionary
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       M_list(3m_list)
+
+
+				April 19, 2023		       M_list(3m_list)
 remove(3m_list) 					       remove(3m_list)
+
+
 
 NAME
   remove(3f) - [M_list] remove entry from an allocatable array at specified
   position (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine remove(list,place)
 
      character(len=:)|doubleprecision|real|integer,intent(inout) :: list(:)
      integer, intent(out) :: PLACE
+
 
 DESCRIPTION
   Remove a value from an allocatable array at the specified index.  The array
@@ -1248,18 +1272,24 @@ EXAMPLES
 	> SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
 	> SIZE=7 bb,b,b,aaa,ZZZ,Z,,
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       remove(3m_list)
+
+
+				April 19, 2023		       remove(3m_list)
 get(3m_list)							  get(3m_list)
+
+
 
 NAME
   get(3f) - [M_list::dictionary::OOPS] get value of key-value pair in a
   dictionary given key (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
@@ -1268,6 +1298,8 @@ SYNOPSIS
      character(len=*),intent(in) :: VALUE
 
      value=dict%get(key)
+
+
 
 DESCRIPTION
   get a value given a key from a key-value dictionary
@@ -1324,22 +1356,29 @@ EXAMPLES
 	>  G=value for G
 	>  H=
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  get(3m_list)
+
+
+				April 19, 2023			  get(3m_list)
 clr(3m_list)							  clr(3m_list)
+
+
 
 NAME
   clr(3f) - [M_list::dictionary::OOPS] clear basic dictionary (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
 
      call dict%clr()
+
 
 DESCRIPTION
   clear a basic dictionary.
@@ -1378,13 +1417,18 @@ EXAMPLES
 	>  D='dee',C='see',B='bee',A='aye'
 	> DICTIONARY AFTER CLEARED
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  clr(3m_list)
+
+
+				April 19, 2023			  clr(3m_list)
++ echo '>>>> run make'
+>>>> run make
 + cd ..
 + make clean
 Makefile:64: target '../example/demo_M_list' given more than once in the same rule
@@ -1526,21 +1570,11 @@ finalizing index lists...
 writing tag file...
 Running plantuml with JAVA...
 Running dot...
-Generating dot graphs using 5 parallel threads...
-Running dot for graph 1/5
-Running dot for graph 2/5
-Running dot for graph 3/5
-Running dot for graph 4/5
-Running dot for graph 5/5
-Patching output file 1/4
-Patching output file 2/4
-Patching output file 3/4
-Patching output file 4/4
 lookup cache used 73/65536 hits=218 misses=73
 finished...
 + make man
 Makefile:64: target '../example/demo_M_list' given more than once in the same rule
-mandb: warning: $MANPATH set, appending /etc/manpath.config
+mandb: warning: $MANPATH set, inserting /etc/manpath.config
 Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/../man/man3'. Wait...
 Purging old database entries in /home/urbanjs/venus/V600/github/M_list/src/../man...
 Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man...
@@ -1578,19 +1612,14 @@ M_list(3f) (3m_list) [M_list] - (unknown subject)
 remove(3f) (3m_list) [remove] - (unknown subject)
 replace(3f) (3m_list) [replace] - (unknown subject)
 set(3f) (3m_list) [set] - (unknown subject)
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
 del(3m_list)							  del(3m_list)
+
+
 
 NAME
   del(3f) - [M_list::dictionary::OOPS] delete entry by key name from a basic
   dictionary (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
@@ -1598,6 +1627,7 @@ SYNOPSIS
      character(len=*),intent(in) :: key
 
      dict%del(key)
+
 
 DESCRIPTION
   Delete an entry from a basic dictionary if it is present.
@@ -1639,18 +1669,24 @@ EXAMPLES
 	 > D='dee',C='see',B='bee',A='aye'
 	 > D='dee',B='bee'
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  del(3m_list)
+
+
+				April 19, 2023			  del(3m_list)
 ifdef(3m_list)							ifdef(3m_list)
+
+
 
 NAME
   ifdef(3f) - [M_list::dictionary::OOPS] return whether name is present in
   dictionary or not (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
@@ -1659,6 +1695,8 @@ SYNOPSIS
      logical :: value
 
      value=dict%ifdef(key)
+
+
 
 DESCRIPTION
   determine if name is already defined in dictionary or not
@@ -1716,18 +1754,24 @@ EXAMPLES
       > G= T
       > H= F
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		ifdef(3m_list)
+
+
+				April 19, 2023			ifdef(3m_list)
 insert(3m_list) 					       insert(3m_list)
+
+
 
 NAME
   insert(3f) - [M_list] insert entry into a string array at specified position
   (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine insert(list,value,place)
@@ -1735,6 +1779,7 @@ SYNOPSIS
      character(len=*)|doubleprecision|real|integer,intent(in) :: value
      character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
      integer,intent(in)    :: place
+
 
 DESCRIPTION
   Insert a value into an allocatable array at the specified index.  The list
@@ -1767,11 +1812,7 @@ EXAMPLES
       call sort_shell(arr,order='d')
       ! add or replace values
       call update(arr,'b')
-      call update
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-(arr,'[')
+      call update(arr,'[')
       call update(arr,'c')
       call update(arr,'ZZ')
       call update(arr,'ZZZ')
@@ -1808,18 +1849,24 @@ gzip: stdout: Permission denied
 	 > array is now SIZE=9 xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
 	 > array is now SIZE=10 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,ZZ,,
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       insert(3m_list)
+
+
+				April 19, 2023		       insert(3m_list)
 replace(3m_list)					      replace(3m_list)
+
+
 
 NAME
   replace(3f) - [M_list] replace entry in a string array at specified position
   (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine replace(list,value,place)
@@ -1827,6 +1874,7 @@ SYNOPSIS
      character(len=*)|doubleprecision|real|integer,intent(in) :: value
      character(len=:)|doubleprecision|real|integer,intent(in) :: list(:)
      integer, intent(out)	   :: PLACE
+
 
 DESCRIPTION
   replace a value in an allocatable array at the specified index. Unless the
@@ -1906,28 +1954,33 @@ EXAMPLES
      > b==>value of b
      > a==>value of a again
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	      replace(3m_list)
+
+
+				April 19, 2023		      replace(3m_list)
 set(3m_list)							  set(3m_list)
+
+
 
 NAME
   set(3f) - [M_list::dictionary::OOPS] add or replace a key-value pair in a
   dictionary (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
 
      character(len=*),intent(in) :: key
      character(len=*),intent(in) :: VALUE
-gzip: stdout: Permission denied
-
 
      call dict%rep(key,value)
+
 
 DESCRIPTION
   Add or replace a key-value pair in a dictionary.
@@ -1977,18 +2030,24 @@ EXAMPLES
 	> B==>[^]
 	> A==>[new value for A]
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  set(3m_list)
+
+
+				April 19, 2023			  set(3m_list)
 locate(3m_list) 					       locate(3m_list)
+
+
 
 NAME
   locate(3f) - [M_list] finds the index where a string is found or should be
   in a sorted array (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine locate(list,value,place,ier,errmsg)
@@ -1999,6 +2058,7 @@ SYNOPSIS
 
      integer, intent(out),optional	   :: IER
      character(len=*),intent(out),optional :: ERRMSG
+
 
 DESCRIPTION
   LOCATE(3f) finds the index where the VALUE is found or should be found in an
@@ -2092,9 +2152,7 @@ EXAMPLES
 	>  for "[" index is	      -4	   5
 	> SIZE=5 xxx,b,aaa,[,ZZZ,
 	>  for "c" index is	      -2	   6
-	> SIZE=6 xxx,c,b,
-gzip: stdout: Permission denied
-aaa,[,ZZZ,
+	> SIZE=6 xxx,c,b,aaa,[,ZZZ,
 	>  for "ZZ" index is	       -7	    7
 	> SIZE=7 xxx,c,b,aaa,[,ZZZ,,
 	>  for "ZZZZ" index is		 -6	      8
@@ -2102,17 +2160,23 @@ aaa,[,ZZZ,
 	>  for "z" index is	      -1	   9
 	> SIZE=9 z,xxx,c,b,aaa,[,ZZZZ,ZZZ,,
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       locate(3m_list)
+
+
+				April 19, 2023		       locate(3m_list)
 M_list(3m_list) 					       M_list(3m_list)
+
+
 
 NAME
   M_list(3f) - [M_list::INTRO] maintain simple lists (LICENSE:PD)
+
 
 SYNOPSIS
   use M_list, only : insert, replace, remove, locate use M_list, only :
@@ -2214,11 +2278,7 @@ EXAMPLES
       endif
       end subroutine update
       function get(key) result(valout)
-      character(len=*),intent(in)   :
-gzip: stdout: Permission denied
-
-gzip: stdout: Permission denied
-: key
+      character(len=*),intent(in)   :: key
       character(len=:),allocatable  :: valout
       integer			    :: place
 	 ! find where string is or should be
@@ -2244,6 +2304,8 @@ gzip: stdout: Permission denied
 	>  get b=>value of b
 	>  get d=>value of d
 	>  get notthere=>
+
+
 
    BASIC DICTIONARY
   A basic dictionary that uses the basic M_list functions.
@@ -2272,6 +2334,7 @@ gzip: stdout: Permission denied
 	%del	  delete an existing key from type(dictionary)
 	%clr	  empty a type(dictionary)
 	%ifdef	  test if name is defined
+
 
 EXAMPLES
   Sample program
@@ -2323,24 +2386,31 @@ EXAMPLES
 	!
 	end program test_dictionary
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       M_list(3m_list)
+
+
+				April 19, 2023		       M_list(3m_list)
 remove(3m_list) 					       remove(3m_list)
+
+
 
 NAME
   remove(3f) - [M_list] remove entry from an allocatable array at specified
   position (LICENSE:PD)
+
 
 SYNOPSIS
   subroutine remove(list,place)
 
      character(len=:)|doubleprecision|real|integer,intent(inout) :: list(:)
      integer, intent(out) :: PLACE
+
 
 DESCRIPTION
   Remove a value from an allocatable array at the specified index.  The array
@@ -2386,18 +2456,24 @@ EXAMPLES
 	> SIZE=8 bb,b,b,ab,aaa,ZZZ,Z,,
 	> SIZE=7 bb,b,b,aaa,ZZZ,Z,,
 
+
 AUTHOR
   1989,2017 John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022	       remove(3m_list)
+
+
+				April 19, 2023		       remove(3m_list)
 get(3m_list)							  get(3m_list)
+
+
 
 NAME
   get(3f) - [M_list::dictionary::OOPS] get value of key-value pair in a
   dictionary given key (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
@@ -2406,6 +2482,8 @@ SYNOPSIS
      character(len=*),intent(in) :: VALUE
 
      value=dict%get(key)
+
+
 
 DESCRIPTION
   get a value given a key from a key-value dictionary
@@ -2462,22 +2540,29 @@ EXAMPLES
 	>  G=value for G
 	>  H=
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  get(3m_list)
+
+
+				April 19, 2023			  get(3m_list)
 clr(3m_list)							  clr(3m_list)
+
+
 
 NAME
   clr(3f) - [M_list::dictionary::OOPS] clear basic dictionary (LICENSE:PD)
+
 
 SYNOPSIS
   type(dictionary) :: dict
 
      call dict%clr()
+
 
 DESCRIPTION
   clear a basic dictionary.
@@ -2516,13 +2601,16 @@ EXAMPLES
 	>  D='dee',C='see',B='bee',A='aye'
 	> DICTIONARY AFTER CLEARED
 
+
 AUTHOR
   John S. Urban
 
 LICENSE
   Public Domain
 
-			       December 30, 2022		  clr(3m_list)
+
+
+				April 19, 2023			  clr(3m_list)
 + make ship
 Makefile:64: target '../example/demo_M_list' given more than once in the same rule
 : make easily distributed archive files of manpages
@@ -2565,21 +2653,23 @@ Makefile:64: target '../example/demo_M_list' given more than once in the same ru
 + make clean
 Makefile:64: target '../example/demo_M_list' given more than once in the same rule
 rm -f ../example/demo_insert ../example/demo_locate ../example/demo_M_list ../example/demo_remove ../example/demo_replace ../example/demo_M_list  M_list.o  *.mod ../test/test_suite_M_list 
++ echo '>>>> fpm test'
+>>>> fpm test
 + cd ../..
 + fpm test
  + mkdir -p build/dependencies
 Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_sort/.git/
 From https://github.com/urbanjost/M_sort
  * branch            HEAD       -> FETCH_HEAD
-Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_msg/.git/
-From https://github.com/urbanjost/M_msg
+Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_framework/.git/
+From https://github.com/urbanjost/M_framework
  * branch            HEAD       -> FETCH_HEAD
 [  0%]                     M_list.f90
 [  3%]                     M_list.f90  done.
-[  3%]                     M_sort.f90
-[  6%]                     M_sort.f90  done.
-[  6%]                      M_msg.F90
-[  9%]                      M_msg.F90  done.
+[  3%]                     M_sort.F90
+[  6%]                     M_sort.F90  done.
+[  6%]           M_framework__msg.F90
+[  9%]           M_framework__msg.F90  done.
 [  9%]                       main.f90
 [ 12%]                       main.f90  done.
 [ 12%]                   demo_clr.f90
@@ -2604,10 +2694,10 @@ From https://github.com/urbanjost/M_msg
 [ 43%]                   demo_set.f90  done.
 [ 43%]                   demo_del.f90
 [ 46%]                   demo_del.f90  done.
-[ 46%]                  M_journal.f90
-[ 50%]                  M_journal.f90  done.
-[ 50%]                   M_verify.F90
-[ 53%]                   M_verify.F90  done.
+[ 46%]       M_framework__journal.f90
+[ 50%]       M_framework__journal.f90  done.
+[ 50%]        M_framework__verify.F90
+[ 53%]        M_framework__verify.F90  done.
 [ 53%]                    libM_list.a
 [ 56%]                    libM_list.a  done.
 [ 56%]          test_suite_M_list.f90
@@ -2639,37 +2729,39 @@ From https://github.com/urbanjost/M_msg
 [ 96%]                     test_suite
 [100%]                     test_suite  done.
 [100%] Project compiled successfully.
-unit_check:       locate               SUCCESS : ZZZ 4 should be 4
-unit_check:       locate               SUCCESS : zqj -1 should be -1
-unit_check_done:  locate               PASSED  : DURATION:00000000000001 GOOD:2  BAD:0
-unit_check:       insert               SUCCESS : should not be located -5
-unit_check:       insert               SUCCESS : NEW should be "NEW"
-unit_check:       insert               SUCCESS : array now bigger 5 to 6
-unit_check_done:  insert               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       remove               SUCCESS : found the element to remove 5
-unit_check:       remove               SUCCESS : did not find the element to remove -5
-unit_check:       remove               SUCCESS : shrunk by two
-unit_check_done:  remove               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       replace              SUCCESS : location= 5
-unit_check:       replace              SUCCESS : no change in size 9
-unit_check:       replace              SUCCESS : new value for ab
-unit_check_done:  replace              PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       dict%set             SUCCESS : array should be A
-unit_check:       dict%set             SUCCESS : array should be z c b A
-unit_check:       dict%set             SUCCESS : strings ok
-unit_check_done:  dict%set             PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       dict%del             SUCCESS : string deletes keys
-unit_check:       dict%del             SUCCESS : string deletes values
-unit_check_done:  dict%del             PASSED  : DURATION:00000000000001 GOOD:2  BAD:0
-unit_check:       dict%get             SUCCESS : string get keys
-unit_check:       dict%get             SUCCESS : string get values
-unit_check_done:  dict%get             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
-unit_check:       dict%                SUCCESS : ifdef tests
-unit_check_done:  dict%ifdef           PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
-unit_check:       dict%                SUCCESS : clr tests
-unit_check_done:  dict%clr             PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
-unit_check_stop:  TALLY:               PASSED  : DURATION:00000000000003 GOOD:20  BAD:0
+check:       locate               SUCCESS : ZZZ 4 should be 4
+check:       locate               SUCCESS : zqj -1 should be -1
+check_done:  locate               PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000001
+check:       insert               SUCCESS : should not be located -5
+check:       insert               SUCCESS : NEW should be "NEW"
+check:       insert               SUCCESS : array now bigger 5 to 6
+check_done:  insert               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       remove               SUCCESS : found the element to remove 5
+check:       remove               SUCCESS : did not find the element to remove -5
+check:       remove               SUCCESS : shrunk by two
+check_done:  remove               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       replace              SUCCESS : location= 5
+check:       replace              SUCCESS : no change in size 9
+check:       replace              SUCCESS : new value for ab
+check_done:  replace              PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       dict%set             SUCCESS : array should be A
+check:       dict%set             SUCCESS : array should be z c b A
+check:       dict%set             SUCCESS : strings ok
+check_done:  dict%set             PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       dict%del             SUCCESS : string deletes keys
+check:       dict%del             SUCCESS : string deletes values
+check_done:  dict%del             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check:       dict%get             SUCCESS : string get keys
+check:       dict%get             SUCCESS : string get values
+check_done:  dict%get             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check:       dict%                SUCCESS : ifdef tests
+check_done:  dict%ifdef           PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
+check:       dict%                SUCCESS : clr tests
+check_done:  dict%clr             PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
+check_stop:  TALLY                PASSED  : GOOD:       20 BAD:        0 DURATION:00000000000002
 STOP 0
++ echo '>>>> make BOOK html document'
+>>>> make BOOK html document
 + env MANPATH=../../man mandb -c
 mandb: warning: $MANPATH set, ignoring /etc/manpath.config
 Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man1'. Wait...
@@ -2727,18 +2819,18 @@ ________________________________________________________________________________
 + echo 'function loadthem(){'
 + '[' M_list = INDEX ']'
 + uniq
-+ read NAME
-+ tr -d '()'
 + echo M_list.3m_list.html
 + uniq
-+ env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
-+ grep -i '(3M_list)'
 + awk '{printf "%s.%s.html\n",$1,$2}'
++ env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
 + man -k '\[M_list\>'
++ grep -i '(3M_list)'
++ tr -d '()'
++ read NAME
 + man --section 3m_list -k .
 + grep -i '(3M_list)'
-+ man -k '\[M_list\>'
 + env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
++ man -k '\[M_list\>'
 + grep -vi '(3M_list)'
 + '[' -r ../../docs//M_list.3m_list.html..html ']'
 + read NAME
@@ -2774,6 +2866,8 @@ ________________________________________________________________________________
 + read NAME
 + echo '}'
 + exit
++ echo '>>>> make HTML index to manpages'
+>>>> make HTML index to manpages
 + env MANPATH=../../man OUTDIR=../../docs GPF_manpage_index
 making HTML index for section 1 in ../../docs/man1.html
 FOUND 0 for section 1
@@ -2807,52 +2901,61 @@ FOUND 0 for section 3
 making HTML index for Fortran Intrinsics for section 7 in ../../docs/man7i.html
 FOUND 0 for section 7
 sed: can't read ../../docs/*.[37]fortran.html: No such file or directory
++ echo '>>>> spell check'
+>>>> spell check
 + spell ../../README.md
-+ column -t
 + xargs -n 8
++ column -t
 Fortran   Makefile  cd         doxygen  fortran  fpm   gfortran    gif
 github    gmake     html       https    ifort    io    javascript  lang
 manpages  md        nvfortran  src      tgz      toml  urbanjost
++ echo '>>>> update GPF project and documents'
+>>>> update GPF project and documents
 + unset GITHUB
 + make.one libGPF
-1803975 (process ID) old priority 0, new priority 19
+1978441 (process ID) old priority 0, new priority 19
 W-A-R-N-I-N-G: no ccheck.c file (required for configured versions)
++ echo '>>>> run test'
+>>>> run test
 + cd ../../test
 + ccall test_suite_M_list.f90
-*ccall*: MAKING TEMPORARY DIRECTORY /tmp/CCALL_Linux_ifx_1804712
-+ mkdir -m 755 -p /tmp/CCALL_Linux_ifx_1804712
-+ chmod u=xrw,g-xrw,o-xrw /tmp/CCALL_Linux_ifx_1804712
+*ccall*: MAKING TEMPORARY DIRECTORY /tmp/CCALL_Linux_gfortran_1978857
++ mkdir -m 755 -p /tmp/CCALL_Linux_gfortran_1978857
++ chmod u=xrw,g-xrw,o-xrw /tmp/CCALL_Linux_gfortran_1978857
 + CCALL_DELETE_DIR=TRUE
-+ FULLNAME=/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
++ FULLNAME=/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
 + SPLIT
-+ sed -e 's/ -/@ -/g'
 + tr @ '\012'
-+ cp test_suite_M_list.f90 /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
++ sed -e 's/ -/@ -/g'
++ cp test_suite_M_list.f90 /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
 + echo NAME test_suite_M_list.f90
 NAME test_suite_M_list.f90
-+ echo /home/urbanjs/venus/V600/bin/Linux_ifx/test_suite_M_list
-/home/urbanjs/venus/V600/bin/Linux_ifx/test_suite_M_list
-+ ADDOPTIONS /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
-+ INPUTFILENAME=/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
++ echo /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
+/home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
++ ADDOPTIONS /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
++ INPUTFILENAME=/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
 + grep
- -qi '\<use\>  *\<M_readline\>' /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
+ -qi '\<use\>  *\<M_readline\>' /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
 + grep
- -qi '\<use\>  *\<M_curl\>' /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
+ -qi '\<use\>  *\<M_curl\>' /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
 + set
  -x
 + set
  -v
-+ ifx
++ gfortran
+ -fbacktrace
+ -fdump-core
+ -frecord-marker=4
  -I.
  -DTESTPRG
- -DTESTPRG90 /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
- -o /home/urbanjs/venus/V600/bin/Linux_ifx/test_suite_M_list
- -fp-model precise
- -pc 64
- -align all
- -reentrancy threaded
- -nogen-interfaces
- -L/home/urbanjs/venus/V600/lib/Linux_ifx
+ -DTESTPRG90 /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
+ -o /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
+ -Wall
+ -Wextra
+ -Bstatic
+ -I/home/urbanjs/venus/V600/lib/Linux_gfortran
+ -J/home/urbanjs/venus/V600/lib/Linux_gfortran
+ -L/home/urbanjs/venus/V600/lib/Linux_gfortran
  -lkon
  -lDL
  -lMULTI
@@ -2865,150 +2968,360 @@ NAME test_suite_M_list.f90
  -lncurses
  -lcurl
  -lSTUG
+ -lsqlite3
+ -lquadmath
+ -lm
+ -Wunreachable-code
+ -Wunused
+ -Wuninitialized
  -g
- -O0
- -traceback
- -I /home/urbanjs/venus/V600/lib/Linux_ifx
- -module /home/urbanjs/venus/V600/lib/Linux_ifx
- -assume byterecl
- -assume nounderscore
- -fpp
- -L/usr/X11R6/lib64
- -L/usr/X11R6/lib
+ -O
+ -fcoarray=single
+ -Bdynamic
+ -L/usr/lib/x86_64-linux-gnu
  -lX11
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(3): remark #6536: All symbols from this module are already visible due to another USE; the ONLY clause will have no effect. Rename clauses, if any, will be honored.   [M_VERIFY]
-use M_verify
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(2): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_MSG]
-use M_msg
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(3): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_VERIFY]
-use M_verify
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(8): error #6498: The use-name for this local-name is not defined.   [UNIT_CHECK_LEVEL]
-   unit_check_level=0
----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(4): error #6581: Unresolved rename.   [UNIT_CHECK]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
----------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(4): error #6581: Unresolved rename.   [UNIT_CHECK_START]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
----------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(4): error #6581: Unresolved rename.   [UNIT_CHECK_GOOD]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
----------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(4): error #6581: Unresolved rename.   [UNIT_CHECK_BAD]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
---------------------------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(4): error #6581: Unresolved rename.   [UNIT_CHECK_DONE]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
-------------------------------------------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(5): error #6581: Unresolved rename.   [UNIT_CHECK_STOP]
-use M_verify, only : unit_check_level, unit_check_stop
----------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(14): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_SORT]
-use M_sort, only : sort_shell
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_VERIFY]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(16): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_LIST]
-use M_list, only : locate, insert, remove, replace, dictionary
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(35): error #6406: Conflicting attributes or multiple declaration of name.   [DICTIONARY]
-type(dictionary) :: dict
------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(57): error #6406: Conflicting attributes or multiple declaration of name.   [DICTIONARY]
-type(dictionary) :: dict
------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(88): error #6406: Conflicting attributes or multiple declaration of name.   [DICTIONARY]
-type(dictionary)     :: tt
------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(110): error #6406: Conflicting attributes or multiple declaration of name.   [DICTIONARY]
-type(dictionary)     :: tt
------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(133): error #6406: Conflicting attributes or multiple declaration of name.   [DICTIONARY]
-type(dictionary)             :: dict
------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(194): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_SORT]
-use M_sort, only : sort_shell
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(218): error #7002: Error in opening the compiled module file.  Check INCLUDE paths.   [M_SORT]
-use M_sort, only : sort_shell
-----^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(16): error #6580: Name in only-list does not exist or is not accessible.   [DICTIONARY]
-use M_list, only : locate, insert, remove, replace, dictionary
-----------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(14): error #6580: Name in only-list does not exist or is not accessible.   [SORT_SHELL]
-use M_sort, only : sort_shell
--------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #6580: Name in only-list does not exist or is not accessible.   [UNIT_CHECK]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
----------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #6580: Name in only-list does not exist or is not accessible.   [UNIT_CHECK_START]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
----------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #6580: Name in only-list does not exist or is not accessible.   [UNIT_CHECK_GOOD]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
----------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #6580: Name in only-list does not exist or is not accessible.   [UNIT_CHECK_BAD]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
---------------------------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #6580: Name in only-list does not exist or is not accessible.   [UNIT_CHECK_DONE]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
-------------------------------------------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(15): error #6580: Name in only-list does not exist or is not accessible.   [UNIT_CHECK_LEVEL]
-use M_verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
------------------------------------------------------------------------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(16): error #6580: Name in only-list does not exist or is not accessible.   [LOCATE]
-use M_list, only : locate, insert, remove, replace, dictionary
--------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(16): error #6580: Name in only-list does not exist or is not accessible.   [INSERT]
-use M_list, only : locate, insert, remove, replace, dictionary
----------------------------^
-/tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90(16): error #6580: Name in only-list does not exist or is not accessible.   [REMOVE]
-use M_list, only : locate, insert, remove, replace, dictionary
------------------------------------^
-/tmp/CCALL_Linux_ifx_1804712/ifx03830347286unQ2v/ifxlhqV8u.i90(244): catastrophic error: Too many errors, exiting
-compilation aborted for /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90 (code 1)
-+ ar rv /home/urbanjs/venus/V600/lib/Linux_ifx/PROGRAM.a /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
-a - /tmp/CCALL_Linux_ifx_1804712/test_suite_M_list.1804712.f90
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:16:4:
+
+   16 | use M_framework__verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
+      |    1
+Warning: Unused module variable ‘unit_check_level’ which has been explicitly imported at (1) [-Wunused-variable]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+
+  150 | character(len=:),allocatable :: lst(:)
+      |                                      ^
+Warning: ‘.lst’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:192:26:
+
+  192 | end subroutine test_insert
+      |                          ^
+note: ‘.lst’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:151:59:
+
+  151 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      |                                                           ^
+Warning: ‘lst.offset’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+
+  150 | character(len=:),allocatable :: lst(:)
+      |                                      ^
+note: ‘lst’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:151:59:
+
+  151 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      |                                                           ^
+Warning: ‘lst.dim[0].lbound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+
+  150 | character(len=:),allocatable :: lst(:)
+      |                                      ^
+note: ‘lst’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:151:59:
+
+  151 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+      |                                                           ^
+Warning: ‘lst.dim[0].ubound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+
+  150 | character(len=:),allocatable :: lst(:)
+      |                                      ^
+note: ‘lst’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:165:38:
+
+  165 | character(len=:),allocatable :: arr(:)
+      |                                      ^
+Warning: ‘.arr’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:195:4:
+
+  195 | use M_sort, only : sort_shell
+      |    ^
+note: ‘.arr’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:196:39:
+
+  196 | character(len=:),allocatable  :: arr(:)
+      |                                       ^
+Warning: ‘.arr’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:219:4:
+
+  219 | use M_sort, only : sort_shell
+      |    ^
+note: ‘.arr’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:220:39:
+
+  220 | character(len=:),allocatable  :: arr(:)
+      |                                       ^
+Warning: ‘.arr’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:35:24:
+
+   35 | subroutine test_dict_set
+      |                        ^
+note: ‘.arr’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:141:52:
+
+  141 |    val=[dict%get('Z'), dict%get('A'), dict%get('X')]
+      |                                                    ^
+Warning: ‘val.offset’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:135:39:
+
+  135 | character(len=20),allocatable :: val(:)
+      |                                       ^
+note: ‘val’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:141:52:
+
+  141 |    val=[dict%get('Z'), dict%get('A'), dict%get('X')]
+      |                                                    ^
+Warning: ‘val.dim[0].lbound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:135:39:
+
+  135 | character(len=20),allocatable :: val(:)
+      |                                       ^
+note: ‘val’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:141:52:
+
+  141 |    val=[dict%get('Z'), dict%get('A'), dict%get('X')]
+      |                                                    ^
+Warning: ‘val.dim[0].ubound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:135:39:
+
+  135 | character(len=20),allocatable :: val(:)
+      |                                       ^
+note: ‘val’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:103:131:
+
+  103 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
+      |                                                                                                                                   ^
+Warning: ‘answers.offset’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:90:34:
+
+   90 | logical,allocatable  :: answers(:)
+      |                                  ^
+note: ‘answers’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:103:131:
+
+  103 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
+      |                                                                                                                                   ^
+Warning: ‘answers.dim[0].lbound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:90:34:
+
+   90 | logical,allocatable  :: answers(:)
+      |                                  ^
+note: ‘answers’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:103:131:
+
+  103 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
+      |                                                                                                                                   ^
+Warning: ‘answers.dim[0].ubound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:90:34:
+
+   90 | logical,allocatable  :: answers(:)
+      |                                  ^
+note: ‘answers’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:126:131:
+
+  126 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
+      |                                                                                                                                   ^
+Warning: ‘answers.offset’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:112:34:
+
+  112 | logical,allocatable  :: answers(:)
+      |                                  ^
+note: ‘answers’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:126:131:
+
+  126 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
+      |                                                                                                                                   ^
+Warning: ‘answers.dim[0].lbound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:112:34:
+
+  112 | logical,allocatable  :: answers(:)
+      |                                  ^
+note: ‘answers’ declared here
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:126:131:
+
+  126 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
+      |                                                                                                                                   ^
+Warning: ‘answers.dim[0].ubound’ is used uninitialized [-Wuninitialized]
+/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:112:34:
+
+  112 | logical,allocatable  :: answers(:)
+      |                                  ^
+note: ‘answers’ declared here
++ ar rv /home/urbanjs/venus/V600/lib/Linux_gfortran/PROGRAM.a /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
+a - /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
 + set +x
 /home/urbanjs/venus/V600/LIBRARY/CYGWIN/scripts_regression/goodbad: test_suite_M_list.1 0 test_suite_M_list start --section 1
 /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
-*ccall*: REMOVING /tmp/CCALL_Linux_ifx_1804712
+*ccall*: REMOVING /tmp/CCALL_Linux_gfortran_1978857
 + test_suite_M_list
-unit_check:       locate               SUCCESS : ZZZ 4 should be 4
-unit_check:       locate               SUCCESS : zqj -1 should be -1
-unit_check_done:  locate               PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
-unit_check:       insert               SUCCESS : should not be located -5
-unit_check:       insert               SUCCESS : NEW should be "NEW"
-unit_check:       insert               SUCCESS : array now bigger 5 to 6
-unit_check_done:  insert               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       remove               SUCCESS : found the element to remove 5
-unit_check:       remove               SUCCESS : did not find the element to remove -5
-unit_check:       remove               SUCCESS : shrunk by two
-unit_check_done:  remove               PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       replace              SUCCESS : location= 5
-unit_check:       replace              SUCCESS : no change in size 9
-unit_check:       replace              SUCCESS : new value for ab
-unit_check_done:  replace              PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       dict%set             SUCCESS : array should be A
-unit_check:       dict%set             SUCCESS : array should be z c b A
-unit_check:       dict%set             SUCCESS : strings ok
-unit_check_done:  dict%set             PASSED  : DURATION:00000000000000 GOOD:3  BAD:0
-unit_check:       dict%del             SUCCESS : string deletes keys
-unit_check:       dict%del             SUCCESS : string deletes values
-unit_check_done:  dict%del             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
-unit_check:       dict%get             SUCCESS : string get keys
-unit_check:       dict%get             SUCCESS : string get values
-unit_check_done:  dict%get             PASSED  : DURATION:00000000000000 GOOD:2  BAD:0
-unit_check:       dict%                SUCCESS : ifdef tests
-unit_check_done:  dict%ifdef           PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
-unit_check:       dict%                SUCCESS : clr tests
-unit_check_done:  dict%clr             PASSED  : DURATION:00000000000000 GOOD:1  BAD:0
-unit_check_stop:  TALLY:               PASSED  : DURATION:00000000000002 GOOD:20  BAD:0
+check:       locate               SUCCESS : ZZZ 4 should be 4
+check:       locate               SUCCESS : zqj -1 should be -1
+check_done:  locate               PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check:       insert               SUCCESS : should not be located -5
+check:       insert               SUCCESS : NEW should be "NEW"
+check:       insert               SUCCESS : array now bigger 5 to 6
+check_done:  insert               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       remove               SUCCESS : found the element to remove 5
+check:       remove               SUCCESS : did not find the element to remove -5
+check:       remove               SUCCESS : shrunk by two
+check_done:  remove               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       replace              SUCCESS : location= 5
+check:       replace              SUCCESS : no change in size 9
+check:       replace              SUCCESS : new value for ab
+check_done:  replace              PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       dict%set             SUCCESS : array should be A
+check:       dict%set             SUCCESS : array should be z c b A
+check:       dict%set             SUCCESS : strings ok
+check_done:  dict%set             PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check:       dict%del             SUCCESS : string deletes keys
+check:       dict%del             SUCCESS : string deletes values
+check_done:  dict%del             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check:       dict%get             SUCCESS : string get keys
+check:       dict%get             SUCCESS : string get values
+check_done:  dict%get             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000001
+check:       dict%                SUCCESS : ifdef tests
+check_done:  dict%ifdef           PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
+check:       dict%                SUCCESS : clr tests
+check_done:  dict%clr             PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
+check_stop:  TALLY                PASSED  : GOOD:       20 BAD:        0 DURATION:00000000000001
 STOP 0
++ echo '>>>> GPF_fman'
+>>>> GPF_fman
 + '[' -d doc/ ']'
 + GPF_fman m_list doc
--rwxrwxrwx 1 urbanjs urbanjs 42139 Dec 30 20:27 /home/urbanjs/venus/V600/github/APPS/fpm-docs/src/m_list_docs.f90
++++ dirname /home/urbanjs/venus/V600/github/github_scripts/bash/GPF_fman
+++ realpath /home/urbanjs/venus/V600/github/github_scripts/bash
++ HERE=/home/urbanjs/venus/V600/github/github_scripts/bash
+++ dirname /home/urbanjs/venus/V600/github/github_scripts/bash
++ BASE=/home/urbanjs/venus/V600/github/github_scripts
+++ dirname /home/urbanjs/venus/V600/github/github_scripts
++ BASE=/home/urbanjs/venus/V600/github
++ DOCS=/home/urbanjs/venus/V600/github/docs
++ export PACKAGE=m_list
++ PACKAGE=m_list
++ export TEXTDIR=doc
++ TEXTDIR=doc
++ export NAME
++ cd doc
++ WRITE_MODULE
++ cat
++ cat
++ cat
++ cat
++ COUNT=0
++ ls clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
++ read NAME
++ SHORTNAME=clr
++ COUNT=1
++ cat
+++ TOCHARACTER
+++ :
+++ cat clr.3m_list.man
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/^/'\''/'
++ read NAME
++ SHORTNAME=del
++ COUNT=2
++ cat
+++ TOCHARACTER
+++ :
+++ cat del.3m_list.man
+++ sed -e 's/^/'\''/'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/'\''/'\'''\''/g'
++ read NAME
++ SHORTNAME=get
++ COUNT=3
++ cat
+++ TOCHARACTER
+++ :
+++ cat get.3m_list.man
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/^/'\''/'
++ read NAME
++ SHORTNAME=ifdef
++ COUNT=4
++ cat
+++ TOCHARACTER
+++ :
+++ cat ifdef.3m_list.man
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/^/'\''/'
++ read NAME
++ SHORTNAME=insert
++ COUNT=5
++ cat
+++ TOCHARACTER
+++ :
+++ cat insert.3m_list.man
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/^/'\''/'
++ read NAME
++ SHORTNAME=locate
++ COUNT=6
++ cat
+++ TOCHARACTER
+++ :
+++ cat locate.3m_list.man
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/^/'\''/'
++ read NAME
++ SHORTNAME=M_list
++ COUNT=7
++ cat
+++ TOCHARACTER
+++ :
+++ cat M_list.3m_list.man
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/^/'\''/'
++ read NAME
++ SHORTNAME=remove
++ COUNT=8
++ cat
+++ TOCHARACTER
+++ :
+++ cat remove.3m_list.man
+++ cat
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/^/'\''/'
+++ sed -e 's/$/'\'', \&/'
++ read NAME
++ SHORTNAME=replace
++ COUNT=9
++ cat
+++ TOCHARACTER
+++ :
+++ cat replace.3m_list.man
+++ sed -e 's/^/'\''/'
+++ sed -e 's/'\''/'\'''\''/g'
+++ cat
+++ sed -e 's/$/'\'', \&/'
++ read NAME
++ SHORTNAME=set
++ COUNT=10
++ cat
+++ TOCHARACTER
+++ :
+++ cat set.3m_list.man
+++ sed -e 's/'\''/'\'''\''/g'
+++ sed -e 's/$/'\'', \&/'
+++ cat
+++ sed -e 's/^/'\''/'
++ read NAME
++ END_MODULE
++ cat
++ cat
++ ls -ld /home/urbanjs/venus/V600/github/PLUGINS/fpm-docs/src/m_list_docs.f90
+-rwxrwxrwx 1 urbanjs urbanjs 42139 Apr 19 20:01 /home/urbanjs/venus/V600/github/PLUGINS/fpm-docs/src/m_list_docs.f90
++ cat
