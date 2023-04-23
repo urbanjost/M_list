@@ -2,18 +2,15 @@ program runtest
 use M_framework__msg
 use M_framework__verify
 use M_framework__verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
-use M_framework__verify, only : unit_check_level, unit_check_stop
+use M_framework__verify, only : unit_check_stop
 interface; subroutine test_suite_M_list(); end ; end interface
-   unit_check_command=''
-   unit_check_keep_going=.true.
-   unit_check_level=0
    call test_suite_M_list()
    call unit_check_stop()
 end program runtest
 !TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
 subroutine test_suite_M_list  
 use M_sort, only : sort_shell
-use M_framework__verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
+use M_framework__verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done
 use M_list, only : locate, insert, remove, replace, dictionary
 character(len=*),parameter   :: share=' -library libGPF -filename `pwd`/M_list.FF -documentation y -ufpp y -ccall n -archive GPF.a'
 integer                      :: place
