@@ -100,17 +100,17 @@
           <li id="statements"><i class="fa fa-list-ol"></i>
             <a data-toggle="tooltip"
                data-placement="bottom" data-html="true"
-               title=" 7.7% of total for procedures.">22 statements</a>
+               title=" 9.2% of total for procedures.">27 statements</a>
           </li>
 
             <li id="source-file">
               <i class="fa fa-code"></i>
-              <a href="../src/demo_locate.f90"> Source File</a>
+              <a href="../src/demo_M_list.f90"> Source File</a>
             </li>
         </ul>
         <ol class="breadcrumb in-well text-right">
-              <li><a href='../sourcefile/demo_locate.f90.html'>demo_locate.f90</a></li>
-              <li><a href='../program/demo_locate.html'>demo_locate</a></li>
+              <li><a href='../sourcefile/demo_m_list.f90.html'>demo_M_list.f90</a></li>
+              <li><a href='../program/demo_m_list.html'>demo_M_list</a></li>
           <li class="active">update</li>
         </ol>
       </div>
@@ -137,10 +137,9 @@
       </div>
       <div id="vars-0" class="panel-collapse collapse">
         <div class="list-group">
-            <a class="list-group-item" href="../proc/update.html#variable-end">end</a>
-            <a class="list-group-item" href="../proc/update.html#variable-ii">ii</a>
-            <a class="list-group-item" href="../proc/update.html#variable-place~21">place</a>
-            <a class="list-group-item" href="../proc/update.html#variable-plus">plus</a>
+            <a class="list-group-item" href="../proc/update.html#variable-ilen">ilen</a>
+            <a class="list-group-item" href="../proc/update.html#variable-place~22">place</a>
+            <a class="list-group-item" href="../proc/update.html#variable-val">val</a>
         </div>
       </div>
     </div>
@@ -175,9 +174,10 @@
     </div>
     
     <div class="col-md-9" id='text'>
-    <h2> subroutine update(arr, string)  
+    <h2> subroutine update(key, valin)  
 </h2>
     
+
 
 
     <h3>Arguments</h3>
@@ -193,30 +193,30 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-arr"></span>
-              character(len=:),
+              <span class="anchor" id="variable-key~7"></span>
+              character(len=*),
             </td>
-<td></td>
+<td>intent(in)</td>
               <td></td>            <td>
-              allocatable
+              
             </td>
             <td>::</td>
-            <td><strong>arr</strong>(:)</td>
+            <td><strong>key</strong></td>
             <td>
                 
             </td>
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-string"></span>
-              character(len=*)
+              <span class="anchor" id="variable-valin"></span>
+              character(len=*),
             </td>
-<td></td>
-              <td></td>            <td>
+<td>intent(in),</td>
+              <td>optional</td>            <td>
               
             </td>
             <td>::</td>
-            <td><strong>string</strong></td>
+            <td><strong>valin</strong></td>
             <td>
                 
             </td>
@@ -237,10 +237,9 @@
       </div>
       <div id="vars-1" class="panel-collapse collapse">
         <div class="list-group">
-            <a class="list-group-item" href="../proc/update.html#variable-end">end</a>
-            <a class="list-group-item" href="../proc/update.html#variable-ii">ii</a>
-            <a class="list-group-item" href="../proc/update.html#variable-place~21">place</a>
-            <a class="list-group-item" href="../proc/update.html#variable-plus">plus</a>
+            <a class="list-group-item" href="../proc/update.html#variable-ilen">ilen</a>
+            <a class="list-group-item" href="../proc/update.html#variable-place~22">place</a>
+            <a class="list-group-item" href="../proc/update.html#variable-val">val</a>
         </div>
       </div>
     </div>
@@ -288,7 +287,7 @@
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-end"></span>
+              <span class="anchor" id="variable-ilen"></span>
               integer,
             </td>
               <td>public</td>
@@ -296,7 +295,7 @@
               
             </td>
             <td>::</td>
-            <td><strong>end</strong></td>
+            <td><strong>ilen</strong></td>
                 <td></td>
                 <td></td>
             <td>
@@ -305,24 +304,7 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-ii"></span>
-              integer,
-            </td>
-              <td>public</td>
-            <td>
-              
-            </td>
-            <td>::</td>
-            <td><strong>ii</strong></td>
-                <td></td>
-                <td></td>
-            <td>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>
-              <span class="anchor" id="variable-place~21"></span>
+              <span class="anchor" id="variable-place~22"></span>
               integer,
             </td>
               <td>public</td>
@@ -339,15 +321,15 @@
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-plus"></span>
-              integer,
+              <span class="anchor" id="variable-val"></span>
+              character(len=:),
             </td>
-              <td>public</td>
+              <td>public,</td>
             <td>
-              
+              allocatable
             </td>
             <td>::</td>
-            <td><strong>plus</strong></td>
+            <td><strong>val</strong></td>
                 <td></td>
                 <td></td>
             <td>
@@ -369,34 +351,34 @@
     
     <section>
     <h2><span class="anchor" id="src"></span>Source Code</h2>
-    <div class="highlight"><pre><span></span><span class="w">      </span><span class="k">subroutine </span><span class="n">update</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">string</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">arr</span><span class="p">(:)</span><span class="w"></span>
-<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">)</span><span class="w">             </span><span class="kd">::</span><span class="w"> </span><span class="n">string</span><span class="w"></span>
-<span class="w">      </span><span class="kt">integer</span><span class="w">                      </span><span class="kd">::</span><span class="w"> </span><span class="n">place</span><span class="p">,</span><span class="w"> </span><span class="n">plus</span><span class="p">,</span><span class="w"> </span><span class="n">ii</span><span class="p">,</span><span class="w"> </span><span class="k">end</span><span class="w"></span>
-<span class="w">      </span><span class="c">! find where string is or should be</span>
-<span class="w">      </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span><span class="n">string</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="o">*</span><span class="p">)</span><span class="s1">&#39;for &quot;&#39;</span><span class="o">//</span><span class="n">string</span><span class="o">//</span><span class="s1">&#39;&quot; index is &#39;</span><span class="p">,</span><span class="n">place</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="c">! if string was not found insert it</span>
-<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="n">place</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="k">then</span>
-<span class="k">         </span><span class="n">plus</span><span class="o">=</span><span class="nb">abs</span><span class="p">(</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="n">ii</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="k">end</span><span class="o">=</span><span class="n">size</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span><span class="w"></span>
-<span class="w">         </span><span class="c">! empty array</span>
-<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="k">end</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
-<span class="k">            </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="c">! put in front of array</span>
-<span class="w">         </span><span class="n">elseif</span><span class="p">(</span><span class="n">plus</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="k">then</span>
-<span class="k">            </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="c">! put at end of array</span>
-<span class="w">         </span><span class="n">elseif</span><span class="p">(</span><span class="n">plus</span><span class="p">.</span><span class="n">eq</span><span class="p">.</span><span class="k">end</span><span class="p">)</span><span class="k">then</span>
-<span class="k">            </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">arr</span><span class="p">,</span><span class="w"> </span><span class="n">string</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="c">! put in middle of array</span>
+    <div class="highlight"><pre><span></span><span class="w">      </span><span class="k">subroutine </span><span class="n">update</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">valin</span><span class="p">)</span><span class="w"></span>
+<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span><span class="w">           </span><span class="kd">::</span><span class="w"> </span><span class="n">key</span><span class="w"></span>
+<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=*</span><span class="p">),</span><span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">),</span><span class="k">optional</span><span class="w">  </span><span class="kd">::</span><span class="w"> </span><span class="n">valin</span><span class="w"></span>
+<span class="w">      </span><span class="kt">integer</span><span class="w">                               </span><span class="kd">::</span><span class="w"> </span><span class="n">place</span><span class="w"></span>
+<span class="w">      </span><span class="kt">integer</span><span class="w">                               </span><span class="kd">::</span><span class="w"> </span><span class="n">ilen</span><span class="w"></span>
+<span class="w">      </span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="p">:),</span><span class="k">allocatable</span><span class="w">          </span><span class="kd">::</span><span class="w"> </span><span class="n">val</span><span class="w"></span>
+<span class="w">      </span><span class="k">if</span><span class="p">(</span><span class="nb">present</span><span class="p">(</span><span class="n">valin</span><span class="p">))</span><span class="k">then</span>
+<span class="k">         </span><span class="n">val</span><span class="o">=</span><span class="n">valin</span><span class="w"></span>
+<span class="w">         </span><span class="n">ilen</span><span class="o">=</span><span class="nb">len_trim</span><span class="p">(</span><span class="n">val</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="c">! find where string is or should be</span>
+<span class="w">         </span><span class="k">call </span><span class="n">locate</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="c">! if string was not found insert it</span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">place</span><span class="p">.</span><span class="n">lt</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            call </span><span class="n">insert</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="nb">iabs</span><span class="p">(</span><span class="n">place</span><span class="p">))</span><span class="w"></span>
+<span class="w">            </span><span class="k">call </span><span class="n">insert</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">val</span><span class="p">,</span><span class="nb">iabs</span><span class="p">(</span><span class="n">place</span><span class="p">))</span><span class="w"></span>
+<span class="w">            </span><span class="k">call </span><span class="n">insert</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="n">ilen</span><span class="p">,</span><span class="nb">iabs</span><span class="p">(</span><span class="n">place</span><span class="p">))</span><span class="w"></span>
 <span class="w">         </span><span class="k">else</span>
-<span class="k">            </span><span class="n">arr</span><span class="o">=</span><span class="p">[</span><span class="kt">character</span><span class="p">(</span><span class="nb">len</span><span class="o">=</span><span class="n">ii</span><span class="p">)</span><span class="w"> </span><span class="kd">::</span><span class="w"> </span><span class="n">arr</span><span class="p">(:</span><span class="n">plus</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">string</span><span class="p">,</span><span class="n">arr</span><span class="p">(</span><span class="n">plus</span><span class="p">:)</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
-<span class="w">         </span><span class="k">endif</span><span class="w"></span>
-<span class="w">         </span><span class="c">! show array</span>
-<span class="w">         </span><span class="k">write</span><span class="p">(</span><span class="o">*</span><span class="p">,</span><span class="s1">&#39;(&quot;SIZE=&quot;,i0,1x,*(a,&quot;,&quot;))&#39;</span><span class="p">)</span><span class="k">end</span><span class="p">,(</span><span class="nb">trim</span><span class="p">(</span><span class="n">arr</span><span class="p">(</span><span class="n">i</span><span class="p">)),</span><span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="k">end</span><span class="p">)</span><span class="w"></span>
-<span class="w">      </span><span class="k">endif</span>
+<span class="k">            call </span><span class="n">replace</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">val</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">call </span><span class="n">replace</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="n">ilen</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">endif</span>
+<span class="k">      else</span>
+<span class="k">         call </span><span class="n">locate</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span><span class="n">key</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">if</span><span class="p">(</span><span class="n">place</span><span class="p">.</span><span class="n">gt</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="k">then</span>
+<span class="k">            call </span><span class="n">remove</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">call </span><span class="n">remove</span><span class="p">(</span><span class="n">values</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">            </span><span class="k">call </span><span class="n">remove</span><span class="p">(</span><span class="n">counts</span><span class="p">,</span><span class="n">place</span><span class="p">)</span><span class="w"></span>
+<span class="w">         </span><span class="k">endif</span>
+<span class="k">      endif</span>
 <span class="k">      end subroutine </span><span class="n">update</span><span class="w"></span>
 </pre></div>
 
@@ -418,7 +400,7 @@
             <p class="text-right">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2023-04-23 22:08              </p>
+ on 2023-05-07 00:01              </p>
           </div>
         </div>
         <br>
