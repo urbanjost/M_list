@@ -1,6 +1,6 @@
 >>>> MODULE IS                       M_list
->>>> DOCUMENT DIRECTORY IS           /home/urbanjs/venus/V600/github/M_list/src/source
->>>> MANPAGES PROCEDURE DIRECTORY IS /home/urbanjs/venus/V600/github/M_list/man
+>>>> DOCUMENT DIRECTORY IS           /home/urbanjs/venus/V600/github/LIST/M_list/src/source
+>>>> MANPAGES PROCEDURE DIRECTORY IS /home/urbanjs/venus/V600/github/LIST/M_list/man
 >>>> MAN_EXTENSION IS                m_list
 + grep -q '^#' M_list.FF
 + SUFFIX=f90
@@ -12,274 +12,274 @@
 + set -xv
 + cat
 >>>> .man files to MAN DIRECTORY as ROFF and HTML
->>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
+>>>> MANOUT        => /home/urbanjs/venus/V600/github/LIST/M_list/man
 >>>> MAN_EXTENSION => 
->>>> DOCS          => /home/urbanjs/venus/V600/github/M_list/docs
+>>>> DOCS          => /home/urbanjs/venus/V600/github/LIST/M_list/docs
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man1
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man1
 ++ ls '*.1.man' '*.1m_list.man'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man2
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man2
 ++ ls '*.2.man' '*.2m_list.man'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man3
-++ uniq
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man3
 ++ sort
 ++ ls '*.3.man' clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
+++ uniq
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for clr.3m_list.man'
 >>>> processing manpage and HTML for clr.3m_list.man
 ++ basename clr.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/clr.3m_list
 ++ basename clr.3m_list.man .3m_list.man
 + SHORTNAME=clr
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list SHORTNAME clr
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/clr.3m_list SHORTNAME clr
 + txt2man -s 3m_list -t clr clr.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/clr.3m_list
 + env AUX_FILENAME=clr man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html d83b47c3-f888-4d9f-8fd0-4c4675b2d44f
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/clr.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/clr.3m_list
+man2html e174834a-9ea3-478c-8296-97934bda5c25
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/clr.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/clr.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/clr.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/clr.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/clr.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for del.3m_list.man'
 >>>> processing manpage and HTML for del.3m_list.man
 ++ basename del.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/del.3m_list
 ++ basename del.3m_list.man .3m_list.man
 + SHORTNAME=del
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list SHORTNAME del
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/del.3m_list SHORTNAME del
 + txt2man -s 3m_list -t del del.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/del.3m_list
 + env AUX_FILENAME=del man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 4a6239e0-1712-490d-a88c-e0340578fdf1
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/del.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/del.3m_list
+man2html 2eaf93b3-c748-495c-af46-a68327ddb210
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/del.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/del.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/del.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/del.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/del.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for get.3m_list.man'
 >>>> processing manpage and HTML for get.3m_list.man
 ++ basename get.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/get.3m_list
 ++ basename get.3m_list.man .3m_list.man
 + SHORTNAME=get
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list SHORTNAME get
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/get.3m_list SHORTNAME get
 + txt2man -s 3m_list -t get get.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/get.3m_list
 + env AUX_FILENAME=get man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 64ab0da0-5e00-42aa-add6-4e60e0bccefb
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/get.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/get.3m_list
+man2html 68962059-2b03-49c7-bb6e-40613b83b8f2
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/get.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/get.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/get.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/get.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/get.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for ifdef.3m_list.man'
 >>>> processing manpage and HTML for ifdef.3m_list.man
 ++ basename ifdef.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/ifdef.3m_list
 ++ basename ifdef.3m_list.man .3m_list.man
 + SHORTNAME=ifdef
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list SHORTNAME ifdef
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/ifdef.3m_list SHORTNAME ifdef
 + txt2man -s 3m_list -t ifdef ifdef.3m_list.man
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/ifdef.3m_list
 + env AUX_FILENAME=ifdef man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 326d1d53-f694-43e2-bb6d-430329272c7f
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/ifdef.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/ifdef.3m_list
+man2html 143c26ed-fe7a-46c2-acd9-d42de38aa634
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/ifdef.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/ifdef.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/ifdef.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/ifdef.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/ifdef.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for insert.3m_list.man'
 >>>> processing manpage and HTML for insert.3m_list.man
 ++ basename insert.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/insert.3m_list
 ++ basename insert.3m_list.man .3m_list.man
 + SHORTNAME=insert
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list SHORTNAME insert
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/insert.3m_list SHORTNAME insert
 + txt2man -s 3m_list -t insert insert.3m_list.man
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/insert.3m_list
 + env AUX_FILENAME=insert man2html
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 3a5de17e-d229-4bc8-bc7a-3286cbd9a1df
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/insert.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/insert.3m_list
+man2html 150be911-260a-4bea-a68f-d7baba9b7b0d
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/insert.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/insert.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/insert.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/insert.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/insert.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for locate.3m_list.man'
 >>>> processing manpage and HTML for locate.3m_list.man
 ++ basename locate.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/locate.3m_list
 ++ basename locate.3m_list.man .3m_list.man
 + SHORTNAME=locate
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list SHORTNAME locate
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/locate.3m_list SHORTNAME locate
 + txt2man -s 3m_list -t locate locate.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
 + env AUX_FILENAME=locate man2html
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/locate.3m_list
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html b0baba75-697c-4951-8c29-4b84d1547688
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/locate.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/locate.3m_list
+man2html be290745-0926-46cf-a8cf-5dc2d895eb06
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/locate.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/locate.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/locate.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/locate.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/locate.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for M_list.3m_list.man'
 >>>> processing manpage and HTML for M_list.3m_list.man
 ++ basename M_list.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/M_list.3m_list
 ++ basename M_list.3m_list.man .3m_list.man
 + SHORTNAME=M_list
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list SHORTNAME M_list
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/M_list.3m_list SHORTNAME M_list
 + txt2man -s 3m_list -t M_list M_list.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/M_list.3m_list
 + env AUX_FILENAME=M_list man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html ba0799d4-f2c0-4e93-9108-fe3188cfc83d
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/M_list.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/M_list.3m_list
+man2html 2f678d5b-937b-460a-8650-3346c5565617
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/M_list.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/M_list.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/M_list.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/M_list.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/M_list.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for remove.3m_list.man'
 >>>> processing manpage and HTML for remove.3m_list.man
 ++ basename remove.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/remove.3m_list
 ++ basename remove.3m_list.man .3m_list.man
 + SHORTNAME=remove
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list SHORTNAME remove
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/remove.3m_list SHORTNAME remove
 + txt2man -s 3m_list -t remove remove.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/remove.3m_list
 + env AUX_FILENAME=remove man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 445d23b5-b02d-49bc-a08a-4b67a9adbcd7
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/remove.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/remove.3m_list
+man2html dd85a3e1-49bc-4df9-bb68-41f95b565610
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/remove.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/remove.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/remove.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/remove.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/remove.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for replace.3m_list.man'
 >>>> processing manpage and HTML for replace.3m_list.man
 ++ basename replace.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/replace.3m_list
 ++ basename replace.3m_list.man .3m_list.man
 + SHORTNAME=replace
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list SHORTNAME replace
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/replace.3m_list SHORTNAME replace
 + txt2man -s 3m_list -t replace replace.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/replace.3m_list
 + env AUX_FILENAME=replace man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html 314a164e-db62-4ea3-b3c4-a7be866abfd5
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/replace.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/replace.3m_list
+man2html dcd31fcd-cc1a-4017-86bf-2d86d7c83d65
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/replace.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/replace.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/replace.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/replace.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/replace.3m_list
 + for NAME in $(ls *.$NUM.man *.${NUM}${MAN_EXTENSION}.man 2>/dev/null|sort|uniq)
 + echo '>>>> processing manpage and HTML for set.3m_list.man'
 >>>> processing manpage and HTML for set.3m_list.man
 ++ basename set.3m_list.man .man
-+ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
++ SHORTNAME_MAN=/home/urbanjs/venus/V600/github/LIST/M_list/man/man3/set.3m_list
 ++ basename set.3m_list.man .3m_list.man
 + SHORTNAME=set
-+ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list SHORTNAME set
++ : SHORTNAME_MAN /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/set.3m_list SHORTNAME set
 + txt2man -s 3m_list -t set set.3m_list.man
-+ tee /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
++ tee /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/set.3m_list
 + env AUX_FILENAME=set man2html
 /home/urbanjs/venus/V600/github/index/github_scripts/bash/txt2man
-man2html b482bd6e-309b-4131-818d-a9f15fef383b
-+ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html
-CHANGING FILE /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
-BEFORE: /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
-AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
-+ gzip -f /home/urbanjs/venus/V600/github/M_list/man/man3/set.3m_list
+man2html 4ae876e3-73ca-4a09-a47b-f90615e4faa7
++ replace index.html https://github.com/urbanjost/M_list -- /home/urbanjs/venus/V600/github/LIST/M_list/docs/set.3m_list.html
+CHANGING FILE /home/urbanjs/venus/V600/github/LIST/M_list/docs/set.3m_list.html  [index.html][https://github.com/urbanjost/M_list]
+BEFORE: /home/urbanjs/venus/V600/github/LIST/M_list/docs/set.3m_list.html:45:<h5><a href="index.html">[UP]</a></h5>
+AFTER:  /home/urbanjs/venus/V600/github/LIST/M_list/docs/set.3m_list.html:45:<h5><a href="https://github.com/urbanjost/M_list">[UP]</a></h5>
++ gzip -f /home/urbanjs/venus/V600/github/LIST/M_list/man/man3/set.3m_list
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man4
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man4
+++ sort
+++ uniq
 ++ ls '*.4.man' '*.4m_list.man'
-++ sort
-++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man5
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man5
 ++ ls '*.5.man' '*.5m_list.man'
-++ uniq
 ++ sort
+++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man6
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man6
 ++ ls '*.6.man' '*.6m_list.man'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man7
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man7
 ++ ls '*.7.man' '*.7m_list.man'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man8
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man8
 ++ ls '*.8.man' '*.8m_list.man'
 ++ sort
 ++ uniq
 + cat
 >>>> .txt files to MAN DIRECTORY
->>>> MANOUT        => /home/urbanjs/venus/V600/github/M_list/man
+>>>> MANOUT        => /home/urbanjs/venus/V600/github/LIST/M_list/man
 >>>> MAN_EXTENSION => 
 + cd doc
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man1
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man1
 ++ ls '*.1.txt' '*.1m_list.txt'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man2
-++ ls '*.2.txt' '*.2m_list.txt'
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man2
 ++ sort
+++ ls '*.2.txt' '*.2m_list.txt'
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man3
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man3
 ++ ls '*.3.txt' '*.3m_list.txt'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man4
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man4
 ++ ls '*.4.txt' '*.4m_list.txt'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man5
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man5
 ++ ls '*.5.txt' '*.5m_list.txt'
 ++ sort
 ++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man6
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man6
 ++ ls '*.6.txt' '*.6m_list.txt'
+++ uniq
+++ sort
++ for NUM in 1 2 3 4 5 6 7 8
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man7
 ++ sort
 ++ uniq
-+ for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man7
 ++ ls '*.7.txt' '*.7m_list.txt'
-++ sort
-++ uniq
 + for NUM in 1 2 3 4 5 6 7 8
-+ mkdir -p /home/urbanjs/venus/V600/github/M_list/man/man8
++ mkdir -p /home/urbanjs/venus/V600/github/LIST/M_list/man/man8
 ++ ls '*.8.txt' '*.8m_list.txt'
-++ uniq
 ++ sort
+++ uniq
 + echo '>>>> *.htm files to HTML and ROFF'
 >>>> *.htm files to HTML and ROFF
 + cd doc
@@ -323,30 +323,30 @@ AFTER:  /home/urbanjs/venus/V600/github/M_list/docs/set.3m_list.html:45:<h5><a h
 + cd ../../man
 + mandb -c .
 mandb: warning: $MANPATH set, inserting /etc/manpath.config
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man1'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man3'. Wait...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/....
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man2'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man4'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man6'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man7'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man8'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/man/./man5'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man1'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man3'. Wait...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/....
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man2'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man4'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man6'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man7'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man8'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/man/./man5'. Wait...
 done.
-Checking for stray cats under /home/urbanjs/venus/V600/github/M_list/man/....
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat8...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat1...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat3...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat4...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat6...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat2...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat5...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/man/./cat7...
+Checking for stray cats under /home/urbanjs/venus/V600/github/LIST/M_list/man/....
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat8...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat1...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat3...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat4...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat6...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat2...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat5...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/man/./cat7...
 8 man subdirectories contained newer manual pages.
 10 manual pages were added.
 0 stray cats were added.
 ++ pwd
-+ env MANPATH=/home/urbanjs/venus/V600/github/M_list/man man -k .
++ env MANPATH=/home/urbanjs/venus/V600/github/LIST/M_list/man man -k .
 clr (3m_list)        - [M_list::dictionary::OOPS] clear basic dictionary (LIC...
 del (3m_list)        - [M_list::dictionary::OOPS] delete entry by key name fr...
 get (3m_list)        - [M_list::dictionary::OOPS] get value of key-value pair...
@@ -397,14 +397,14 @@ man3/set.3m_list.gz
 + gunzip man3/clr.3m_list.gz man3/del.3m_list.gz man3/get.3m_list.gz man3/ifdef.3m_list.gz man3/insert.3m_list.gz man3/locate.3m_list.gz man3/M_list.3m_list.gz man3/remove.3m_list.gz man3/replace.3m_list.gz man3/set.3m_list.gz
 + echo '>>>> extract demo pages from manpages'
 >>>> extract demo pages from manpages
-+ cd /home/urbanjs/venus/V600/github/M_list/man
++ cd /home/urbanjs/venus/V600/github/LIST/M_list/man
 ++ pwd
-+ MANPATH=/home/urbanjs/venus/V600/github/M_list/man
++ MANPATH=/home/urbanjs/venus/V600/github/LIST/M_list/man
 + SECTION=3m_list
 + DEMO_OUTDIR=../../example/
-+ GPF_extract_manpage_demos /home/urbanjs/venus/V600/github/M_list/man 3m_list ../../example/
++ GPF_extract_manpage_demos /home/urbanjs/venus/V600/github/LIST/M_list/man 3m_list ../../example/
 >>>> Extract demo program from manpages with
-     MANPATH=/home/urbanjs/venus/V600/github/M_list/man
+     MANPATH=/home/urbanjs/venus/V600/github/LIST/M_list/man
      SECTION=3m_list
      DEMO_OUTDIR=../../example/
      DEMO_SUBDIR=FALSE
@@ -494,7 +494,7 @@ LICENSE
 
 
 
-				April 19, 2023			  del(3m_list)
+				 July 10, 2023			  del(3m_list)
 ifdef(3m_list)							ifdef(3m_list)
 
 
@@ -579,7 +579,7 @@ LICENSE
 
 
 
-				April 19, 2023			ifdef(3m_list)
+				 July 10, 2023			ifdef(3m_list)
 insert(3m_list) 					       insert(3m_list)
 
 
@@ -674,7 +674,7 @@ LICENSE
 
 
 
-				April 19, 2023		       insert(3m_list)
+				 July 10, 2023		       insert(3m_list)
 replace(3m_list)					      replace(3m_list)
 
 
@@ -779,7 +779,7 @@ LICENSE
 
 
 
-				April 19, 2023		      replace(3m_list)
+				 July 10, 2023		      replace(3m_list)
 set(3m_list)							  set(3m_list)
 
 
@@ -855,7 +855,7 @@ LICENSE
 
 
 
-				April 19, 2023			  set(3m_list)
+				 July 10, 2023			  set(3m_list)
 locate(3m_list) 					       locate(3m_list)
 
 
@@ -985,7 +985,7 @@ LICENSE
 
 
 
-				April 19, 2023		       locate(3m_list)
+				 July 10, 2023		       locate(3m_list)
 M_list(3m_list) 					       M_list(3m_list)
 
 
@@ -1211,7 +1211,7 @@ LICENSE
 
 
 
-				April 19, 2023		       M_list(3m_list)
+				 July 10, 2023		       M_list(3m_list)
 remove(3m_list) 					       remove(3m_list)
 
 
@@ -1281,7 +1281,7 @@ LICENSE
 
 
 
-				April 19, 2023		       remove(3m_list)
+				 July 10, 2023		       remove(3m_list)
 get(3m_list)							  get(3m_list)
 
 
@@ -1365,7 +1365,7 @@ LICENSE
 
 
 
-				April 19, 2023			  get(3m_list)
+				 July 10, 2023			  get(3m_list)
 clr(3m_list)							  clr(3m_list)
 
 
@@ -1426,7 +1426,7 @@ LICENSE
 
 
 
-				April 19, 2023			  clr(3m_list)
+				 July 10, 2023			  clr(3m_list)
 + echo '>>>> run make'
 >>>> run make
 + cd ..
@@ -1464,22 +1464,22 @@ warning: source html/images is not a readable file or directory... skipping.
 Searching for include files...
 Searching for example files...
 Searching for images...
-Searching for files in directory /home/urbanjs/venus/V600/github/M_list/docs/images
+Searching for files in directory /home/urbanjs/venus/V600/github/LIST/M_list/docs/images
 Searching for dot files...
 Searching for msc files...
 Searching for dia files...
 Searching for files to exclude
 Searching INPUT for files to process...
-Searching for files in directory /home/urbanjs/venus/V600/github/M_list/src
-Searching for files in directory /home/urbanjs/venus/V600/github/M_list/src/source
-Searching for files in directory /home/urbanjs/venus/V600/github/M_list/src/source/doc
-Searching for files in directory /home/urbanjs/venus/V600/github/M_list/src/source/doc/PRIVATE
+Searching for files in directory /home/urbanjs/venus/V600/github/LIST/M_list/src
+Searching for files in directory /home/urbanjs/venus/V600/github/LIST/M_list/src/source
+Searching for files in directory /home/urbanjs/venus/V600/github/LIST/M_list/src/source/doc
+Searching for files in directory /home/urbanjs/venus/V600/github/LIST/M_list/src/source/doc/PRIVATE
 Reading and parsing tag files
 Parsing files
-Reading /home/urbanjs/venus/V600/github/M_list/src/M_list.f90...
-Parsing file /home/urbanjs/venus/V600/github/M_list/src/M_list.f90...
-Preprocessing /home/urbanjs/venus/V600/github/M_list/src/mainpage.txt...
-Parsing file /home/urbanjs/venus/V600/github/M_list/src/mainpage.txt...
+Reading /home/urbanjs/venus/V600/github/LIST/M_list/src/M_list.f90...
+Parsing file /home/urbanjs/venus/V600/github/LIST/M_list/src/M_list.f90...
+Preprocessing /home/urbanjs/venus/V600/github/LIST/M_list/src/mainpage.txt...
+Parsing file /home/urbanjs/venus/V600/github/LIST/M_list/src/mainpage.txt...
 Building group list...
 Building directory list...
 Building namespace list...
@@ -1534,12 +1534,12 @@ Generating style sheet...
 Generating search indices...
 Generating example documentation...
 Generating file sources...
-Parsing code for file /home/urbanjs/venus/V600/github/M_list/src/M_list.f90...
-Parsing code for file /home/urbanjs/venus/V600/github/M_list/src/mainpage.txt...
+Parsing code for file /home/urbanjs/venus/V600/github/LIST/M_list/src/M_list.f90...
+Parsing code for file /home/urbanjs/venus/V600/github/LIST/M_list/src/mainpage.txt...
 Generating file documentation...
-Generating docs for file /home/urbanjs/venus/V600/github/M_list/src/M_list.f90...
+Generating docs for file /home/urbanjs/venus/V600/github/LIST/M_list/src/M_list.f90...
 Generating caller graph for function faster
-Generating docs for file /home/urbanjs/venus/V600/github/M_list/src/mainpage.txt...
+Generating docs for file /home/urbanjs/venus/V600/github/LIST/M_list/src/mainpage.txt...
 Generating page documentation...
 Generating group documentation...
 Generating class documentation...
@@ -1575,9 +1575,9 @@ finished...
 + make man
 Makefile:64: target '../example/demo_M_list' given more than once in the same rule
 mandb: warning: $MANPATH set, inserting /etc/manpath.config
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/../man/man3'. Wait...
-Purging old database entries in /home/urbanjs/venus/V600/github/M_list/src/../man...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/../man/man3'. Wait...
+Purging old database entries in /home/urbanjs/venus/V600/github/LIST/M_list/src/../man...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man...
 mandb: warning: failed to store entry for clr(3m_list)
 mandb: warning: failed to store entry for remove(3m_list)
 mandb: warning: failed to store entry for set(3m_list)
@@ -1589,15 +1589,15 @@ mandb: warning: failed to store entry for insert(3m_list)
 mandb: warning: failed to store entry for locate(3m_list)
 mandb: warning: failed to store entry for replace(3m_list)
 done.
-Checking for stray cats under /home/urbanjs/venus/V600/github/M_list/src/../man...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat8...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat1...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat3...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat4...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat6...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat2...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat5...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/../man/cat7...
+Checking for stray cats under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat8...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat1...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat3...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat4...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat6...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat2...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat5...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/../man/cat7...
 1 man subdirectory contained newer manual pages.
 10 manual pages were added.
 0 stray cats were added.
@@ -1678,7 +1678,7 @@ LICENSE
 
 
 
-				April 19, 2023			  del(3m_list)
+				 July 10, 2023			  del(3m_list)
 ifdef(3m_list)							ifdef(3m_list)
 
 
@@ -1763,7 +1763,7 @@ LICENSE
 
 
 
-				April 19, 2023			ifdef(3m_list)
+				 July 10, 2023			ifdef(3m_list)
 insert(3m_list) 					       insert(3m_list)
 
 
@@ -1858,7 +1858,7 @@ LICENSE
 
 
 
-				April 19, 2023		       insert(3m_list)
+				 July 10, 2023		       insert(3m_list)
 replace(3m_list)					      replace(3m_list)
 
 
@@ -1963,7 +1963,7 @@ LICENSE
 
 
 
-				April 19, 2023		      replace(3m_list)
+				 July 10, 2023		      replace(3m_list)
 set(3m_list)							  set(3m_list)
 
 
@@ -2039,7 +2039,7 @@ LICENSE
 
 
 
-				April 19, 2023			  set(3m_list)
+				 July 10, 2023			  set(3m_list)
 locate(3m_list) 					       locate(3m_list)
 
 
@@ -2169,7 +2169,7 @@ LICENSE
 
 
 
-				April 19, 2023		       locate(3m_list)
+				 July 10, 2023		       locate(3m_list)
 M_list(3m_list) 					       M_list(3m_list)
 
 
@@ -2395,7 +2395,7 @@ LICENSE
 
 
 
-				April 19, 2023		       M_list(3m_list)
+				 July 10, 2023		       M_list(3m_list)
 remove(3m_list) 					       remove(3m_list)
 
 
@@ -2465,7 +2465,7 @@ LICENSE
 
 
 
-				April 19, 2023		       remove(3m_list)
+				 July 10, 2023		       remove(3m_list)
 get(3m_list)							  get(3m_list)
 
 
@@ -2549,7 +2549,7 @@ LICENSE
 
 
 
-				April 19, 2023			  get(3m_list)
+				 July 10, 2023			  get(3m_list)
 clr(3m_list)							  clr(3m_list)
 
 
@@ -2610,7 +2610,7 @@ LICENSE
 
 
 
-				April 19, 2023			  clr(3m_list)
+				 July 10, 2023			  clr(3m_list)
 + make ship
 Makefile:64: target '../example/demo_M_list' given more than once in the same rule
 : make easily distributed archive files of manpages
@@ -2658,27 +2658,29 @@ rm -f ../example/demo_insert ../example/demo_locate ../example/demo_M_list ../ex
 + cd ../..
 + fpm test
  + mkdir -p build/dependencies
-Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_sort/.git/
+Initialized empty Git repository in /home/urbanjs/venus/V600/github/LIST/M_list/build/dependencies/M_sort/.git/
 From https://github.com/urbanjost/M_sort
  * branch            HEAD       -> FETCH_HEAD
-Initialized empty Git repository in /home/urbanjs/venus/V600/github/M_list/build/dependencies/M_framework/.git/
+Initialized empty Git repository in /home/urbanjs/venus/V600/github/LIST/M_list/build/dependencies/M_framework/.git/
 From https://github.com/urbanjost/M_framework
  * branch            HEAD       -> FETCH_HEAD
 [  0%]                     M_list.f90
-[  3%]                     M_list.f90  done.
-[  3%]                     M_sort.F90
-[  6%]                     M_sort.F90  done.
-[  6%]           M_framework__msg.F90
-[  9%]           M_framework__msg.F90  done.
-[  9%]                       main.f90
-[ 12%]                       main.f90  done.
-[ 12%]                   demo_clr.f90
-[ 15%]                   demo_clr.f90  done.
-[ 15%]                 demo_ifdef.f90
-[ 18%]                 demo_ifdef.f90  done.
-[ 18%]                demo_insert.f90
-[ 21%]                demo_insert.f90  done.
-[ 21%]                   demo_get.f90
+[  2%]                     M_list.f90  done.
+[  2%]                     M_sort.F90
+[  5%]                     M_sort.F90  done.
+[  5%]           M_framework__msg.F90
+[  8%]           M_framework__msg.F90  done.
+[  8%]       M_framework__utility.f90
+[ 11%]       M_framework__utility.f90  done.
+[ 11%]                       main.f90
+[ 14%]                       main.f90  done.
+[ 14%]                   demo_clr.f90
+[ 17%]                   demo_clr.f90  done.
+[ 17%]                 demo_ifdef.f90
+[ 20%]                 demo_ifdef.f90  done.
+[ 20%]                demo_insert.f90
+[ 22%]                demo_insert.f90  done.
+[ 22%]                   demo_get.f90
 [ 25%]                   demo_get.f90  done.
 [ 25%]               demo_replace.f90
 [ 28%]               demo_replace.f90  done.
@@ -2691,98 +2693,110 @@ From https://github.com/urbanjost/M_framework
 [ 37%]                demo_M_list.f90
 [ 40%]                demo_M_list.f90  done.
 [ 40%]                   demo_set.f90
-[ 43%]                   demo_set.f90  done.
-[ 43%]                   demo_del.f90
-[ 46%]                   demo_del.f90  done.
-[ 46%]       M_framework__journal.f90
-[ 50%]       M_framework__journal.f90  done.
-[ 50%]        M_framework__verify.F90
-[ 53%]        M_framework__verify.F90  done.
-[ 53%]                    libM_list.a
-[ 56%]                    libM_list.a  done.
-[ 56%]          test_suite_M_list.f90
-[ 59%]          test_suite_M_list.f90  done.
-[ 59%]                         M_list
-[ 62%]                         M_list  done.
-[ 62%]                       demo_clr
-[ 65%]                       demo_clr  done.
-[ 65%]                     demo_ifdef
-[ 68%]                     demo_ifdef  done.
-[ 68%]                    demo_insert
-[ 71%]                    demo_insert  done.
-[ 71%]                       demo_get
-[ 75%]                       demo_get  done.
-[ 75%]                   demo_replace
-[ 78%]                   demo_replace  done.
-[ 78%]                    demo_remove
-[ 81%]                    demo_remove  done.
-[ 81%]                    demo_locate
-[ 84%]                    demo_locate  done.
-[ 84%]                demo_dictionary
-[ 87%]                demo_dictionary  done.
-[ 87%]                    demo_M_list
-[ 90%]                    demo_M_list  done.
-[ 90%]                       demo_set
-[ 93%]                       demo_set  done.
-[ 93%]                       demo_del
-[ 96%]                       demo_del  done.
-[ 96%]                     test_suite
+[ 42%]                   demo_set.f90  done.
+[ 42%]                   demo_del.f90
+[ 45%]                   demo_del.f90  done.
+[ 45%]        M_framework__verify.F90
+[ 48%]        M_framework__verify.F90  done.
+[ 48%]       M_framework__journal.f90
+[ 51%]       M_framework__journal.f90  done.
+[ 51%]        M_framework__approx.F90
+[ 54%]        M_framework__approx.F90  done.
+[ 54%]                M_framework.f90
+[ 57%]                M_framework.f90  done.
+[ 57%]                    libM_list.a
+[ 60%]                    libM_list.a  done.
+[ 60%]          test_suite_M_list.f90
+[ 62%]          test_suite_M_list.f90  done.
+[ 62%]                         M_list
+[ 65%]                         M_list  done.
+[ 65%]                       demo_clr
+[ 68%]                       demo_clr  done.
+[ 68%]                     demo_ifdef
+[ 71%]                     demo_ifdef  done.
+[ 71%]                    demo_insert
+[ 74%]                    demo_insert  done.
+[ 74%]                       demo_get
+[ 77%]                       demo_get  done.
+[ 77%]                   demo_replace
+[ 80%]                   demo_replace  done.
+[ 80%]                    demo_remove
+[ 82%]                    demo_remove  done.
+[ 82%]                    demo_locate
+[ 85%]                    demo_locate  done.
+[ 85%]                demo_dictionary
+[ 88%]                demo_dictionary  done.
+[ 88%]                    demo_M_list
+[ 91%]                    demo_M_list  done.
+[ 91%]                       demo_set
+[ 94%]                       demo_set  done.
+[ 94%]                       demo_del
+[ 97%]                       demo_del  done.
+[ 97%]                     test_suite
 [100%]                     test_suite  done.
 [100%] Project compiled successfully.
+check_start: locate               START   : locate string in allocatable string array sorted in descending order
 check:       locate               SUCCESS : ZZZ 4 should be 4
 check:       locate               SUCCESS : zqj -1 should be -1
-check_done:  locate               PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000001
+check_end:   locate               PASSED  : GOOD: 2         BAD: 0         DURATION: 00000000457581
+check_start: insert               START   : insert value into allocatable array by index"
 check:       insert               SUCCESS : should not be located -5
 check:       insert               SUCCESS : NEW should be "NEW"
 check:       insert               SUCCESS : array now bigger 5 to 6
-check_done:  insert               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   insert               PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000275728
+check_start: remove               START   : remove value from allocatable array by index"
 check:       remove               SUCCESS : found the element to remove 5
 check:       remove               SUCCESS : did not find the element to remove -5
 check:       remove               SUCCESS : shrunk by two
-check_done:  remove               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   remove               PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000240687
+check_start: replace              START   : replace value from allocatable array by index"
 check:       replace              SUCCESS : location= 5
 check:       replace              SUCCESS : no change in size 9
 check:       replace              SUCCESS : new value for ab
-check_done:  replace              PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   replace              PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000250264
+check_start: dict%set             START   : add string into allocatable string array by name
 check:       dict%set             SUCCESS : array should be A
 check:       dict%set             SUCCESS : array should be z c b A
 check:       dict%set             SUCCESS : strings ok
-check_done:  dict%set             PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   dict%set             PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000236078
+check_start: dict%del             START   : delete string by name from allocatable string array
 check:       dict%del             SUCCESS : string deletes keys
 check:       dict%del             SUCCESS : string deletes values
-check_done:  dict%del             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check_end:   dict%del             PASSED  : GOOD: 2         BAD: 0         DURATION: 00000000206384
+check_start: dict%get             START   : locate and get value by key name from dictionary
 check:       dict%get             SUCCESS : string get keys
 check:       dict%get             SUCCESS : string get values
-check_done:  dict%get             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check_end:   dict%get             PASSED  : GOOD: 2         BAD: 0         DURATION: 00000000160698
+check_start: dict%ifdef           START   : return whether name is present in dictionary or not
 check:       dict%                SUCCESS : ifdef tests
-check_done:  dict%ifdef           PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
+check_end:   dict%ifdef           PASSED  : GOOD: 1         BAD: 0         DURATION: 00000000128267
+check_start: dict%ifdef           START   : return whether name is present in dictionary or not
 check:       dict%                SUCCESS : clr tests
-check_done:  dict%clr             PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
-check_stop:  TALLY                PASSED  : GOOD:       20 BAD:        0 DURATION:00000000000002
-STOP 0
+check_end:   dict%clr             PASSED  : GOOD: 1         BAD: 0         DURATION: 00000000136332
+check_stop:  TALLY                PASSED  : GOOD: 20        BAD: 0         DURATION: 00000002857590
 + echo '>>>> make BOOK html document'
 >>>> make BOOK html document
 + env MANPATH=../../man mandb -c
 mandb: warning: $MANPATH set, ignoring /etc/manpath.config
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man1'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man3'. Wait...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man2'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man4'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man6'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man7'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man8'. Wait...
-Updating index cache for path `/home/urbanjs/venus/V600/github/M_list/src/source/../../man/man5'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man1'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man3'. Wait...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man2'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man4'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man6'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man7'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man8'. Wait...
+Updating index cache for path `/home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/man5'. Wait...
 done.
-Checking for stray cats under /home/urbanjs/venus/V600/github/M_list/src/source/../../man...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat8...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat1...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat3...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat4...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat6...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat2...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat5...
-Processing manual pages under /home/urbanjs/venus/V600/github/M_list/src/source/../../man/cat7...
+Checking for stray cats under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat8...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat1...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat3...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat4...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat6...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat2...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat5...
+Processing manual pages under /home/urbanjs/venus/V600/github/LIST/M_list/src/source/../../man/cat7...
 8 man subdirectories contained newer manual pages.
 10 manual pages were added.
 0 stray cats were added.
@@ -2819,18 +2833,18 @@ ________________________________________________________________________________
 + echo 'function loadthem(){'
 + '[' M_list = INDEX ']'
 + uniq
++ read NAME
 + echo M_list.3m_list.html
-+ uniq
++ tr -d '()'
 + awk '{printf "%s.%s.html\n",$1,$2}'
++ uniq
 + env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
 + man -k '\[M_list\>'
 + grep -i '(3M_list)'
-+ tr -d '()'
-+ read NAME
 + man --section 3m_list -k .
 + grep -i '(3M_list)'
-+ env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
 + man -k '\[M_list\>'
++ env LC_ALL=C /usr/bin/sort -k 2r,2r -k 1,1
 + grep -vi '(3M_list)'
 + '[' -r ../../docs//M_list.3m_list.html..html ']'
 + read NAME
@@ -2913,31 +2927,31 @@ manpages  md        nvfortran  src      tgz      toml  urbanjost
 >>>> update GPF project and documents
 + unset GITHUB
 + make.one libGPF
-1978441 (process ID) old priority 0, new priority 19
+435491 (process ID) old priority 0, new priority 19
 W-A-R-N-I-N-G: no ccheck.c file (required for configured versions)
 + echo '>>>> run test'
 >>>> run test
 + cd ../../test
 + ccall test_suite_M_list.f90
-*ccall*: MAKING TEMPORARY DIRECTORY /tmp/CCALL_Linux_gfortran_1978857
-+ mkdir -m 755 -p /tmp/CCALL_Linux_gfortran_1978857
-+ chmod u=xrw,g-xrw,o-xrw /tmp/CCALL_Linux_gfortran_1978857
+*ccall*: MAKING TEMPORARY DIRECTORY /tmp/CCALL_Linux_gfortran_436189
++ mkdir -m 755 -p /tmp/CCALL_Linux_gfortran_436189
++ chmod u=xrw,g-xrw,o-xrw /tmp/CCALL_Linux_gfortran_436189
 + CCALL_DELETE_DIR=TRUE
-+ FULLNAME=/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
++ FULLNAME=/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
 + SPLIT
-+ tr @ '\012'
 + sed -e 's/ -/@ -/g'
-+ cp test_suite_M_list.f90 /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
++ tr @ '\012'
++ cp test_suite_M_list.f90 /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
 + echo NAME test_suite_M_list.f90
 NAME test_suite_M_list.f90
 + echo /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
 /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
-+ ADDOPTIONS /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
-+ INPUTFILENAME=/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
++ ADDOPTIONS /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
++ INPUTFILENAME=/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
 + grep
- -qi '\<use\>  *\<M_readline\>' /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
+ -qi '\<use\>  *\<M_readline\>' /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
 + grep
- -qi '\<use\>  *\<M_curl\>' /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
+ -qi '\<use\>  *\<M_curl\>' /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
 + set
  -x
 + set
@@ -2948,7 +2962,7 @@ NAME test_suite_M_list.f90
  -frecord-marker=4
  -I.
  -DTESTPRG
- -DTESTPRG90 /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
+ -DTESTPRG90 /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
  -o /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
  -Wall
  -Wextra
@@ -2980,209 +2994,122 @@ NAME test_suite_M_list.f90
  -Bdynamic
  -L/usr/lib/x86_64-linux-gnu
  -lX11
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:16:4:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:145:38:
 
-   16 | use M_framework__verify, only : unit_check, unit_check_start, unit_check_good, unit_check_bad, unit_check_done, unit_check_level
-      |    1
-Warning: Unused module variable ‘unit_check_level’ which has been explicitly imported at (1) [-Wunused-variable]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
-
-  150 | character(len=:),allocatable :: lst(:)
+  145 | character(len=:),allocatable :: lst(:)
       |                                      ^
 Warning: ‘.lst’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:192:26:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:187:26:
 
-  192 | end subroutine test_insert
+  187 | end subroutine test_insert
       |                          ^
 note: ‘.lst’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:151:59:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:146:59:
 
-  151 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+  146 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
       |                                                           ^
 Warning: ‘lst.offset’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:145:38:
 
-  150 | character(len=:),allocatable :: lst(:)
+  145 | character(len=:),allocatable :: lst(:)
       |                                      ^
 note: ‘lst’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:151:59:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:146:59:
 
-  151 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+  146 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
       |                                                           ^
 Warning: ‘lst.dim[0].lbound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:145:38:
 
-  150 | character(len=:),allocatable :: lst(:)
+  145 | character(len=:),allocatable :: lst(:)
       |                                      ^
 note: ‘lst’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:151:59:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:146:59:
 
-  151 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
+  146 |    lst=[character(len=20) :: '', 'ZZZ', 'aaa', 'b', 'xxx' ]
       |                                                           ^
 Warning: ‘lst.dim[0].ubound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:150:38:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:145:38:
 
-  150 | character(len=:),allocatable :: lst(:)
+  145 | character(len=:),allocatable :: lst(:)
       |                                      ^
 note: ‘lst’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:165:38:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:160:38:
 
-  165 | character(len=:),allocatable :: arr(:)
+  160 | character(len=:),allocatable :: arr(:)
       |                                      ^
 Warning: ‘.arr’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:195:4:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:190:4:
 
-  195 | use M_sort, only : sort_shell
+  190 | use M_sort, only : sort_shell
       |    ^
 note: ‘.arr’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:196:39:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:191:39:
 
-  196 | character(len=:),allocatable  :: arr(:)
+  191 | character(len=:),allocatable  :: arr(:)
       |                                       ^
 Warning: ‘.arr’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:219:4:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:215:4:
 
-  219 | use M_sort, only : sort_shell
+  215 | use M_sort, only : sort_shell
       |    ^
 note: ‘.arr’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:220:39:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:216:39:
 
-  220 | character(len=:),allocatable  :: arr(:)
+  216 | character(len=:),allocatable  :: arr(:)
       |                                       ^
 Warning: ‘.arr’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:35:24:
+/tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90:30:24:
 
-   35 | subroutine test_dict_set
+   30 | subroutine test_dict_set
       |                        ^
 note: ‘.arr’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:141:52:
-
-  141 |    val=[dict%get('Z'), dict%get('A'), dict%get('X')]
-      |                                                    ^
-Warning: ‘val.offset’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:135:39:
-
-  135 | character(len=20),allocatable :: val(:)
-      |                                       ^
-note: ‘val’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:141:52:
-
-  141 |    val=[dict%get('Z'), dict%get('A'), dict%get('X')]
-      |                                                    ^
-Warning: ‘val.dim[0].lbound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:135:39:
-
-  135 | character(len=20),allocatable :: val(:)
-      |                                       ^
-note: ‘val’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:141:52:
-
-  141 |    val=[dict%get('Z'), dict%get('A'), dict%get('X')]
-      |                                                    ^
-Warning: ‘val.dim[0].ubound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:135:39:
-
-  135 | character(len=20),allocatable :: val(:)
-      |                                       ^
-note: ‘val’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:103:131:
-
-  103 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
-      |                                                                                                                                   ^
-Warning: ‘answers.offset’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:90:34:
-
-   90 | logical,allocatable  :: answers(:)
-      |                                  ^
-note: ‘answers’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:103:131:
-
-  103 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
-      |                                                                                                                                   ^
-Warning: ‘answers.dim[0].lbound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:90:34:
-
-   90 | logical,allocatable  :: answers(:)
-      |                                  ^
-note: ‘answers’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:103:131:
-
-  103 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
-      |                                                                                                                                   ^
-Warning: ‘answers.dim[0].ubound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:90:34:
-
-   90 | logical,allocatable  :: answers(:)
-      |                                  ^
-note: ‘answers’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:126:131:
-
-  126 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
-      |                                                                                                                                   ^
-Warning: ‘answers.offset’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:112:34:
-
-  112 | logical,allocatable  :: answers(:)
-      |                                  ^
-note: ‘answers’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:126:131:
-
-  126 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
-      |                                                                                                                                   ^
-Warning: ‘answers.dim[0].lbound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:112:34:
-
-  112 | logical,allocatable  :: answers(:)
-      |                                  ^
-note: ‘answers’ declared here
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:126:131:
-
-  126 |    answers=[tt%ifdef('A'), tt%ifdef('B'), tt%ifdef('C'), tt%ifdef('D'), tt%ifdef('E'), tt%ifdef('F'), tt%ifdef('G'), tt%ifdef('H')]
-      |                                                                                                                                   ^
-Warning: ‘answers.dim[0].ubound’ is used uninitialized [-Wuninitialized]
-/tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90:112:34:
-
-  112 | logical,allocatable  :: answers(:)
-      |                                  ^
-note: ‘answers’ declared here
-+ ar rv /home/urbanjs/venus/V600/lib/Linux_gfortran/PROGRAM.a /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
-a - /tmp/CCALL_Linux_gfortran_1978857/test_suite_M_list.1978857.f90
++ ar rv /home/urbanjs/venus/V600/lib/Linux_gfortran/PROGRAM.a /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
+a - /tmp/CCALL_Linux_gfortran_436189/test_suite_M_list.436189.f90
 + set +x
 /home/urbanjs/venus/V600/LIBRARY/CYGWIN/scripts_regression/goodbad: test_suite_M_list.1 0 test_suite_M_list start --section 1
 /home/urbanjs/venus/V600/bin/Linux_gfortran/test_suite_M_list
-*ccall*: REMOVING /tmp/CCALL_Linux_gfortran_1978857
+*ccall*: REMOVING /tmp/CCALL_Linux_gfortran_436189
 + test_suite_M_list
+check_start: locate               START   : locate string in allocatable string array sorted in descending order
 check:       locate               SUCCESS : ZZZ 4 should be 4
 check:       locate               SUCCESS : zqj -1 should be -1
-check_done:  locate               PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check_end:   locate               PASSED  : GOOD: 2         BAD: 0         DURATION: 00000000939758
+check_start: insert               START   : insert value into allocatable array by index"
 check:       insert               SUCCESS : should not be located -5
 check:       insert               SUCCESS : NEW should be "NEW"
 check:       insert               SUCCESS : array now bigger 5 to 6
-check_done:  insert               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   insert               PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000426917
+check_start: remove               START   : remove value from allocatable array by index"
 check:       remove               SUCCESS : found the element to remove 5
 check:       remove               SUCCESS : did not find the element to remove -5
 check:       remove               SUCCESS : shrunk by two
-check_done:  remove               PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   remove               PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000199668
+check_start: replace              START   : replace value from allocatable array by index"
 check:       replace              SUCCESS : location= 5
 check:       replace              SUCCESS : no change in size 9
 check:       replace              SUCCESS : new value for ab
-check_done:  replace              PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   replace              PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000179587
+check_start: dict%set             START   : add string into allocatable string array by name
 check:       dict%set             SUCCESS : array should be A
 check:       dict%set             SUCCESS : array should be z c b A
 check:       dict%set             SUCCESS : strings ok
-check_done:  dict%set             PASSED  : GOOD:        3 BAD:        0 DURATION:00000000000000
+check_end:   dict%set             PASSED  : GOOD: 3         BAD: 0         DURATION: 00000000174634
+check_start: dict%del             START   : delete string by name from allocatable string array
 check:       dict%del             SUCCESS : string deletes keys
 check:       dict%del             SUCCESS : string deletes values
-check_done:  dict%del             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000000
+check_end:   dict%del             PASSED  : GOOD: 2         BAD: 0         DURATION: 00000000166930
+check_start: dict%get             START   : locate and get value by key name from dictionary
 check:       dict%get             SUCCESS : string get keys
 check:       dict%get             SUCCESS : string get values
-check_done:  dict%get             PASSED  : GOOD:        2 BAD:        0 DURATION:00000000000001
+check_end:   dict%get             PASSED  : GOOD: 2         BAD: 0         DURATION: 00000000150374
+check_start: dict%ifdef           START   : return whether name is present in dictionary or not
 check:       dict%                SUCCESS : ifdef tests
-check_done:  dict%ifdef           PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
+check_end:   dict%ifdef           PASSED  : GOOD: 1         BAD: 0         DURATION: 00000000135237
+check_start: dict%ifdef           START   : return whether name is present in dictionary or not
 check:       dict%                SUCCESS : clr tests
-check_done:  dict%clr             PASSED  : GOOD:        1 BAD:        0 DURATION:00000000000000
-check_stop:  TALLY                PASSED  : GOOD:       20 BAD:        0 DURATION:00000000000001
-STOP 0
+check_end:   dict%clr             PASSED  : GOOD: 1         BAD: 0         DURATION: 00000000120524
+check_stop:  TALLY                PASSED  : GOOD: 20        BAD: 0         DURATION: 00000002718107
 + echo '>>>> GPF_fman'
 >>>> GPF_fman
 + '[' -d doc/ ']'
@@ -3207,18 +3134,18 @@ STOP 0
 + cat
 + cat
 + COUNT=0
-+ ls clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
 + read NAME
++ ls clr.3m_list.man del.3m_list.man get.3m_list.man ifdef.3m_list.man insert.3m_list.man locate.3m_list.man M_list.3m_list.man remove.3m_list.man replace.3m_list.man set.3m_list.man
 + SHORTNAME=clr
 + COUNT=1
 + cat
 ++ TOCHARACTER
 ++ :
 ++ cat clr.3m_list.man
-++ sed -e 's/$/'\'', \&/'
-++ cat
 ++ sed -e 's/'\''/'\'''\''/g'
 ++ sed -e 's/^/'\''/'
+++ sed -e 's/$/'\'', \&/'
+++ cat
 + read NAME
 + SHORTNAME=del
 + COUNT=2
@@ -3226,10 +3153,10 @@ STOP 0
 ++ TOCHARACTER
 ++ :
 ++ cat del.3m_list.man
-++ sed -e 's/^/'\''/'
-++ sed -e 's/$/'\'', \&/'
-++ cat
 ++ sed -e 's/'\''/'\'''\''/g'
+++ cat
+++ sed -e 's/$/'\'', \&/'
+++ sed -e 's/^/'\''/'
 + read NAME
 + SHORTNAME=get
 + COUNT=3
@@ -3238,8 +3165,8 @@ STOP 0
 ++ :
 ++ cat get.3m_list.man
 ++ sed -e 's/'\''/'\'''\''/g'
-++ sed -e 's/$/'\'', \&/'
 ++ cat
+++ sed -e 's/$/'\'', \&/'
 ++ sed -e 's/^/'\''/'
 + read NAME
 + SHORTNAME=ifdef
@@ -3248,8 +3175,8 @@ STOP 0
 ++ TOCHARACTER
 ++ :
 ++ cat ifdef.3m_list.man
-++ sed -e 's/'\''/'\'''\''/g'
 ++ sed -e 's/$/'\'', \&/'
+++ sed -e 's/'\''/'\'''\''/g'
 ++ cat
 ++ sed -e 's/^/'\''/'
 + read NAME
@@ -3259,9 +3186,9 @@ STOP 0
 ++ TOCHARACTER
 ++ :
 ++ cat insert.3m_list.man
-++ sed -e 's/'\''/'\'''\''/g'
-++ sed -e 's/$/'\'', \&/'
 ++ cat
+++ sed -e 's/$/'\'', \&/'
+++ sed -e 's/'\''/'\'''\''/g'
 ++ sed -e 's/^/'\''/'
 + read NAME
 + SHORTNAME=locate
@@ -3269,11 +3196,11 @@ STOP 0
 + cat
 ++ TOCHARACTER
 ++ :
-++ cat locate.3m_list.man
+++ sed -e 's/^/'\''/'
+++ cat
 ++ sed -e 's/'\''/'\'''\''/g'
 ++ sed -e 's/$/'\'', \&/'
-++ cat
-++ sed -e 's/^/'\''/'
+++ cat locate.3m_list.man
 + read NAME
 + SHORTNAME=M_list
 + COUNT=7
@@ -3282,19 +3209,19 @@ STOP 0
 ++ :
 ++ cat M_list.3m_list.man
 ++ sed -e 's/'\''/'\'''\''/g'
-++ sed -e 's/$/'\'', \&/'
 ++ cat
 ++ sed -e 's/^/'\''/'
+++ sed -e 's/$/'\'', \&/'
 + read NAME
 + SHORTNAME=remove
 + COUNT=8
 + cat
 ++ TOCHARACTER
 ++ :
-++ cat remove.3m_list.man
-++ cat
 ++ sed -e 's/'\''/'\'''\''/g'
+++ cat remove.3m_list.man
 ++ sed -e 's/^/'\''/'
+++ cat
 ++ sed -e 's/$/'\'', \&/'
 + read NAME
 + SHORTNAME=replace
@@ -3303,9 +3230,9 @@ STOP 0
 ++ TOCHARACTER
 ++ :
 ++ cat replace.3m_list.man
-++ sed -e 's/^/'\''/'
 ++ sed -e 's/'\''/'\'''\''/g'
 ++ cat
+++ sed -e 's/^/'\''/'
 ++ sed -e 's/$/'\'', \&/'
 + read NAME
 + SHORTNAME=set
@@ -3316,12 +3243,12 @@ STOP 0
 ++ cat set.3m_list.man
 ++ sed -e 's/'\''/'\'''\''/g'
 ++ sed -e 's/$/'\'', \&/'
-++ cat
 ++ sed -e 's/^/'\''/'
+++ cat
 + read NAME
 + END_MODULE
 + cat
 + cat
 + ls -ld /home/urbanjs/venus/V600/github/PLUGINS/fpm-docs/src/m_list_docs.f90
--rwxrwxrwx 1 urbanjs urbanjs 42139 Apr 19 20:01 /home/urbanjs/venus/V600/github/PLUGINS/fpm-docs/src/m_list_docs.f90
+-rwxrwxrwx 1 urbanjs urbanjs 42139 Jul 10 14:49 /home/urbanjs/venus/V600/github/PLUGINS/fpm-docs/src/m_list_docs.f90
 + cat

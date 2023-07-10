@@ -6,7 +6,7 @@ output_dir: docs/fpm-ford
 project: M_list
 summary: maintain sorted lists of INTRINSIC type
 project_github: https://github.com/urbanjost/M_list
-project_download:
+project_download: https://github.com/urbanjost/M_list/archive/refs/heads/master.zip
 author: John S. Urban
 author_email: urbanjost@gmail.com
 github: https://github.com/urbanjost/M_list
