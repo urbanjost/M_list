@@ -1,9 +1,9 @@
-<!--
-# M_list
-![list](docs/images/list.gif)
--->
+[![list](docs/images/list.gif)](https://urbanjost.github.io/M_list/fpm-ford/index.html)
+# [M_list and associated files](https://urbanjost.github.io/M_list/man3.html)
 
-## M_list(3f) - maintain a sorted intrinsic type array in Fortran
+## Name
+   M_list(3f) and M_list__oop(3f) - maintain a sorted intrinsic type
+   array in Fortran
 
 ## Description
 
@@ -19,8 +19,9 @@
    Because of the expense of reallocating the data these routines are best
    suited for maintaining small lists that do not change size frequently.
 
-   For more demanding needs, see linked-list methods for maintaining generic
-   dictionaries; several examples of which are available on the Fortran Wiki.
+   For more demanding needs, see linked-list methods for maintaining
+   generic dictionaries; several examples of which are available on the
+   Fortran Wiki.
 
 ## Building the Module Using make(1) ![gmake](docs/images/gnu.gif)
 Just download the github repository, enter the src/ directory and run make(1):
